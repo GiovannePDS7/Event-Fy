@@ -1,0 +1,31 @@
+@import url("../../../../styles.css");
+*{
+  color: aliceblue;
+}
+#container-mobile{
+  height: 48vh;
+  background-image: url('../../../../assets/Background/Principal_bg.png');
+  background-size: 100% 100%;
+}
+
+#Logo-mobile{
+  padding-top: 3.5%;
+    width: 40vw;
+    display: block;
+    margin: 0 auto;
+}
+
+#container-info-mobile{
+  padding:  0 4.5vw;
+  height: 36vh;
+  background: #63af0b;
+}
+
+#btn-mobile{
+  width: 30%;
+}
+
+#h1-mobile{
+  font-size: 7.5vw;
+  font-weight: bold;
+}

@@ -8,6 +8,7 @@ import { CadastroComponent } from './Pages/cadastro/cadastro.component';
 import { PrincipalComponent } from './Pages/principal/principal.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { FooterComponent } from './Components/Apresentacao/footer/footer.component';
+import { PrincipalApresentacaoComponent } from './Components/Apresentacao/principal-apresentacao/principal-apresentacao.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FooterComponent } from './Components/Apresentacao/footer/footer.compone
     CadastroComponent,
     PrincipalComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    PrincipalApresentacaoComponent
   ],
   imports: [
     BrowserModule,
