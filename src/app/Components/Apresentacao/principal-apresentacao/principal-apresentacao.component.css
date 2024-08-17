@@ -1,31 +1,61 @@
 @import url("../../../../styles.css");
-*{
+
+* {
   color: aliceblue;
 }
-#container-mobile{
-  height: 48vh;
+
+#container-mobile {
   background-image: url('../../../../assets/Background/Principal_bg.png');
   background-size: 100% 100%;
+  padding-bottom: 20vw;
 }
 
-#Logo-mobile{
-  padding-top: 3.5%;
-    width: 40vw;
-    display: block;
-    margin: 0 auto;
+#Logo-mobile {
+  padding: 7% 0 5% 0;
+  width: 45vw;
+  display: block;
+  margin: 0 auto;
 }
 
-#container-info-mobile{
-  padding:  0 4.5vw;
-  height: 36vh;
-  background: #63af0b;
+#container-info-mobile {
+  padding: 0 0 0 4.5vw;
+  height: 70%;
 }
 
-#btn-mobile{
+#btn-mobile {
   width: 30%;
 }
 
-#h1-mobile{
-  font-size: 7.5vw;
+#h1-mobile {
+  width: 80%;
+  font-size: 8vw;
   font-weight: bold;
+}
+
+#color-h1 {
+  color: var(--cor-secundaria);
+}
+
+#containerImg {
+  height: 30%;
+  width: 100%;
+}
+
+#descricao {
+  width: 92%;
+  font-weight: 250;
+  font-size: 3.8vw;
+  line-height: 120%;
+}
+
+#btn-mobile {
+  margin-top: 2%;
+  padding: 3% 0;
+  font-size: 4vw;
+  border: none;
+  background: var(--cor-secundaria);
+  min-width: 38vw;
+  max-width: 43vw;
+  color: #000;
+  border-radius: 8vw;
 }
