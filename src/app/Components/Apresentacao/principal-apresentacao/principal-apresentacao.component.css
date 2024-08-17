@@ -20,6 +20,7 @@
 #container-info-mobile {
   padding: 0 0 0 4.5vw;
   height: 70%;
+
 }
 
 #btn-mobile {
@@ -28,7 +29,7 @@
 
 #h1-mobile {
   width: 80%;
-  font-size: 8vw;
+  font-size: 7.5vw;
   font-weight: bold;
 }
 
@@ -42,7 +43,7 @@
 }
 
 #descricao {
-  width: 92%;
+  width: 93%;
   font-weight: 250;
   font-size: 3.8vw;
   line-height: 120%;
