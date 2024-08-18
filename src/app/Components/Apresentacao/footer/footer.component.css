@@ -2,7 +2,7 @@
 
 footer{
   background-color: var(--cor-footer);
-  color: var(--text-color-footer);
+  color: var(--text-color);
   text-align: center;
 }
 #logo{
@@ -14,7 +14,7 @@ footer{
   padding: 0  8%;
 }
 #text-copy{
-  border-top: 2px solid var(--text-color-footer);
+  border-top: 2px solid var(--text-color);
 }
 #copyContainer{
   height: 4vh;

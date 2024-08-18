@@ -1,0 +1,77 @@
+#text-Planos{
+    text-align: center;
+    height: 23vh;
+}
+#text-Planos h1{
+    font-size: 7.5vw;
+    font-weight: bold;
+    margin-top: 3%; 
+}
+#text-Planos p{
+    width: 80%;
+    margin-left: 10%;
+}
+.card{
+    margin-left: 7.5%;
+    margin-bottom: 3%;
+    width: 85%;
+    text-align: center;
+    border: 2px solid var(--cor-secundaria) ;
+}
+.card h1{
+    font-size: 10vw;
+    margin-top: 7%;
+    font-weight: bold;
+}
+.card h2{
+    font-size: 11vw;
+    color: var(--text-color-gray);
+}
+.card h3{
+    font-weight: bold;
+    margin-bottom: 7%;
+}
+.sub-Card{
+    background-color: var(--cor-secundaria);
+    border-radius: var(--bs-card-border-radius) var(--bs-card-border-radius) 0 0;
+}
+.sub-Card h1{
+    font-size: 7vw;
+}
+.custom-list-container{
+    margin-left: 15%;
+}
+
+ul.custom-list {
+    list-style: none; 
+    padding-left: 0; 
+    margin: 0;
+    
+}
+
+li.custom-list-item {
+    display: flex; 
+    align-items: center; 
+    padding-left: 1em; 
+    position: relative; 
+}
+
+li.custom-list-item::before {
+    content: '•'; 
+    position: absolute; 
+    left: 0; 
+    font-size: 1.5em; 
+    color: black; 
+}
+
+.btn-hire{
+    margin-top: 2%;
+    margin-bottom: 7%;
+    padding: 3% 0;
+    font-size: 5vw;
+    border: none;
+    background: black;
+    width: 80%;
+    color: var(--text-color);
+    border-radius: 2vw;
+}

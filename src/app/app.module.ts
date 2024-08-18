@@ -9,6 +9,7 @@ import { PrincipalComponent } from './Pages/principal/principal.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { FooterComponent } from './Components/Apresentacao/footer/footer.component';
 import { PrincipalApresentacaoComponent } from './Components/Apresentacao/principal-apresentacao/principal-apresentacao.component';
+import { PlanosComponent } from './Components/Apresentacao/planos/planos.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PrincipalApresentacaoComponent } from './Components/Apresentacao/princi
     PrincipalComponent,
     LoginComponent,
     FooterComponent,
-    PrincipalApresentacaoComponent
+    PrincipalApresentacaoComponent,
+    PlanosComponent
   ],
   imports: [
     BrowserModule,
