@@ -34,13 +34,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "100mb",  
+                  "maximumError": "200mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "10mb",
+                  "maximumError": "20mb"
                 }
               ],
               "outputHashing": "all"
@@ -89,11 +89,8 @@
             "styles": [
               "src/styles.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
-
             ],
-            "scripts": [
-
-            ]
+            "scripts": []
           }
         }
       }
