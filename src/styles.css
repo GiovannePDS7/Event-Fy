@@ -1,6 +1,10 @@
 @import url(bootstrap-icons/font/bootstrap-icons.css);
 
-:root{
+* {
+  font-family: "Inter";
+}
+
+:root {
   --cor-primaria: #fcfcfc;
   --cor-secundaria: #EF820D;
   --cor-footer: #252525;

@@ -1,13 +1,12 @@
-.grandContainer{
+.grandContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-#text-Quem-somos{
+#text-Quem-somos {
   width: 85%;
-  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,16 +14,15 @@
   flex-direction: column;
 }
 
-#text-Quem-somos h1{
+#text-Quem-somos h1 {
   font-size: 8vw;
   font-weight: bold;
   margin-top: 3%;
 }
 
-.litterContainer{
+.litterContainer {
   margin-top: 30px;
   width: 85%;
-  height: 40vh;
   border: 2px solid #ef820d;
   border-radius: 10px;
   display: flex;
@@ -33,17 +31,20 @@
   flex-direction: column;
 }
 
-.tituloCard{
+.tituloCard {
+  padding: 1.5vw 0;
   font-size: 6vw;
   font-weight: bold;
   text-align: center;
 }
 
-.textCard{
+.textCard {
+  font-size: 3.4vw;
   width: 85%;
   text-align: center;
 }
 
-.img{
-  margin-bottom: 10px;
+.img {
+  padding: 3vw 0;
+  width: 15vw;
 }

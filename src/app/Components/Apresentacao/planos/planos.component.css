@@ -1,100 +1,113 @@
-#text-Planos{
-    text-align: center;
-    font-size: 3.6vw;
+#text-Planos {
+  text-align: center;
+  font-size: 3.6vw;
+  padding: 3vw 0;
 }
-#text-Planos h1{
-    font-size: 7.5vw;
-    font-weight: bold;
-    margin-top: 3%;
+
+#text-Planos h1 {
+  font-size: 7.5vw;
+  font-weight: bold;
+  margin-top: 3%;
 }
-#text-Planos p{
-    width: 80%;
-    margin-left: 10%;
+
+#text-Planos p {
+  width: 85%;
+  text-align: center;
 }
-.card{
-    margin-left: 7.5%;
-    margin-bottom: 3%;
-    width: 85%;
-    text-align: center;
-    border: 2px solid var(--cor-secundaria) ;
+
+.card {
+  margin-left: 7.5%;
+  margin-bottom: 3%;
+  width: 85%;
+  text-align: center;
+  border: 2px solid var(--cor-secundaria);
 }
-.card h1{
-    font-size: 10vw;
-    margin-top: 7%;
-    font-weight: bold;
+
+.card h1 {
+  font-size: 10vw;
+  margin-top: 7%;
+  font-weight: bold;
 }
-.card h2{
-    font-size: 11vw;
-    color: var(--text-color-gray);
+
+.card h2 {
+  font-size: 11vw;
+  color: var(--text-color-gray);
 }
-.card h3{
-    font-weight: bold;
-    margin-bottom: 7%;
+
+.card h3 {
+  font-weight: bold;
+  margin-bottom: 7%;
 }
-.sub-Card{
-    background-color: var(--cor-secundaria);
-    border-radius: var(--bs-card-border-radius) var(--bs-card-border-radius) 0 0;
+
+.sub-Card {
+  background-color: var(--cor-secundaria);
+  border-radius: var(--bs-card-border-radius) var(--bs-card-border-radius) 0 0;
 }
-.sub-Card h1{
-    font-size: 7vw;
+
+.sub-Card h1 {
+  font-size: 7vw;
 }
-.custom-list-container{
+
+.custom-list-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.ul-planos{
+
+.ul-planos {
   margin: 0;
   padding: 0;
 }
-.custom-list-item{
+
+.custom-list-item {
   font-size: 4.2vw;
 }
+
 li.custom-list-item {
-    display: flex;
-    align-items: center;
-    padding-left: 1em;
-    position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  position: relative;
 
 }
 
 li.custom-list-item::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    font-size: 1.5em;
-    color: black;
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-size: 1.5em;
+  color: black;
 }
 
-.btn-hire{
-    margin-top: 2%;
-    margin-bottom: 7%;
-    padding: 3% 0;
-    font-size: 5vw;
-    border: none;
-    background: black;
-    width: 80%;
-    color: var(--text-color);
-    border-radius: 2vw;
+.btn-hire {
+  margin-top: 2%;
+  margin-bottom: 7%;
+  padding: 3% 0;
+  font-size: 5vw;
+  border: none;
+  background: black;
+  width: 80%;
+  color: var(--text-color);
+  border-radius: 2vw;
 }
 
-.preco-container{
+.preco-container {
   height: 16vw;
 }
 
-.preco-center{
+.preco-center {
   font-size: 12vw;
 }
 
-.preco-right{
+.preco-right {
   font-size: 6vw;
 }
 
-.preco-margin{
+.preco-margin {
   margin-right: 2vw;
 }
 
-.preco-left{
+.preco-left {
   height: 100%;
   font-size: 7vw;
 }
