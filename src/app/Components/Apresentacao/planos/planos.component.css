@@ -1,11 +1,11 @@
 #text-Planos{
     text-align: center;
-    height: 23vh;
+    font-size: 3.6vw;
 }
 #text-Planos h1{
     font-size: 7.5vw;
     font-weight: bold;
-    margin-top: 3%; 
+    margin-top: 3%;
 }
 #text-Planos p{
     width: 80%;
@@ -39,29 +39,31 @@
     font-size: 7vw;
 }
 .custom-list-container{
-    margin-left: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-ul.custom-list {
-    list-style: none; 
-    padding-left: 0; 
-    margin: 0;
-    
+.ul-planos{
+  margin: 0;
+  padding: 0;
 }
-
+.custom-list-item{
+  font-size: 4.2vw;
+}
 li.custom-list-item {
-    display: flex; 
-    align-items: center; 
-    padding-left: 1em; 
-    position: relative; 
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    position: relative;
+
 }
 
 li.custom-list-item::before {
-    content: '•'; 
-    position: absolute; 
-    left: 0; 
-    font-size: 1.5em; 
-    color: black; 
+    content: '•';
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+    color: black;
 }
 
 .btn-hire{
@@ -74,4 +76,25 @@ li.custom-list-item::before {
     width: 80%;
     color: var(--text-color);
     border-radius: 2vw;
+}
+
+.preco-container{
+  height: 16vw;
+}
+
+.preco-center{
+  font-size: 12vw;
+}
+
+.preco-right{
+  font-size: 6vw;
+}
+
+.preco-margin{
+  margin-right: 2vw;
+}
+
+.preco-left{
+  height: 100%;
+  font-size: 7vw;
 }
