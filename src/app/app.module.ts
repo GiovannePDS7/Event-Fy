@@ -10,7 +10,8 @@ import { LoginComponent } from './Pages/login/login.component';
 import { FooterComponent } from './Components/Apresentacao/footer/footer.component';
 import { PrincipalApresentacaoComponent } from './Components/Apresentacao/principal-apresentacao/principal-apresentacao.component';
 import { PlanosComponent } from './Components/Apresentacao/planos/planos.component';
-
+import { QuemSomosComponent } from './Components/Apresentacao/quem-somos/quem-somos.component';
+import { FuncionalidadesComponent } from './Components/Apresentacao/funcionalidades/funcionalidades.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { PlanosComponent } from './Components/Apresentacao/planos/planos.compone
     LoginComponent,
     FooterComponent,
     PrincipalApresentacaoComponent,
-    PlanosComponent
+    PlanosComponent,
+    QuemSomosComponent,
+    FuncionalidadesComponent
   ],
   imports: [
     BrowserModule,

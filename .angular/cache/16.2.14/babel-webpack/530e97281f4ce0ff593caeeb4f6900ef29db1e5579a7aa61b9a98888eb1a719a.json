@@ -1,1 +1,13 @@
-{"ast":null,"code":"import * as __NgCli_bootstrap_1 from \"@angular/platform-browser\";\nimport { AppModule } from './app/app.module';\n__NgCli_bootstrap_1.platformBrowser().bootstrapModule(AppModule).catch(err => console.error(err));","map":{"version":3,"names":["AppModule","__NgCli_bootstrap_1","platformBrowser","bootstrapModule","catch","err","console","error"],"sources":["C:\\Users\\etechas\\Downloads\\EventFy\\src\\main.ts"],"sourcesContent":["import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n\nimport { AppModule } from './app/app.module';\n\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));\n"],"mappings":";AAEA,SAASA,SAAS,QAAQ,kBAAkB;AAG5CC,mBAAA,CAAAC,eAAA,EAAwB,CAACC,eAAe,CAACH,SAAS,CAAC,CAChDI,KAAK,CAACC,GAAG,IAAIC,OAAO,CAACC,KAAK,CAACF,GAAG,CAAC,CAAC","ignoreList":[]},"metadata":{},"sourceType":"module","externalDependencies":[]}
+ft-Windows-Application-Experience-Infrastructure.Resources" />
+      <component name="Microsoft-Windows-AT.Resources" />
+      <component name="Microsoft-Windows-Autochk.Resources" />
+      <component name="Microsoft-Windows-Basic-Misc-Tools.Resources" />
+      <component name="Microsoft-Windows-BcdBoot-CmdlineTool.Resources" />
+      <component name="Microsoft-Windows-Bits-Bitsadmin.Resources" />
+      <component name="Microsoft-Windows-BITSExtensions-Setup.Resources" />
+      <component name="Microsoft-Windows-BLB-CLI-Main.Resources" />
+      <component name="Microsoft-Windows-BootConfig.Resources" />
+      <component name="Microsoft-Windows-BootConfigurationData-CmdlineTool.Resources" />
+      <component name="Microsoft-Windows-BootEnvironment-BootSectorTool.Resources" />
+      <component name="Microsoft-Windows-BootRes.Resources" />
+      <component name="Microsoft-Windows-CertificateRequestT

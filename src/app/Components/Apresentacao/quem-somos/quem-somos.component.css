@@ -1,0 +1,21 @@
+.grandContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#text-Quem-somos{
+  width: 85%;
+  height: 38vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#text-Quem-somos h1{
+  font-size: 7.5vw;
+  font-weight: bold;
+  margin-top: 3%;
+}

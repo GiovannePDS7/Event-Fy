@@ -1,1 +1,24 @@
-{"ast":null,"code":"import { switchMap } from './switchMap';\nimport { operate } from '../util/lift';\nexport function switchScan(accumulator, seed) {\n  return operate((source, subscriber) => {\n    let state = seed;\n    switchMap((value, index) => accumulator(state, value, index), (_, innerValue) => (state = innerValue, innerValue))(source).subscribe(subscriber);\n    return () => {\n      state = null;\n    };\n  });\n}","map":{"version":3,"names":["switchMap","operate","switchScan","accumulator","seed","source","subscriber","state","value","index","_","innerValue","subscribe"],"sources":["C:/Users/etechas/Downloads/EventFy/node_modules/rxjs/dist/esm/internal/operators/switchScan.js"],"sourcesContent":["import { switchMap } from './switchMap';\nimport { operate } from '../util/lift';\nexport function switchScan(accumulator, seed) {\n    return operate((source, subscriber) => {\n        let state = seed;\n        switchMap((value, index) => accumulator(state, value, index), (_, innerValue) => ((state = innerValue), innerValue))(source).subscribe(subscriber);\n        return () => {\n            state = null;\n        };\n    });\n}\n"],"mappings":"AAAA,SAASA,SAAS,QAAQ,aAAa;AACvC,SAASC,OAAO,QAAQ,cAAc;AACtC,OAAO,SAASC,UAAUA,CAACC,WAAW,EAAEC,IAAI,EAAE;EAC1C,OAAOH,OAAO,CAAC,CAACI,MAAM,EAAEC,UAAU,KAAK;IACnC,IAAIC,KAAK,GAAGH,IAAI;IAChBJ,SAAS,CAAC,CAACQ,KAAK,EAAEC,KAAK,KAAKN,WAAW,CAACI,KAAK,EAAEC,KAAK,EAAEC,KAAK,CAAC,EAAE,CAACC,CAAC,EAAEC,UAAU,MAAOJ,KAAK,GAAGI,UAAU,EAAGA,UAAU,CAAC,CAAC,CAACN,MAAM,CAAC,CAACO,SAAS,CAACN,UAAU,CAAC;IAClJ,OAAO,MAAM;MACTC,KAAK,GAAG,IAAI;IAChB,CAAC;EACL,CAAC,CAAC;AACN","ignoreList":[]},"metadata":{},"sourceType":"module","externalDependencies":[]}
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v3" manifestVersion="1.0" copyright="Copyright (c) Microsoft Corporation. All Rights Reserved.">
+  <assemblyIdentity name="Microsoft-OneCore-CoreSystem-Core-merged-Package" version="10.0.19041.4291" processorArchitecture="amd64" language="ro-RO" buildType="release" publicKeyToken="31bf3856ad364e35" />
+  <package identifier="Microsoft-OneCore-CoreSystem-Core-merged-ro-RO" releaseType="Language Pack">
+    <parent disposition="detect">
+      <assemblyIdentity name="Microsoft-OneCore-CoreSystem-Core-merged-Package" version="10.0.19041.4291" processorArchitecture="amd64" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" />
+    </parent>
+    <update name="a40255d1fde6e8ae7553e1b3adece80a">
+      <mum2:customInformation xmlns:mum2="urn:schemas-microsoft-com:asm.v3">
+        <mum2:noAutoMerge />
+      </mum2:customInformation>
+      <component>
+        <assemblyIdentity name="kdnic.inf-LanguagePack" version="10.0.19041.1" processorArchitecture="amd64" language="ro-RO" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" />
+      </component>
+    </update>
+    <update name="16cf24fb4edd4a818f14d7fda1fb796e">
+      <mum2:customInformation xmlns:mum2="urn:schemas-microsoft-com:asm.v3">
+        <mum2:noAutoMerge />
+      </mum2:customInformation>
+      <component>
+        <assemblyIdentity name="ndisuio.inf-LanguagePack" version="10.0.19041.1" processorArchitecture="amd64" language="ro-RO" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" />
+      </component>
+    </update>
+    <update n
