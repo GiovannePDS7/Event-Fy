@@ -8,6 +8,7 @@ import { PrincipalComponent } from './Pages/principal/principal.component';
 const routes: Routes = [
 {path: '', redirectTo: "/apresentacao", pathMatch: 'full'},
 { path: 'apresentacao', component: ApresentacaoComponent },
+{path: 'login', component: LoginComponent},
 { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' }
 
 ];

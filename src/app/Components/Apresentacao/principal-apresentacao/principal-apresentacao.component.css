@@ -4,30 +4,26 @@
   color: aliceblue;
 }
 
-#container-mobile {
+#container-mobile, #container-desktop {
   background-image: url('../../../../assets/Background/Principal_bg.png');
   background-size: 100% 100%;
   padding-bottom: 20vw;
 }
 
-#Logo-mobile {
+#Logo-mobile, #Logo-desktop {
   padding: 7% 0 5% 0;
   width: 45vw;
   display: block;
   margin: 0 auto;
 }
 
-#container-info-mobile {
+#container-info-mobile, #container-info-desktop {
   padding: 0 0 0 4.5vw;
   height: 70%;
 
 }
 
-#btn-mobile {
-  width: 30%;
-}
-
-#h1-mobile {
+#h1-mobile, #h1-desktop {
   width: 90%;
   font-size: 7.5vw;
   font-weight: bold;
@@ -37,19 +33,20 @@
   color: var(--cor-secundaria);
 }
 
-#containerImg {
+#containerImg, #containerImg-desktop {
   height: 30%;
   width: 100%;
 }
 
-#descricao {
+#descricao, #descricao-desktop {
   width: 93%;
   font-weight: 250;
   font-size: 3.8vw;
   line-height: 120%;
 }
 
-#btn-mobile {
+#btn-mobile, #btn-desktop {
+  width: 30%;
   margin-top: 2%;
   padding: 3% 0;
   font-size: 4vw;
@@ -59,4 +56,43 @@
   max-width: 43vw;
   color: #000;
   border-radius: 8vw;
+}
+
+/* desktop */
+
+#Logo-desktop {
+  margin: 0 auto;
+  width: 30vw;
+  padding: 5% 0 4% 0;
+}
+
+#container-info-desktop {
+  width: 80%;
+}
+
+#h1-desktop {
+  width: 100%;
+  font-size: 5vw;
+}
+
+#descricao-desktop {
+  width: 100%;
+  font-size: 3.2vw;
+}
+
+#containerImg-desktop {
+  height: auto;
+}
+
+#container-desktop {
+  height: 100vh;
+  padding-bottom: 15vw;
+}
+
+
+#btn-desktop {
+  min-width: 32vw;
+  max-width: 37vw;
+  padding: 2% 0;
+  font-size: 2.8vw;
 }
