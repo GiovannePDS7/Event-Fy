@@ -1,3 +1,6 @@
+@import url("../../../../styles.css");
+
+
 .grandContainer {
   display: flex;
   justify-content: center;
@@ -47,4 +50,55 @@
 .img {
   padding: 3vw 0;
   width: 15vw;
+}
+
+/* desktop */
+
+#h1-desktop {
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  font-size: 3.5vw;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+#linha {
+  height: 0.5vh;
+  width: 17vw;
+  background: #000;
+}
+
+#section-title {
+  margin-left: 2vw;
+}
+
+.containers-desktop {
+  width: 50%;
+  height: 65vw;
+}
+
+.card-desktop {
+  height: 40%;
+  width: 55%;
+  border-radius: 5px;
+  border: 1.5px var(--cor-secundaria) solid;
+}
+
+.img-box-desktop {
+  width: 7.5vw;
+}
+
+.span-desktop {
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  line-height: normal;
+}
+
+.p-desktop {
+  width: 90%;
+  font-size: 1.2vw;
+  text-align: center;
+  line-height: normal;
 }
