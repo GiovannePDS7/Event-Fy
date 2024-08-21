@@ -28,7 +28,8 @@
 
 }
 
-#h1-mobile, #h1-mobile-desktop {
+#h1-mobile, #h1-desktop {
+  line-height: 1;
   width: 90%;
   font-size: 7.5vw;
   font-weight: bold;
@@ -70,7 +71,7 @@
   width: 20vw;
 }
 
-#h1-mobile-desktop {
+#h1-desktop {
   font-size: 4vw;
 }
 
