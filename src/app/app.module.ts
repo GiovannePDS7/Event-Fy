@@ -12,6 +12,7 @@ import { PrincipalApresentacaoComponent } from './Components/Apresentacao/princi
 import { PlanosComponent } from './Components/Apresentacao/planos/planos.component';
 import { QuemSomosComponent } from './Components/Apresentacao/quem-somos/quem-somos.component';
 import { FuncionalidadesComponent } from './Components/Apresentacao/funcionalidades/funcionalidades.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FuncionalidadesComponent } from './Components/Apresentacao/funcionalida
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
