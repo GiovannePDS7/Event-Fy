@@ -10,6 +10,11 @@
   padding-bottom: 20vw;
 }
 
+#container-desktop {
+  height: 100vh;
+  padding-bottom: 5%;
+}
+
 #Logo-mobile, #Logo-desktop {
   padding: 7% 0 5% 0;
   width: 45vw;
@@ -17,13 +22,13 @@
   margin: 0 auto;
 }
 
-#container-info-mobile, #container-info-desktop {
+#container-info-mobile {
   padding: 0 0 0 4.5vw;
-  height: 70%;
+  height: 75vh;
 
 }
 
-#h1-mobile, #h1-desktop {
+#h1-mobile, #h1-mobile-desktop {
   width: 90%;
   font-size: 7.5vw;
   font-weight: bold;
@@ -33,7 +38,7 @@
   color: var(--cor-secundaria);
 }
 
-#containerImg, #containerImg-desktop {
+#containerImg {
   height: 30%;
   width: 100%;
 }
@@ -61,38 +66,30 @@
 /* desktop */
 
 #Logo-desktop {
-  margin: 0 auto;
-  width: 30vw;
-  padding: 5% 0 4% 0;
+  padding: 0;
+  width: 20vw;
 }
 
-#container-info-desktop {
-  width: 80%;
-}
-
-#h1-desktop {
-  width: 100%;
-  font-size: 5vw;
+#h1-mobile-desktop {
+  font-size: 4vw;
 }
 
 #descricao-desktop {
-  width: 100%;
-  font-size: 3.2vw;
+  width: 60%;
+  font-size: 2.4vw;
+}
+
+#btn-desktop {
+  padding: 0.8% 0;
+  font-size: 2vw;
+  min-width: auto;
+  max-width: none;
+  width: 22vw;
 }
 
 #containerImg-desktop {
-  height: auto;
-}
-
-#container-desktop {
-  height: 100vh;
-  padding-bottom: 15vw;
-}
-
-
-#btn-desktop {
-  min-width: 32vw;
-  max-width: 37vw;
-  padding: 2% 0;
-  font-size: 2.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
