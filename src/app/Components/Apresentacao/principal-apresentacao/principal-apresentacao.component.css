@@ -22,14 +22,17 @@
   margin: 0 auto;
 }
 
-#container-info-mobile {
+#container-info-mobile, #container-info-desktop {
   padding: 0 0 0 4.5vw;
-  height: 75vh;
 
 }
 
+#container-info-desktop {
+  height: 75vh;
+}
+
 #h1-mobile, #h1-desktop {
-  line-height: 1;
+  line-height: 1.2;
   width: 90%;
   font-size: 7.5vw;
   font-weight: bold;
@@ -81,7 +84,7 @@
 }
 
 #btn-desktop {
-  padding: 0.8% 0;
+  padding: 1% 0;
   font-size: 2vw;
   min-width: auto;
   max-width: none;
