@@ -102,3 +102,11 @@
   text-align: center;
   line-height: normal;
 }
+
+.card-left {
+  margin-right: 14%;
+}
+
+.card-right {
+  margin-left: 14%;
+}
