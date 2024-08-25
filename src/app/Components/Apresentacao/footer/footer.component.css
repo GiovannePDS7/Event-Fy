@@ -32,12 +32,12 @@ footer {
 
 #grandContainerFooter {
   width: 100%;
-  height: 35vh;
+  height: 20vw;
   background-color: var(--cor-footer);
   color: var(--text-color);
   text-align: center;
   display: flex;
-  
+
 }
 
 #littleContainerFooterLeft, #littleContainerFooterCenter, #littleContainerFooterRight {
@@ -48,7 +48,8 @@ footer {
   align-items: center;
   flex-direction: column;
 }
-#littleContainerFooterRight{
+
+#littleContainerFooterRight {
   justify-content: center;
   align-items: flex-start;
 }
@@ -99,7 +100,7 @@ a {
 #p-lg-copyright {
   width: 100%;
   height: 100%;
-  
+
 }
 
 #ContainerCopyright {
@@ -113,36 +114,42 @@ a {
   color: var(--text-color);
 }
 
-.bi bi-instagram{
+.bi bi-instagram {
   color: white
 }
 
-#grandContainerFooter{
+#grandContainerFooter {
   margin-top: 2vh;
 }
 
-i{
+i {
   padding: 0 8%;
   font-size: 3vw;
 }
 
-#teste{
+#teste {
   height: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
 }
-#teste2{
+
+#teste2 {
   height: 70%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
 }
-#imgEmpresa{
-  padding-bottom: 8%;
+
+#imgEmpresa {
+  width: 4vw;
+  padding-bottom: 1vw;
 }
-.TextFooter{
-  font-size: 1rem;
+
+.TextFooter {
+  margin: 0;
+  line-height: normal;
+  font-size: 1.3vw;
 }
