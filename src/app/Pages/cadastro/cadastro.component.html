@@ -1,6 +1,24 @@
 <div class="d-xs-block d-md-none" id="background">
-  <section>
-    <button></button>
+  <section class="d-flex align-items-center flex-column" id="section-container">
+    <button id="button-seta" [routerLink]="['/login']">
+      <img class="img-fluid" id="seta" src="../../../assets/Elementos/Seta.png">
+    </button>
+    <div id="img-container">
+      <img class="img-fluid" id="iso-logo" src="../../../assets/Logo/isoLogo.png">
+    </div>
+    <div id="cadastro">
+      <h1 class="text-center" id="h1-signUp">Sign Up</h1>
+
+      <ng-form method="post">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Outline form field</mat-label>
+            <input matInput placeholder="Placeholder">
+
+            
+          </mat-form-field>
+        </p>
+      </ng-form>
+    </div>
   </section>
 </div>
-

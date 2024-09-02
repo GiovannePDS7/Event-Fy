@@ -1,5 +1,64 @@
 @import url(../../../styles.css);
 
 #background{
+  height: 100vh;
   background: #000;
+}
+#button-seta{
+  left: 5%;
+  top: 4%;
+  position: absolute;
+  background: none;
+  border: none;
+}
+
+#seta{
+  width: 8vw;
+}
+
+#img-container{
+  padding-top: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+#iso-logo{
+  width: 16vw;
+}
+
+#cadastro {
+  border-top-left-radius: 63px;
+  flex: 1;
+  width: 100%;
+  background: var(--cor-primaria);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#section-container{
+  height: 100%;
+}
+
+#h1-signUp{
+  padding-top: 12%;
+  color: #000;
+  font-size: 9.5vw;
+  font-weight: bold;
+}
+
+fieldset {
+  border: 1px solid #4CAF50;
+  border-radius: 8px;
+  width: 80vw;
+}
+
+.input-form{
+  height: 100%;
+  width: 100%;
+}
+
+.legend-form{
+  font-size: 3vw;
 }
