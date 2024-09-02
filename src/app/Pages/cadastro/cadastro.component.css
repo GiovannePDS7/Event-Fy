@@ -52,32 +52,6 @@
   font-weight: bold;
 }
 
-fieldset {
-  border: 1px solid #4CAF50;
-  border-radius: 8px;
-  width: 80vw;
-}
-
-.legend-form {
-  font-size: 3vw;
-}
-
-.form-field {
-  border-radius: 8px;
-  width: 100%;
-}
-
-.p-form-input {
-  margin-top: 10%;
-  width: 80vw;
-
-}
-
-.input-form {
-
-  height: 100%;
-}
-
 /*----------------*/
 
 /* fieldset */
@@ -87,6 +61,8 @@ fieldset:disabled {
 }
 
 fieldset {
+  border-radius: 8px;
+  width: 80vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -121,7 +97,7 @@ legend {
 }
 
 .icon-form {
-  width: 6vw;
+  width: 7vw;
   float: right;
 }
 
@@ -151,7 +127,7 @@ legend {
 
 #span-SignIn {
   color: var(--cor-secundaria);
-  font-size: 4.5vw;
+  font-size: 4vw;
   font-style: italic;
 }
 

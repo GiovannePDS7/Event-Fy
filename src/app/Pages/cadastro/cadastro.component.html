@@ -16,23 +16,27 @@
         </fieldset>
         <fieldset>
           <legend>E-mail</legend>
-          <input class="input-form" matInput type="email" placeholder="email@gmail.com">
+          <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
         </fieldset>
         <fieldset>
           <legend>Senha</legend>
-          <input class="input-form" matInput type="password" placeholder="* * * *">
-          <img class="img-fluid icon-form" src="../../../assets/Elementos/password_hide.png">
+          <input class="input-form" matInput [type]="typeInput" placeholder="* * * *">
+          <img class="img-fluid icon-form"
+            [src]="typeInput === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
+            (click)="visibilidadeSenha()">
         </fieldset>
         <fieldset>
           <legend>Confirmar Senha</legend>
-          <input class="input-form" matInput type="password" placeholder="* * * *">
-          <img class="img-fluid icon-form" src="../../../assets/Elementos/password_hide.png">
+          <input class="input-form" matInput [type]="typeInputConfirm" placeholder="* * * *">
+          <img class="img-fluid icon-form"
+            [src]="typeInputConfirm === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
+            (click)="visibilidadeConfirmSenha()">
         </fieldset>
         <button id="button-submit">Sign Up</button>
 
         <div id="container-SignIn">
-          <span id="span-SignIn">Já tem uma conta? <a id="a-SignIn" [routerLink]="['/login']">Sign In</a></span>
+          <span id="span-SignIn">Já tem uma conta ? <a id="a-SignIn" [routerLink]="['/login']">Sign In</a></span>
         </div>
       </ng-form>
     </div>

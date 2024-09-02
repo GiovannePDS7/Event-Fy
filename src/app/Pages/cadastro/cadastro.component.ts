@@ -1,6 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-cadastro',
@@ -9,5 +7,13 @@ import { MatInputModule } from '@angular/material/input';
   encapsulation: ViewEncapsulation.None
 })
 export class CadastroComponent {
+  typeInput: string = 'password';
+  typeInputConfirm: string = 'password';
 
+  visibilidadeSenha(): void {
+    this.typeInput = this.typeInput === 'password' ? 'text' : 'password';
+  }
+  visibilidadeConfirmSenha(): void {
+    this.typeInputConfirm = this.typeInputConfirm === 'password' ? 'text' : 'password';
+  }
 }

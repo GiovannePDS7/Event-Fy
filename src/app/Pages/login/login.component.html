@@ -1,18 +1,38 @@
 <div class="d-xs-block d-md-none" id="background">
-  <section id="containerSection">
-      <button id="button-seta">
-        <img src="../../../assets/Elementos/Seta.png" class="img_fluid" id="Seta">
-      </button>
-      <div id="containerLogo">
-        <img src="../../../assets/Logo/isoLogo.png" id="logo" class="img_fluid">
-      </div>
-  </section>
-  <section>
-      <div id="containerLogin">
-        <form method="get">
+  <section id="containerSection" class="d-flex align-items-center justify-content- flex-column">
+    <button id="button-seta" [routerLink]="['/apresentacao']">
+      <img class="img-fluid" id="seta" src="../../../assets/Elementos/Seta.png">
+    </button>
+    <div id="img-container">
+      <img src="../../../assets/Logo/isoLogo.png" id="iso-logo" class="img_fluid">
+    </div>
+    <div id="Login">
+      <h1 class="text-center" id="h1-Login">Login</h1>
+      <ng-form method="get" id="formulario">
+        <fieldset>
+          <legend>E-mail</legend>
+          <input class="input-form" matInput type="text" placeholder="seuemail@gmail.com">
+          <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
+        </fieldset>
+        <fieldset>
+          <legend>Senha</legend>
+          <input class="input-form" matInput [type]="typeSenha" placeholder="* * * *">
+          <img class="img-fluid icon-form"
+            [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
+            (click)="visibilidadeSenha()">
+        </fieldset>
+        <div class="w-100 d-flex align-items-center flex-column">
+          <button id="button-submit">Entrar</button>
+          <div id="container-EsqueceuSenha">
+            <a id="a-ES" [routerLink]="['/']">Esqueceu a senha ?</a>
+          </div>
+        </div>
 
-        </form>
-        <button id="btnLogin">Login</button>
-      </div>
+        <div id="container-SignUp">
+          <span id="span-SignUp">Ainda não tem uma conta ? <a id="a-SignUp"
+              [routerLink]="['/cadastro']">Cadastre-se</a></span>
+        </div>
+      </ng-form>
+    </div>
   </section>
 </div>

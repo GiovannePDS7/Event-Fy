@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  typeSenha: string = 'password';
 
+  visibilidadeSenha(): void {
+    this.typeSenha = this.typeSenha === 'password' ? 'text' : 'password';
+  }
 }
