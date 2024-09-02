@@ -1,86 +1,54 @@
 #background{
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+  background: black;
+  height: 100vh;
+}
+#seta{
+  width: 8vw;
+}
+#button-seta{
+  top: 4%;
+  left: 5%;
+  position: absolute;
+  border: none;
+  background: none;
 }
 #logo{
-    padding: 55% 5% 10%;
-    width: 35%;
+  margin-top: 20%;
+  margin-bottom: 15%;;
+  width: 25%;
 }
-#container-Logo h1{
-    font-size: 6vh;
-    font-weight: bold;
-    color: var(--text-color);
+#containerSection{
+  text-align: center;
 }
-#littleContainerLogin{
-    border-radius: 30px 30px 0 0;
-    width: 100%;
-    background-color: var(--cor-secundaria);
-    padding-top: 8%;
-    padding-left: 7%;
+#containerInput{
+  border: 1px solid;
 }
-#littleContainerLogin h1{
-    text-align: start;
-    font-size: 4vh;
-    font-weight: bolder;
-    font-style: italic;
-    margin-bottom: 8%;
+#containerLogin{
+  background-color: #fff;
+  width: 100%;
+  height: 75vh;
+  border-radius: 63px 0 0 0 ;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
 }
-#bigContainerLogin{
-    padding-top: 10%;
+#containerLogin h1{
+  font-size: 9.5vw;
+  padding: 13%;
+  font-weight: bold;
 }
-#email, #password{
-    width: 90%;
-    height: 5vh;
-    border: 0px;
-    border-radius: 10px;
-    font-size: 2vh;
-    margin-right: 8%;
-    margin-top: 5%;
+#containerLogin{
+  border: 1px solid;
 }
-#password{
-    margin-top: 10%;
+#btnLogin{
+  margin-top: 13%;
+  width: 90%;
+  height: 4vh;
+  border-radius: 9px;
+  font-size: 5vw;
+  font-weight: bold;
+  background-color: black;
+  color: var(--text-color);
+  border: none;
+  box-shadow: none;
 }
-#container-Forgot{
-    width: 90%;
-    text-align: end;
-    margin-top: 1%;
-}
-#forgot{
-    color: var(--text-color);
-}
-#container-Btn{
-    width: 90%;
-}
-#btnEntrar{
-    border: 0;
-    border-radius: 10px;
-    width: 80%;
-    color: var(--text-color);
-    background-color: var(--cor-footer);
-    height: 6vh;
-    margin-top: 11%;
-    font-size: 4vh;
-    font-weight: bold;
-    font-style: italic;
-}
-#container-Linkregister{
-    margin-top: 6%;
-    text-align: center;
-    width: 90%;
-    font-style: italic;
-}
-#container-Linkregister h1{
-    text-align: center;
-    font-size: 2.5vh;
-    font-weight: normal;
-}
-#container-Linkregister a{
-    font-size: 2vh;
-    color: var(--text-color);
-
-}
-
-
-
