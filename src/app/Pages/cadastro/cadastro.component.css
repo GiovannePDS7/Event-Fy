@@ -1,10 +1,11 @@
 @import url(../../../styles.css);
 
-#background{
+#background {
   height: 100vh;
   background: #000;
 }
-#button-seta{
+
+#button-seta {
   left: 5%;
   top: 4%;
   position: absolute;
@@ -12,18 +13,19 @@
   border: none;
 }
 
-#seta{
+#seta {
   width: 8vw;
 }
 
-#img-container{
+#img-container {
   padding-top: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 10%;
 }
-#iso-logo{
+
+#iso-logo {
   width: 16vw;
 }
 
@@ -35,14 +37,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 10%;
 }
 
-#section-container{
+#section-container {
   height: 100%;
 }
 
-#h1-signUp{
-  padding-top: 12%;
+#h1-signUp {
+  margin: 0;
+  padding-bottom: 10%;
   color: #000;
   font-size: 9.5vw;
   font-weight: bold;
@@ -54,11 +58,104 @@ fieldset {
   width: 80vw;
 }
 
-.input-form{
-  height: 100%;
+.legend-form {
+  font-size: 3vw;
+}
+
+.form-field {
+  border-radius: 8px;
   width: 100%;
 }
 
-.legend-form{
-  font-size: 3vw;
+.p-form-input {
+  margin-top: 10%;
+  width: 80vw;
+
+}
+
+.input-form {
+
+  height: 100%;
+}
+
+/*----------------*/
+
+/* fieldset */
+fieldset:disabled {
+  pointer-events: revert;
+  opacity: revert;
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: revert;
+  margin: revert;
+  padding: 0 0% 1.5% 3%;
+  border: 1.5px solid var(--cor-secundaria);
+}
+
+legend {
+  float: none;
+  width: auto;
+  margin: 0;
+  font-size: 4.5vw;
+  padding: 0 3%;
+  font-style: italic;
+}
+
+/*----------------*/
+
+.input-form {
+  all: unset;
+  height: 100%;
+  width: 80%;
+  padding-left: 4%;
+  font-size: 4vw;
+}
+
+.input-form::placeholder {
+  color: #8a8a8a;
+  font-style: italic;
+}
+
+.icon-form {
+  width: 6vw;
+  float: right;
+}
+
+#formulario {
+  width: 100%;
+  height: 120vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#button-submit {
+  height: 9.3vw;
+  border-radius: 8px;
+  background: #000;
+  color: var(--cor-primaria);
+  border: none;
+  width: 90%;
+  font-size: 5.2vw;
+  font-weight: bold;
+}
+
+#container-SignIn {
+  margin-bottom: 10vw;
+}
+
+#span-SignIn {
+  color: var(--cor-secundaria);
+  font-size: 4.5vw;
+  font-style: italic;
+}
+
+#a-SignIn {
+  color: #000;
+  text-decoration: underline;
 }

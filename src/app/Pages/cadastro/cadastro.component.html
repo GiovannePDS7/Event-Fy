@@ -8,16 +8,32 @@
     </div>
     <div id="cadastro">
       <h1 class="text-center" id="h1-signUp">Sign Up</h1>
+      <ng-form method="post" id="formulario">
+        <fieldset>
+          <legend>Username</legend>
+          <input class="input-form" matInput type="text" placeholder="usuário_1234">
+          <img class="img-fluid icon-form" src="../../../assets/Elementos/username.png">
+        </fieldset>
+        <fieldset>
+          <legend>E-mail</legend>
+          <input class="input-form" matInput type="email" placeholder="email@gmail.com">
+          <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
+        </fieldset>
+        <fieldset>
+          <legend>Senha</legend>
+          <input class="input-form" matInput type="password" placeholder="* * * *">
+          <img class="img-fluid icon-form" src="../../../assets/Elementos/password_hide.png">
+        </fieldset>
+        <fieldset>
+          <legend>Confirmar Senha</legend>
+          <input class="input-form" matInput type="password" placeholder="* * * *">
+          <img class="img-fluid icon-form" src="../../../assets/Elementos/password_hide.png">
+        </fieldset>
+        <button id="button-submit">Sign Up</button>
 
-      <ng-form method="post">
-        <p>
-          <mat-form-field appearance="outline">
-            <mat-label>Outline form field</mat-label>
-            <input matInput placeholder="Placeholder">
-
-            
-          </mat-form-field>
-        </p>
+        <div id="container-SignIn">
+          <span id="span-SignIn">Já tem uma conta? <a id="a-SignIn" [routerLink]="['/login']">Sign In</a></span>
+        </div>
       </ng-form>
     </div>
   </section>
