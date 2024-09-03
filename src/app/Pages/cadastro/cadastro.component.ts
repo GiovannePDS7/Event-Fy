@@ -10,5 +10,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
   encapsulation: ViewEncapsulation.None
 })
 export class CadastroComponent {
+  typeInput: string = 'password';
+  typeInputConfirm: string = 'password';
 
+  visibilidadeSenha(): void {
+    this.typeInput = this.typeInput === 'password' ? 'text' : 'password';
+  }
+  visibilidadeConfirmSenha(): void {
+    this.typeInputConfirm = this.typeInputConfirm === 'password' ? 'text' : 'password';
+  }
 }

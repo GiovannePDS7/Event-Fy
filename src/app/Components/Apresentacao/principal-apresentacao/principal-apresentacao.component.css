@@ -39,6 +39,10 @@
   font-weight: bold;
 }
 
+#h1-mobile {
+  padding-top: 8%;
+}
+
 #color-h1 {
   color: var(--cor-secundaria);
 }
