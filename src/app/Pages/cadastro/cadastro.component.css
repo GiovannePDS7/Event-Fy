@@ -12,11 +12,29 @@
   background: none;
   border: none;
 }
-
+#button-setaLg {
+  left: 5%;
+  top: 5%;
+  position: absolute;
+  background: none;
+  border: none;
+}
+#container-SignupLg h1{
+  position: absolute;
+  top: 10%;
+  left: 29%;
+  font-size: 6vw;
+  font-weight: bold;
+}
+#containerCadastro{
+  top: 50%
+}
 #seta {
   width: 8vw;
 }
-
+#setaLg{
+  width: 5vw;
+}
 #img-container {
   padding-top: 15%;
   display: flex;
@@ -96,6 +114,25 @@ fieldset {
   border: 1.5px solid var(--cor-secundaria);
 }
 
+#containerInputUser, #containerInputEmail, #containerInputPass, #containerInputConfirm{
+  width: 80%;
+  height: 9vh;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  margin-right: auto;
+  margin-left: auto;
+}
+#containerInputEmail{
+  top: 35%;
+}
+#containerInputPass{
+  top: 50%;
+}
+#containerInputConfirm{
+  top: 65%;
+}
+
 legend {
   float: none;
   width: auto;
@@ -105,14 +142,24 @@ legend {
   font-style: italic;
 }
 
+.legendLg{
+  font-size:2.5vw;
+}
+
 /*----------------*/
 
-.input-form {
+.input-form, .input-formLg {
   all: unset;
   height: 100%;
   width: 80%;
   padding-left: 4%;
   font-size: 4vw;
+}
+.input-formLg{
+  font-size: 2vw;
+  width: 100%;
+  padding-left: 3%;
+  padding-top: 2%;
 }
 
 .input-form::placeholder {
@@ -134,7 +181,16 @@ legend {
   flex-direction: column;
 }
 
-#button-submit {
+#formularioLg{
+  width: 100%;
+}
+
+#icon-formlg{
+  width: 9%;
+  padding-right: 3%;
+}
+
+#button-submit, #button-submitLg {
   height: 9.3vw;
   border-radius: 8px;
   background: #000;
@@ -144,15 +200,34 @@ legend {
   font-size: 5.2vw;
   font-weight: bold;
 }
+#button-submitLg{
+  position: absolute;
+  left: 1%;
+  top: 80%;
+  height: 5vh;
+  width: 98%;
+  font-size: 2vw;
+}
 
 #container-SignIn {
   margin-bottom: 10vw;
 }
+#container-SignInLg{
+  position: absolute;
+  width: 90%;
+  font-size: 2vw;
+  left: 5%;
+  top: 90%;
+  text-align: center;
+}
 
-#span-SignIn {
+#span-SignIn, #span-SignInLg {
   color: var(--cor-secundaria);
   font-size: 4.5vw;
   font-style: italic;
+}
+#span-SignInLg{
+  font-size: 2vw;
 }
 
 #a-SignIn {

@@ -15,6 +15,8 @@ import { FuncionalidadesComponent } from './Components/Apresentacao/funcionalida
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import {MatInputModule} from '@angular/material/input';
     BrowserAnimationsModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
