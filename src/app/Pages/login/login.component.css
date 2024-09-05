@@ -154,3 +154,107 @@ legend {
   color: #000;
   text-decoration: underline;
 }
+
+
+/*LG*/
+
+#button-setaLg {
+  left: 5%;
+  top: 7%;
+  position: absolute;
+  background: none;
+  border: none;
+}
+
+#container-SignupLg h1{
+  position: absolute;
+  top: 20%;
+  left: 36%;
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+#setaLg{
+  width: 5vw;
+}
+
+.legendLg{
+  font-size:2.5vw;
+}
+
+.input-form, .input-formLg {
+  all: unset;
+  height: 100%;
+  width: 80%;
+  padding-left: 4%;
+  font-size: 4vw;
+}
+.input-formLg{
+  font-size: 2vw;
+  width: 100%;
+  padding-left: 3%;
+  padding-top: 2%;
+}
+
+#formularioLg{
+  width: 100%;
+}
+
+#icon-formlg{
+  width: 9%;
+  padding-right: 3%;
+}
+
+#button-submit, #button-submitLg {
+  height: 9.3vw;
+  border-radius: 8px;
+  background: #000;
+  color: var(--cor-primaria);
+  border: none;
+  width: 90%;
+  font-size: 5.2vw;
+  font-weight: bold;
+}
+#button-submitLg{
+  position: absolute;
+  left: 1%;
+  top: 70%;
+  height: 5vh;
+  width: 98%;
+  font-size: 2vw;
+}
+
+#container-SignInLg{
+  position: absolute;
+  width: 90%;
+  font-size: 2vw;
+  left: 5%;
+  top: 85%;
+  text-align: center;
+}
+
+#span-SignIn, #span-SignInLg {
+  color: var(--cor-secundaria);
+  font-size: 4vw;
+  font-style: italic;
+}
+#span-SignInLg{
+  font-size: 2vw;
+}
+
+#containerInputUser, #containerInputEmail{
+  width: 80%;
+  height: 9vh;
+  position: absolute;
+  top: 33%;
+  left: 10%;
+  margin-right: auto;
+  margin-left: auto;
+}
+#containerInputEmail{
+  top: 50%;
+}
+
+#imgLogin{
+  width: 90%;
+}
