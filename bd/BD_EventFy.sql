@@ -5,7 +5,8 @@ USE EventFy;
 CREATE TABLE Organizador(
 	Id_Organizador		  INT PRIMARY KEY IDENTITY(1, 1),
 	Nome_Organizador	  CHAR(60) NOT NULL,
-	Email_Organizador	  VARCHAR(50) NOT NULL,
+  Foto_Organizador    VARBINARY(1000),
+	Email_Organizador	  VARCHAR(50)  UNIQUE NOT NULL,
 	Senha_Oganizador	  VARCHAR(50) NOT NULL,
 	Contato_Organizador	VARCHAR(20) NOT NULL,
 	Data_Cadastro		    DATETIME
@@ -65,6 +66,9 @@ CREATE TABLE Cliente(
   Email_Cliente       VARCHAR(50) NOT NULL,
   Contato_Cliente     VARCHAR(20) NOT NULL
 )
+
+
+
 
 
 --Visualizar as Tabelas Criadas
