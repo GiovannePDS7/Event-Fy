@@ -15,12 +15,16 @@
   text-align: center;
 }
 
-.card {
+.card{
   margin-left: 7.5%;
   margin-bottom: 3%;
   width: 85%;
   text-align: center;
   border: 2px solid var(--cor-secundaria);
+}
+
+#card-Lg{
+  width: 30%;
 }
 
 .card h1 {
@@ -110,4 +114,8 @@ li.custom-list-item::before {
 .preco-left {
   height: 100%;
   font-size: 7vw;
+}
+
+#container-CardLg{
+  display: flex;
 }
