@@ -22,8 +22,8 @@
 #container-SignupLg h1{
   position: absolute;
   top: 10%;
-  left: 29%;
-  font-size: 6vw;
+  left: 36%;
+  font-size: 4vw;
   font-weight: bold;
 }
 #containerCadastro{
@@ -33,7 +33,7 @@
   width: 8vw;
 }
 #setaLg{
-  width: 5vw;
+  width: 4vw;
 }
 #img-container {
   padding-top: 15%;
@@ -92,7 +92,7 @@ fieldset {
 
 #containerInputUser, #containerInputEmail, #containerInputPass, #containerInputConfirm{
   width: 80%;
-  height: 9vh;
+  height: 8vh;
   position: absolute;
   top: 20%;
   left: 10%;
@@ -119,10 +119,17 @@ legend {
 }
 
 .legendLg{
-  font-size:2.5vw;
+  font-size: 220%;
 }
-
 /*----------------*/
+
+#h1-signUpLg{
+  margin: 0;
+  padding-bottom: 10%;
+  color: #000;
+  font-size: 8vw;
+  font-weight: bold;
+}
 
 .input-form, .input-formLg {
   all: unset;
@@ -132,10 +139,15 @@ legend {
   font-size: 4vw;
 }
 .input-formLg{
-  font-size: 2vw;
+  font-size: 190%;
   width: 100%;
-  padding-left: 3%;
+  padding-left: 3.5%;
+}
+
+#formSenha{
   padding-top: 2%;
+  font-size: 200%;
+  padding-left: 3%;
 }
 
 .input-form::placeholder {
@@ -178,11 +190,11 @@ legend {
 }
 #button-submitLg{
   position: absolute;
-  left: 1%;
+  left: 10%;
   top: 80%;
-  height: 5vh;
-  width: 98%;
-  font-size: 2vw;
+  height: 5.5vh;
+  width: 80%;
+  font-size: 1.5vw;
 }
 
 #container-SignIn {
@@ -203,7 +215,7 @@ legend {
   font-style: italic;
 }
 #span-SignInLg{
-  font-size: 2vw;
+  font-size: 1.7vw;
 }
 
 #a-SignIn {

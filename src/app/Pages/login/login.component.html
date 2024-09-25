@@ -29,8 +29,7 @@
         </div>
 
         <div id="container-SignUp">
-          <span id="span-SignUp">Ainda não tem uma conta ? <a id="a-SignUp"
-              [routerLink]="['/cadastro']">Cadastre-se</a></span>
+          <span id="span-SignUp">Ainda não tem uma conta ? <a id="a-SignUp" [routerLink]="['/cadastro']">Cadastre-se</a></span>
         </div>
       </ng-form>
     </div>
@@ -45,7 +44,7 @@
       </mat-grid-tile>
       <mat-grid-tile id="container-SignupLg">
         <section>
-          <button id="button-setaLg" [routerLink]="['/login']">
+          <button id="button-setaLg" [routerLink]="['/apresentacao']">
               <img class="img-fluid" id="setaLg" src="../../../assets/Elementos/SetaP.png">
           </button>
           <h1>Login</h1>
@@ -57,16 +56,17 @@
                   <input class="input-formLg" matInput type="text" placeholder="usuário_1234">
                   <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/username.png">
               </fieldset>
+
               <fieldset id="containerInputEmail">
                   <legend class="legendLg">Senha</legend>
-                  <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *">
+                  <input class="input-formLg" id="formSenha" matInput [type]="typeSenha" placeholder="* * * *">
                   <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/password_hide.png">
               </fieldset>
               
               <button id="button-submitLg">Login</button>
           </ng-form>
           <div id="container-SignInLg">
-              <span id="span-SignInLg">Ainda não tem conta? <a id="a-SignIn" [routerLink]="['/cadastro']">Cadastre-se</a></span>
+              <span id="span-SignInLg">Ainda não tem conta? <a id="a-SignUp" [routerLink]="['/cadastro']">Cadastre-se</a></span>
           </div>   
       </section>
       </mat-grid-tile>
