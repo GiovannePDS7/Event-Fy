@@ -91,11 +91,11 @@ fieldset {
 }
 
 #containerInputUser, #containerInputEmail, #containerInputPass, #containerInputConfirm{
-  width: 80%;
-  height: 8vh;
+  width: 70%;
+  height: 6vh;
   position: absolute;
   top: 20%;
-  left: 10%;
+  left: 15%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -119,7 +119,7 @@ legend {
 }
 
 .legendLg{
-  font-size: 220%;
+  font-size: 1.8vw;
 }
 /*----------------*/
 
@@ -138,8 +138,10 @@ legend {
   padding-left: 4%;
   font-size: 4vw;
 }
+
+
 .input-formLg{
-  font-size: 160%;
+  font-size: 1.3vw;
   width: 100%;
   padding-left: 3.5%;
 }
@@ -188,11 +190,12 @@ legend {
   font-size: 5.2vw;
   font-weight: bold;
 }
+
 #button-submitLg{
   position: absolute;
   left: 10%;
   top: 80%;
-  height: 5.5vh;
+  height: 6vh;
   width: 80%;
   font-size: 1.5vw;
 }
@@ -216,6 +219,11 @@ legend {
 }
 #span-SignInLg{
   font-size: 1.7vw;
+}
+
+#a-ES-Lg {
+  font-size: 1vw;
+  margin-right: 5vw;
 }
 
 #a-SignIn {

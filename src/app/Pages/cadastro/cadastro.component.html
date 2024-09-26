@@ -54,27 +54,38 @@
             </section>
             <section>
                 <ng-form method="post" id="formularioLg">
+
                     <fieldset id="containerInputUser">
                         <legend class="legendLg">Username</legend>
                         <input class="input-formLg" matInput type="text" placeholder="usuário_1234">
                         <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/username.png">
                     </fieldset>
+
                     <fieldset id="containerInputEmail">
-                        <legend class="legendLg">Email</legend>
-                        <input class="input-formLg" matInput type="email" placeholder="email@gmail.com">
-                        <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
+                      <legend class="legendLg">E-mail</legend>
+                      <input class="input-formLg" matInput type="email" placeholder="seuemail@gmail.com">
+                      <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
                     </fieldset>
+
                     <fieldset id="containerInputPass">
-                        <legend class="legendLg">Senha</legend>
-                        <input class="input-formLg" id="formSenha" matInput type="password" placeholder="* * * *">
-                        <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/password_hide.png">
+                      <legend class="legendLg">Senha</legend>
+                      <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *">
+                      <img class="img-fluid icon-form icon-form-password" id="icon-formlg"
+                        [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
+                        (click)="visibilidadeSenha()">
                     </fieldset>
+
                     <fieldset id="containerInputConfirm">
                         <legend class="legendLg">Confirmar Senha</legend>
-                        <input class="input-formLg" id="formSenha" matInput type="password" placeholder="* * * *">
-                        <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/password_hide.png">
+                        <input class="input-formLg" matInput [type]="typeConfirmSenha" placeholder="* * * *">
+                        <img class="img-fluid icon-form icon-form-password" id="icon-formlg" src="../../../assets/Elementos/password_hide.png"
+                        [src]="typeConfirmSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
+                        (click)="visibilidadeConfirmSenha()">
                     </fieldset>
-                    <button id="button-submitLg">Sign Up</button>
+
+                    <div id="btn-formLg">
+                      <button id="button-submitLg">Login</button>
+                    </div>
                 </ng-form>
                 <div id="container-SignInLg">
                     <span id="span-SignInLg">Já tem uma conta? <a id="a-SignIn" [routerLink]="['/login']">Sign In</a></span>

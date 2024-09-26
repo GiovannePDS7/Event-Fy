@@ -9,11 +9,13 @@
     <div id="Login">
       <h1 class="text-center" id="h1-Login">Login</h1>
       <ng-form method="get" id="formulario">
+
         <fieldset>
           <legend>E-mail</legend>
           <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
         </fieldset>
+
         <fieldset>
           <legend>Senha</legend>
           <input class="input-form" matInput [type]="typeSenha" placeholder="* * * *">
@@ -21,6 +23,7 @@
             [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
             (click)="visibilidadeSenha()">
         </fieldset>
+        
         <div class="w-100 d-flex align-items-center flex-column">
           <button id="button-submit">Entrar</button>
           <div id="container-EsqueceuSenha">
