@@ -11,7 +11,7 @@
       <ng-form method="get" id="formulario">
         <fieldset>
           <legend>E-mail</legend>
-          <input class="input-form" matInput type="text" placeholder="seuemail@gmail.com">
+          <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
         </fieldset>
         <fieldset>
@@ -24,12 +24,13 @@
         <div class="w-100 d-flex align-items-center flex-column">
           <button id="button-submit">Entrar</button>
           <div id="container-EsqueceuSenha">
-            <a id="a-ES" [routerLink]="['/']">Esqueceu a senha ?</a>
+            <a id="a-ES" [routerLink]="['/']">Esqueceu a senha?</a>
           </div>
         </div>
 
         <div id="container-SignUp">
-          <span id="span-SignUp">Ainda não tem uma conta ? <a id="a-SignUp" [routerLink]="['/cadastro']">Cadastre-se</a></span>
+          <span id="span-SignUp">Ainda não tem uma conta? <a id="a-SignUp"
+              [routerLink]="['/cadastro']">Cadastre-se</a></span>
         </div>
       </ng-form>
     </div>
@@ -39,36 +40,44 @@
 
 <div class="d-none d-md-block d-lg-block">
   <mat-grid-list cols="2" rowHeight="100vh">
-      <mat-grid-tile id="background">
-          <img src="../../../assets/Elementos/imgLogin.png" id="imgLogin">
-      </mat-grid-tile>
-      <mat-grid-tile id="container-SignupLg">
-        <section>
-          <button id="button-setaLg" [routerLink]="['/apresentacao']">
-              <img class="img-fluid" id="setaLg" src="../../../assets/Elementos/SetaP.png">
-          </button>
-          <h1>Login</h1>
-      </section>
+    <mat-grid-tile id="background">
+      <img src="../../../assets/Elementos/imgLogin.png" id="imgLogin">
+    </mat-grid-tile>
+    <mat-grid-tile id="container-SignupLg">
       <section>
-          <ng-form method="post" id="formularioLg">
-              <fieldset id="containerInputUser">
-                  <legend class="legendLg">Username</legend>
-                  <input class="input-formLg" matInput type="text" placeholder="usuário_1234">
-                  <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/username.png">
-              </fieldset>
-
-              <fieldset id="containerInputEmail">
-                  <legend class="legendLg">Senha</legend>
-                  <input class="input-formLg" id="formSenha" matInput [type]="typeSenha" placeholder="* * * *">
-                  <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/password_hide.png">
-              </fieldset>
-              
-              <button id="button-submitLg">Login</button>
-          </ng-form>
-          <div id="container-SignInLg">
-              <span id="span-SignInLg">Ainda não tem conta? <a id="a-SignUp" [routerLink]="['/cadastro']">Cadastre-se</a></span>
-          </div>   
+        <button id="button-setaLg" [routerLink]="['/apresentacao']">
+          <img class="img-fluid" id="setaLg" src="../../../assets/Elementos/SetaP.png">
+        </button>
+        <h1>Login</h1>
       </section>
-      </mat-grid-tile>
- </mat-grid-list>
+      <section id="section-formLg">
+        <ng-form method="get" id="formularioLg">
+          <fieldset id="containerInputUser">
+            <legend class="legendLg">E-mail</legend>
+            <input class="input-formLg" matInput type="email" placeholder="seuemail@gmail.com">
+            <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
+          </fieldset>
+
+          <fieldset id="containerInputEmail">
+            <legend class="legendLg">Senha</legend>
+            <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *">
+            <img class="img-fluid icon-form icon-form-password" id="icon-formlg"
+              [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
+              (click)="visibilidadeSenha()">
+          </fieldset>
+          <div id="btn-formLg">
+            <button id="button-submitLg">Login</button>
+            <div id="container-EsqueceuSenha-Lg">
+              <a id="a-ES-Lg" [routerLink]="['/']">Esqueceu a senha?</a>
+            </div>
+
+          </div>
+        </ng-form>
+        <div id="container-SignInLg">
+          <span id="span-SignInLg">Ainda não tem conta? <a id="a-SignUp"
+              [routerLink]="['/cadastro']">Cadastre-se</a></span>
+        </div>
+      </section>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>

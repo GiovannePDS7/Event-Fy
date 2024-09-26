@@ -125,13 +125,13 @@ legend {
   font-weight: bold;
 }
 
-#container-EsqueceuSenha {
+#container-EsqueceuSenha, #container-EsqueceuSenha-Lg {
   width: 100%;
   text-align: end;
   padding-top: 4vw;
 }
 
-#a-ES {
+#a-ES, #a-ES-Lg {
   color: var(--cor-secundaria);
   font-size: 3.5vw;
   font-style: italic;
@@ -166,20 +166,21 @@ legend {
   border: none;
 }
 
-#container-SignupLg h1{
+#container-SignupLg h1 {
+  color: #000;
   position: absolute;
-  top: 20%;
+  top: 13%;
   left: 36%;
-  font-size: 5vw;
+  font-size: 4.7vw;
   font-weight: bold;
 }
 
-#setaLg{
+#setaLg {
   width: 4vw;
 }
 
-.legendLg{
-  font-size: 220%;
+.legendLg {
+  font-size: 1.8vw;
 }
 
 .input-form, .input-formLg {
@@ -190,23 +191,25 @@ legend {
   font-size: 4vw;
 }
 
-.input-formLg{
-  font-size: 160%;
+.input-formLg {
+  font-size: 1.3vw;
   width: 100%;
   padding-left: 3.5%;
 }
 
-#formSenha{
-  padding-top: 2%;
+#formSenha {
   font-size: 170%;
-  padding-left: 3%;
 }
 
-#formularioLg{
-  width: 100%;
+#formularioLg {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
-#icon-formlg{
+#icon-formlg {
   width: 9%;
   padding-right: 3%;
 }
@@ -221,22 +224,20 @@ legend {
   font-size: 5.2vw;
   font-weight: bold;
 }
-#button-submitLg{
-  position: absolute;
-  left: 10%;
-  top: 70%;
+
+#button-submitLg {
   height: 6vh;
   width: 80%;
   font-size: 1.5vw;
 }
 
-#container-SignInLg{
-  position: absolute;
-  width: 90%;
-  font-size: 2vw;
-  left: 5%;
-  top: 85%;
-  text-align: center;
+#container-SignInLg {
+  margin-top: 5vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #span-SignIn, #span-SignInLg {
@@ -244,23 +245,45 @@ legend {
   font-size: 4vw;
   font-style: italic;
 }
-#span-SignInLg{
+
+#span-SignInLg {
   font-size: 1.7vw;
 }
 
-#containerInputUser, #containerInputEmail{
-  width: 80%;
-  height: 8vh;
-  position: absolute;
-  top: 33%;
-  left: 10%;
-  margin-right: auto;
-  margin-left: auto;
-}
-#containerInputEmail{
-  top: 50%;
+#containerInputUser, #containerInputEmail {
+  width: 70%;
 }
 
-#imgLogin{
+#imgLogin {
   width: 90%;
+}
+
+#section-formLg {
+  height: 28vw;
+  width: 100%;
+}
+
+#btn-formLg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#container-EsqueceuSenha-Lg {
+  padding-top: 1.5vw;
+}
+
+#a-ES-Lg {
+  font-size: 1vw;
+  margin-right: 5vw;
+}
+
+#container-SignupLg {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-form-password {
+  cursor: pointer;
 }
