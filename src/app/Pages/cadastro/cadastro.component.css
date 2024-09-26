@@ -92,7 +92,6 @@ fieldset {
 
 #containerInputUser, #containerInputEmail, #containerInputPass, #containerInputConfirm{
   width: 70%;
-  height: 6vh;
   position: absolute;
   top: 20%;
   left: 15%;
