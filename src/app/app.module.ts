@@ -12,13 +12,15 @@ import { PlanosComponent } from './Components/Apresentacao/planos/planos.compone
 import { QuemSomosComponent } from './Components/Apresentacao/quem-somos/quem-somos.component';
 import { FuncionalidadesComponent } from './Components/Apresentacao/funcionalidades/funcionalidades.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { InicialComponent } from './Pages/inicial/inicial.component';
 import { FuncionalidadesInicialComponent } from './Components/Inicial/funcionalidades-inicial/funcionalidades-inicial.component';
 import { CriacaoInicialComponent } from './Components/Inicial/criacao-inicial/criacao-inicial.component';
 import { HeaderComponent } from './Components/CP-Principais/header/header.component'
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,9 +36,11 @@ import { HeaderComponent } from './Components/CP-Principais/header/header.compon
     InicialComponent,
     FuncionalidadesInicialComponent,
     CriacaoInicialComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
+    ReactiveFormsModule,
+    MatButtonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

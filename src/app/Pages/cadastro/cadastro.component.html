@@ -44,56 +44,108 @@
 </div>
 
 <div class="d-none d-md-block d-lg-block">
-    <mat-grid-list cols="2" rowHeight="100vh">
-        <mat-grid-tile id="container-SignupLg">
-            <section>
-                <button id="button-setaLg" [routerLink]="['/login']">
-                    <img class="img-fluid" id="setaLg" src="../../../assets/Elementos/SetaP.png">
-                </button>
-                <h1 class="text-center" id="h1-signUpLg" >Sign Up</h1>
-            </section>
-            <section>
-                <ng-form method="post" id="formularioLg">
+  <mat-grid-list cols="2" rowHeight="100vh">
+    <mat-grid-tile id="container-SignupLg">
+      <section>
+        <button id="button-setaLg" [routerLink]="['/login']">
+          <img class="img-fluid" id="setaLg" src="../../../assets/Elementos/SetaP.png">
+        </button>
+        <h1 class="text-center" id="h1-signUpLg">Sign Up</h1>
+      </section>
+      <section>
+        <form id="formularioLg" class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()">
 
-                    <fieldset id="containerInputUser">
-                        <legend class="legendLg">Username</legend>
-                        <input class="input-formLg" matInput type="text" placeholder="usuário_1234">
-                        <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/username.png">
-                    </fieldset>
+          <fieldset id="containerInputUser">
+            <legend class="legendLg">Nome</legend>
+            <input class="input-formLg" type="text" placeholder="Ex: Luiz Henrique" matInput formControlName="name"
+              minlength="3" maxlength="60">
+            <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/username.png">
+          </fieldset>
+          <div id="container-erro-Nome">
+            <mat-error
+              *ngIf="cadastroForm.controls.name.hasError('required') && cadastroForm.controls.name.touched">'Nome'
+              é obrigatório</mat-error>
+            <mat-error *ngIf="cadastroForm.controls.name.hasError('minlength')">'Nome' precisa conter entre 3 e 60
+              caracteres </mat-error>
+          </div>
 
-                    <fieldset id="containerInputEmail">
-                      <legend class="legendLg">E-mail</legend>
-                      <input class="input-formLg" matInput type="email" placeholder="seuemail@gmail.com">
-                      <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
-                    </fieldset>
+          <fieldset id="containerInputEmail">
+            <legend class="legendLg">E-mail</legend>
+            <input class="input-formLg" type="email" placeholder="seuemail@gmail.com" matInput formControlName="email"
+              maxlength="50">
+            <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
+          </fieldset>
+          <div id="container-erro-Email">
+            <mat-error
+              *ngIf="cadastroForm.controls.email.hasError('required') && cadastroForm.controls.email.touched">'E-mail' é
+              obrigatório</mat-error>
+            <mat-error *ngIf="cadastroForm.controls.email.hasError('email')">E-mail inválido</mat-error>
+          </div>
 
-                    <fieldset id="containerInputPass">
-                      <legend class="legendLg">Senha</legend>
-                      <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *">
-                      <img class="img-fluid icon-form icon-form-password" id="icon-formlg"
-                        [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
-                        (click)="visibilidadeSenha()">
-                    </fieldset>
 
-                    <fieldset id="containerInputConfirm">
-                        <legend class="legendLg">Confirmar Senha</legend>
-                        <input class="input-formLg" matInput [type]="typeConfirmSenha" placeholder="* * * *">
-                        <img class="img-fluid icon-form icon-form-password" id="icon-formlg" src="../../../assets/Elementos/password_hide.png"
-                        [src]="typeConfirmSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
-                        (click)="visibilidadeConfirmSenha()">
-                    </fieldset>
+          <fieldset id="containerInputPass">
+            <legend class="legendLg">Senha</legend>
+            <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *" formControlName="senha"
+              minlength="8" maxlength="50">
+            <img class="img-fluid icon-form icon-form-password" id="icon-formlg"
+              [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
+              (click)="visibilidadeSenha()">
+          </fieldset>
+          <div id="container-erro-Senha">
+            <mat-error
+              *ngIf="cadastroForm.controls.senha.hasError('required') && cadastroForm.controls.senha.touched">'Senha' é
+              obrigatório</mat-error>
 
-                    <div id="btn-formLg">
-                      <button id="button-submitLg">Login</button>
-                    </div>
-                </ng-form>
-                <div id="container-SignInLg">
-                    <span id="span-SignInLg">Já tem uma conta? <a id="a-SignIn" [routerLink]="['/login']">Sign In</a></span>
-                </div>   
-            </section>
-        </mat-grid-tile>
-        <mat-grid-tile id="background">
-            <img src="../../../assets/Elementos/imgSingUp.png">
-        </mat-grid-tile>
-   </mat-grid-list>
+            <mat-error
+              *ngIf="cadastroForm.controls.senha.hasError('minlength') && cadastroForm.controls.senha.hasError('pattern')">
+              A senha deve ter de 8 a 50 caracteres e não pode conter espaços.
+            </mat-error>
+
+            <mat-error
+              *ngIf="cadastroForm.controls.senha.hasError('minlength') && !cadastroForm.controls.senha.hasError('pattern')">
+              A senha deve ter de 8 a 50 caracteres
+            </mat-error>
+
+
+            <mat-error
+              *ngIf="cadastroForm.controls.senha.hasError('pattern') && !cadastroForm.controls.senha.hasError('minlength')">
+              A senha não pode conter espaços.
+            </mat-error>
+          </div>
+
+
+          <fieldset id="containerInputConfirm">
+            <legend class="legendLg">Confirmar Senha</legend>
+            <input class="input-formLg" matInput [type]="typeConfirmSenha" placeholder="* * * *"
+              formControlName="confirmarSenha" maxlength="50">
+            <img class="img-fluid icon-form icon-form-password" id="icon-formlg"
+              src="../../../assets/Elementos/password_hide.png"
+              [src]="typeConfirmSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
+              (click)="visibilidadeConfirmSenha()">
+          </fieldset>
+          <div id="container-erro-ConfirmSenha">
+
+            <mat-error
+              *ngIf="cadastroForm.controls.confirmarSenha.hasError('required') && cadastroForm.controls.confirmarSenha.touched">'Confirmar
+              Senha' é
+              obrigatório</mat-error>
+
+            <mat-error
+              *ngIf="cadastroForm.controls.senha.value != cadastroForm.controls.confirmarSenha.value && cadastroForm.controls.confirmarSenha.touched &&  (cadastroForm.controls.confirmarSenha.value?.length != 0)">A
+              senha deve ser igual</mat-error>
+          </div>
+
+          <div id="btn-formLg">
+            <button mat-flat-button id="button-submitLg">Login</button>
+          </div>
+        </form>
+        <div id="container-SignInLg">
+          <span id="span-SignInLg">Já tem uma conta? <a id="a-SignIn" [routerLink]="['/login']">Sign In</a></span>
+        </div>
+      </section>
+    </mat-grid-tile>
+    <mat-grid-tile id="background">
+      <img src="../../../assets/Elementos/imgSingUp.png">
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>

@@ -1,7 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { FormBuilder, FormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro',
@@ -20,5 +18,25 @@ export class CadastroComponent {
   }
   visibilidadeConfirmSenha(): void {
     this.typeConfirmSenha = this.typeConfirmSenha === 'password' ? 'text' : 'password';
+  }
+
+  constructor(private formBuilder: FormBuilder) { }
+
+  cadastroForm = this.formBuilder.group({
+    name: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(60)]),
+    email: this.formBuilder.control('', [Validators.email, Validators.required, Validators.maxLength(50)]),
+    senha: this.formBuilder.control('', [Validators.required,Validators.pattern('^(?!.*\\s).*$'), Validators.minLength(8), Validators.maxLength(50)]),
+    confirmarSenha:  this.formBuilder.control('', [Validators.required])
+  });
+  
+  onEnviar() {
+  this.cadastroForm.markAllAsTouched();
+
+  if (this.cadastroForm.valid) {
+    console.table(this.cadastroForm.value);
+    
+  } else {
+    console.log('Formulário inválido');
+  }
   }
 }

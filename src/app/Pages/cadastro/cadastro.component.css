@@ -12,6 +12,7 @@
   background: none;
   border: none;
 }
+
 #button-setaLg {
   left: 5%;
   top: 5%;
@@ -19,22 +20,27 @@
   background: none;
   border: none;
 }
-#container-SignupLg h1{
+
+#container-SignupLg h1 {
   position: absolute;
   top: 10%;
   left: 36%;
   font-size: 4vw;
   font-weight: bold;
 }
-#containerCadastro{
+
+#containerCadastro {
   top: 50%
 }
+
 #seta {
   width: 8vw;
 }
-#setaLg{
+
+#setaLg {
   width: 4vw;
 }
+
 #img-container {
   padding-top: 15%;
   display: flex;
@@ -90,7 +96,7 @@ fieldset {
   border: 1.5px solid var(--cor-secundaria);
 }
 
-#containerInputUser, #containerInputEmail, #containerInputPass, #containerInputConfirm{
+#containerInputUser, #containerInputEmail, #containerInputPass, #containerInputConfirm {
   width: 70%;
   position: absolute;
   top: 20%;
@@ -98,13 +104,16 @@ fieldset {
   margin-right: auto;
   margin-left: auto;
 }
-#containerInputEmail{
+
+#containerInputEmail {
   top: 35%;
 }
-#containerInputPass{
+
+#containerInputPass {
   top: 50%;
 }
-#containerInputConfirm{
+
+#containerInputConfirm {
   top: 65%;
 }
 
@@ -117,12 +126,13 @@ legend {
   font-style: italic;
 }
 
-.legendLg{
+.legendLg {
   font-size: 1.8vw;
 }
+
 /*----------------*/
 
-#h1-signUpLg{
+#h1-signUpLg {
   margin: 0;
   padding-bottom: 10%;
   color: #000;
@@ -139,13 +149,13 @@ legend {
 }
 
 
-.input-formLg{
+.input-formLg {
   font-size: 1.3vw;
   width: 100%;
   padding-left: 3.5%;
 }
 
-#formSenha{
+#formSenha {
   padding-top: 2%;
   font-size: 170%;
   padding-left: 3%;
@@ -170,11 +180,11 @@ legend {
   flex-direction: column;
 }
 
-#formularioLg{
+#formularioLg {
   width: 100%;
 }
 
-#icon-formlg{
+#icon-formlg {
   width: 9%;
   padding-right: 3%;
 }
@@ -190,7 +200,7 @@ legend {
   font-weight: bold;
 }
 
-#button-submitLg{
+#button-submitLg {
   position: absolute;
   left: 10%;
   top: 80%;
@@ -202,7 +212,8 @@ legend {
 #container-SignIn {
   margin-bottom: 10vw;
 }
-#container-SignInLg{
+
+#container-SignInLg {
   position: absolute;
   width: 90%;
   font-size: 2vw;
@@ -216,7 +227,8 @@ legend {
   font-size: 4vw;
   font-style: italic;
 }
-#span-SignInLg{
+
+#span-SignInLg {
   font-size: 1.7vw;
 }
 
@@ -228,4 +240,21 @@ legend {
 #a-SignIn {
   color: #000;
   text-decoration: underline;
+}
+
+#container-erro-Nome, #container-erro-Email, #container-erro-Senha, #container-erro-ConfirmSenha {
+  position: absolute;
+  top: 30%;
+  left: 16%;
+}
+
+#container-erro-Email {
+  top: 45%
+}
+#container-erro-Senha{ 
+  top: 60%;
+}
+
+#container-erro-ConfirmSenha{
+  top: 75%
 }
