@@ -251,10 +251,30 @@ legend {
 #container-erro-Email {
   top: 45%
 }
-#container-erro-Senha{ 
+#container-erro-Senha{
   top: 60%;
 }
 
 #container-erro-ConfirmSenha{
   top: 75%
 }
+
+#container-erro-Nome-Mobile, #container-erro-Email-Mobile, #container-erro-Senha-Mobile, #container-erro-ConfirmSenha-Mobile{
+  position: absolute;
+  top: 36%;
+  left: 16%;
+
+}
+#container-erro-Email-Mobile{
+ top: 45.5%;
+
+}
+
+#container-erro-Senha-Mobile{
+  top: 54.5%;
+}
+
+#container-erro-ConfirmSenha-Mobile{
+  top: 63.5%;
+}
+

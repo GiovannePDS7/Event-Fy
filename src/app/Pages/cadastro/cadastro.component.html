@@ -8,41 +8,89 @@
     </div>
     <div id="cadastro">
       <h1 class="text-center" id="h1-signUp">Sign Up</h1>
-      <ng-form method="post" id="formulario">
+      <form method="post" id="formulario" class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()" >
         <fieldset>
           <legend>Username</legend>
-          <input class="input-form" matInput type="text" placeholder="usuário_1234">
+          <input class="input-form" matInput type="text" placeholder="usuário_1234" formControlName="name"
+          minlength="3" maxlength="60">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/username.png">
         </fieldset>
+        <div id="container-erro-Nome-Mobile">
+          <mat-error
+            *ngIf="cadastroForm.controls.name.hasError('required') && cadastroForm.controls.name.touched">'Nome'
+            é obrigatório</mat-error>
+          <mat-error *ngIf="cadastroForm.controls.name.hasError('minlength')">'Nome' precisa conter entre 3 e 60
+            caracteres </mat-error>
+        </div>
+
         <fieldset>
           <legend>E-mail</legend>
-          <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com">
+          <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com" formControlName="email"
+          maxlength="50">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
         </fieldset>
+      <div id="container-erro-Email-Mobile">
+        <mat-error
+          *ngIf="cadastroForm.controls.email.hasError('required') && cadastroForm.controls.email.touched">'E-mail' é
+          obrigatório</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.email.hasError('email')">E-mail inválido</mat-error>
+      </div>
         <fieldset>
           <legend>Senha</legend>
-          <input class="input-form" matInput [type]="typeInput" placeholder="* * * *">
+          <input class="input-form" matInput [type]="typeInput" placeholder="* * * *" formControlName="senha"
+          minlength="8" maxlength="50">
           <img class="img-fluid icon-form"
             [src]="typeInput === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
             (click)="visibilidadeSenha()">
         </fieldset>
+        <div id="container-erro-Senha-Mobile">
+          <mat-error
+            *ngIf="cadastroForm.controls.senha.hasError('required') && cadastroForm.controls.senha.touched">'Senha' é
+            obrigatório</mat-error>
+
+          <mat-error
+            *ngIf="cadastroForm.controls.senha.hasError('minlength') && cadastroForm.controls.senha.hasError('pattern')">
+            A senha deve ter de 8 a 50 caracteres e não pode conter espaços.
+          </mat-error>
+
+          <mat-error
+            *ngIf="cadastroForm.controls.senha.hasError('minlength') && !cadastroForm.controls.senha.hasError('pattern')">
+            A senha deve ter de 8 a 50 caracteres
+          </mat-error>
+
+          <mat-error
+            *ngIf="cadastroForm.controls.senha.hasError('pattern') && !cadastroForm.controls.senha.hasError('minlength')">
+            A senha não pode conter espaços.
+          </mat-error>
+        </div>
         <fieldset>
           <legend>Confirmar Senha</legend>
-          <input class="input-form" matInput [type]="typeInputConfirm" placeholder="* * * *">
+          <input class="input-form" matInput [type]="typeInputConfirm" placeholder="* * * *"  formControlName="confirmarSenha" maxlength="50">
           <img class="img-fluid icon-form"
             [src]="typeInputConfirm === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
             (click)="visibilidadeConfirmSenha()">
         </fieldset>
+        <div id="container-erro-ConfirmSenha-Mobile">
+
+          <mat-error
+            *ngIf="cadastroForm.controls.confirmarSenha.hasError('required') && cadastroForm.controls.confirmarSenha.touched">'Confirmar
+            Senha' é
+            obrigatório</mat-error>
+
+          <mat-error
+            *ngIf="cadastroForm.controls.senha.value != cadastroForm.controls.confirmarSenha.value && cadastroForm.controls.confirmarSenha.touched &&  (cadastroForm.controls.confirmarSenha.value?.length != 0)">A
+            senha deve ser igual</mat-error>
+        </div>
         <button id="button-submit">Sign Up</button>
 
         <div id="container-SignIn">
           <span id="span-SignIn">Já tem uma conta ? <a id="a-SignIn" [routerLink]="['/login']">Sign In</a></span>
         </div>
-      </ng-form>
+      </form>
     </div>
   </section>
 </div>
-
+//--------------------------------------------------------------------
 <div class="d-none d-md-block d-lg-block">
   <mat-grid-list cols="2" rowHeight="100vh">
     <mat-grid-tile id="container-SignupLg">
