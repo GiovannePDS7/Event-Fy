@@ -260,21 +260,6 @@ legend {
 }
 
 #container-erro-Nome-Mobile, #container-erro-Email-Mobile, #container-erro-Senha-Mobile, #container-erro-ConfirmSenha-Mobile{
-  position: absolute;
-  top: 36%;
-  left: 16%;
-
+  height: 2vh;
+  width: 80%;
 }
-#container-erro-Email-Mobile{
- top: 45.5%;
-
-}
-
-#container-erro-Senha-Mobile{
-  top: 54.5%;
-}
-
-#container-erro-ConfirmSenha-Mobile{
-  top: 63.5%;
-}
-

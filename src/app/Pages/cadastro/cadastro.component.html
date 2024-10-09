@@ -34,6 +34,7 @@
           *ngIf="cadastroForm.controls.emailOrganizador.hasError('required') && cadastroForm.controls.emailOrganizador.touched">'E-mail' é
           obrigatório</mat-error>
         <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('email')">E-mail inválido</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('emailJaExiste')">Este e-mail já está cadastrado</mat-error>
       </div>
         <fieldset>
           <legend>Senha</legend>
