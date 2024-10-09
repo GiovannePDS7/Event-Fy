@@ -11,33 +11,33 @@
       <form method="post" id="formulario" class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()" >
         <fieldset>
           <legend>Username</legend>
-          <input class="input-form" matInput type="text" placeholder="usuário_1234" formControlName="name"
+          <input class="input-form" matInput type="text" placeholder="usuário_1234" formControlName="nomeOrganizador"
           minlength="3" maxlength="60">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/username.png">
         </fieldset>
         <div id="container-erro-Nome-Mobile">
           <mat-error
-            *ngIf="cadastroForm.controls.name.hasError('required') && cadastroForm.controls.name.touched">'Nome'
+            *ngIf="cadastroForm.controls.nomeOrganizador.hasError('required') && cadastroForm.controls.nomeOrganizador.touched">'Nome'
             é obrigatório</mat-error>
-          <mat-error *ngIf="cadastroForm.controls.name.hasError('minlength')">'Nome' precisa conter entre 3 e 60
+          <mat-error *ngIf="cadastroForm.controls.nomeOrganizador.hasError('minlength')">'Nome' precisa conter entre 3 e 60
             caracteres </mat-error>
         </div>
 
         <fieldset>
           <legend>E-mail</legend>
-          <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com" formControlName="email"
+          <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com" formControlName="emailOrganizador"
           maxlength="50">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
         </fieldset>
       <div id="container-erro-Email-Mobile">
         <mat-error
-          *ngIf="cadastroForm.controls.email.hasError('required') && cadastroForm.controls.email.touched">'E-mail' é
+          *ngIf="cadastroForm.controls.emailOrganizador.hasError('required') && cadastroForm.controls.emailOrganizador.touched">'E-mail' é
           obrigatório</mat-error>
-        <mat-error *ngIf="cadastroForm.controls.email.hasError('email')">E-mail inválido</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('email')">E-mail inválido</mat-error>
       </div>
         <fieldset>
           <legend>Senha</legend>
-          <input class="input-form" matInput [type]="typeInput" placeholder="* * * *" formControlName="senha"
+          <input class="input-form" matInput [type]="typeInput" placeholder="* * * *" formControlName="senhaOrganizador"
           minlength="8" maxlength="50">
           <img class="img-fluid icon-form"
             [src]="typeInput === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
@@ -45,21 +45,21 @@
         </fieldset>
         <div id="container-erro-Senha-Mobile">
           <mat-error
-            *ngIf="cadastroForm.controls.senha.hasError('required') && cadastroForm.controls.senha.touched">'Senha' é
+            *ngIf="cadastroForm.controls.senhaOrganizador.hasError('required') && cadastroForm.controls.senhaOrganizador.touched">'Senha' é
             obrigatório</mat-error>
 
           <mat-error
-            *ngIf="cadastroForm.controls.senha.hasError('minlength') && cadastroForm.controls.senha.hasError('pattern')">
+            *ngIf="cadastroForm.controls.senhaOrganizador.hasError('minlength') && cadastroForm.controls.senhaOrganizador.hasError('pattern')">
             A senha deve ter de 8 a 50 caracteres e não pode conter espaços.
           </mat-error>
 
           <mat-error
-            *ngIf="cadastroForm.controls.senha.hasError('minlength') && !cadastroForm.controls.senha.hasError('pattern')">
+            *ngIf="cadastroForm.controls.senhaOrganizador.hasError('minlength') && !cadastroForm.controls.senhaOrganizador.hasError('pattern')">
             A senha deve ter de 8 a 50 caracteres
           </mat-error>
 
           <mat-error
-            *ngIf="cadastroForm.controls.senha.hasError('pattern') && !cadastroForm.controls.senha.hasError('minlength')">
+            *ngIf="cadastroForm.controls.senhaOrganizador.hasError('pattern') && !cadastroForm.controls.senhaOrganizador.hasError('minlength')">
             A senha não pode conter espaços.
           </mat-error>
         </div>
@@ -78,7 +78,7 @@
             obrigatório</mat-error>
 
           <mat-error
-            *ngIf="cadastroForm.controls.senha.value != cadastroForm.controls.confirmarSenha.value && cadastroForm.controls.confirmarSenha.touched &&  (cadastroForm.controls.confirmarSenha.value?.length != 0)">A
+            *ngIf="cadastroForm.controls.senhaOrganizador.value != cadastroForm.controls.confirmarSenha.value && cadastroForm.controls.confirmarSenha.touched &&  (cadastroForm.controls.confirmarSenha.value?.length != 0)">A
             senha deve ser igual</mat-error>
         </div>
         <button id="button-submit">Sign Up</button>
@@ -90,7 +90,7 @@
     </div>
   </section>
 </div>
-//--------------------------------------------------------------------
+
 <div class="d-none d-md-block d-lg-block">
   <mat-grid-list cols="2" rowHeight="100vh">
     <mat-grid-tile id="container-SignupLg">
@@ -105,35 +105,40 @@
 
           <fieldset id="containerInputUser">
             <legend class="legendLg">Nome</legend>
-            <input class="input-formLg" type="text" placeholder="Ex: Luiz Henrique" matInput formControlName="name"
+            <input class="input-formLg" type="text" placeholder="Ex: Luiz Henrique" matInput formControlName="nomeOrganizador"
               minlength="3" maxlength="60">
             <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/username.png">
           </fieldset>
           <div id="container-erro-Nome">
             <mat-error
-              *ngIf="cadastroForm.controls.name.hasError('required') && cadastroForm.controls.name.touched">'Nome'
+              *ngIf="cadastroForm.controls.nomeOrganizador.hasError('required') && cadastroForm.controls.nomeOrganizador.touched">'Nome'
               é obrigatório</mat-error>
-            <mat-error *ngIf="cadastroForm.controls.name.hasError('minlength')">'Nome' precisa conter entre 3 e 60
+            <mat-error *ngIf="cadastroForm.controls.nomeOrganizador.hasError('minlength')">'Nome' precisa conter entre 3 e 60
               caracteres </mat-error>
           </div>
 
           <fieldset id="containerInputEmail">
             <legend class="legendLg">E-mail</legend>
-            <input class="input-formLg" type="email" placeholder="seuemail@gmail.com" matInput formControlName="email"
-              maxlength="50">
+            <input class="input-formLg" type="email" placeholder="seuemail@gmail.com"
+              matInput formControlName="emailOrganizador" (blur)="verificarEmail()" maxlength="50">
             <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
           </fieldset>
           <div id="container-erro-Email">
-            <mat-error
-              *ngIf="cadastroForm.controls.email.hasError('required') && cadastroForm.controls.email.touched">'E-mail' é
-              obrigatório</mat-error>
-            <mat-error *ngIf="cadastroForm.controls.email.hasError('email')">E-mail inválido</mat-error>
+            <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('required') && cadastroForm.controls.emailOrganizador.touched">
+              'E-mail' é obrigatório
+            </mat-error>
+            <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('email')">
+              E-mail inválido
+            </mat-error>
+            <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('emailJaExiste')">
+              Este e-mail já está cadastrado
+            </mat-error>
           </div>
 
 
           <fieldset id="containerInputPass">
             <legend class="legendLg">Senha</legend>
-            <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *" formControlName="senha"
+            <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *" formControlName="senhaOrganizador"
               minlength="8" maxlength="50">
             <img class="img-fluid icon-form icon-form-password" id="icon-formlg"
               [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
@@ -141,22 +146,22 @@
           </fieldset>
           <div id="container-erro-Senha">
             <mat-error
-              *ngIf="cadastroForm.controls.senha.hasError('required') && cadastroForm.controls.senha.touched">'Senha' é
+              *ngIf="cadastroForm.controls.senhaOrganizador.hasError('required') && cadastroForm.controls.senhaOrganizador.touched">'Senha' é
               obrigatório</mat-error>
 
             <mat-error
-              *ngIf="cadastroForm.controls.senha.hasError('minlength') && cadastroForm.controls.senha.hasError('pattern')">
+              *ngIf="cadastroForm.controls.senhaOrganizador.hasError('minlength') && cadastroForm.controls.senhaOrganizador.hasError('pattern')">
               A senha deve ter de 8 a 50 caracteres e não pode conter espaços.
             </mat-error>
 
             <mat-error
-              *ngIf="cadastroForm.controls.senha.hasError('minlength') && !cadastroForm.controls.senha.hasError('pattern')">
+              *ngIf="cadastroForm.controls.senhaOrganizador.hasError('minlength') && !cadastroForm.controls.senhaOrganizador.hasError('pattern')">
               A senha deve ter de 8 a 50 caracteres
             </mat-error>
 
 
             <mat-error
-              *ngIf="cadastroForm.controls.senha.hasError('pattern') && !cadastroForm.controls.senha.hasError('minlength')">
+              *ngIf="cadastroForm.controls.senhaOrganizador.hasError('pattern') && !cadastroForm.controls.senhaOrganizador.hasError('minlength')">
               A senha não pode conter espaços.
             </mat-error>
           </div>
@@ -179,7 +184,7 @@
               obrigatório</mat-error>
 
             <mat-error
-              *ngIf="cadastroForm.controls.senha.value != cadastroForm.controls.confirmarSenha.value && cadastroForm.controls.confirmarSenha.touched &&  (cadastroForm.controls.confirmarSenha.value?.length != 0)">A
+              *ngIf="cadastroForm.controls.senhaOrganizador.value != cadastroForm.controls.confirmarSenha.value && cadastroForm.controls.confirmarSenha.touched &&  (cadastroForm.controls.confirmarSenha.value?.length != 0)">A
               senha deve ser igual</mat-error>
           </div>
 
