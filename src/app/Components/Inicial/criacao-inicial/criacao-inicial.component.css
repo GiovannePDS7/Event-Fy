@@ -1,0 +1,60 @@
+#ContainerText-Criacao
+{
+    text-align: center;
+}
+#ContainerText-Criacao h1
+{
+    font-weight: bold;
+    font-size: 7vw;
+}
+#text-Criacao
+{
+     width: 80%;
+     margin-left: 10%;
+}
+#ContainerBtn-Criacao
+{
+    text-align: center;
+}
+#ContainerBtn-Criacao button, #ContainerBtn-CriacaoMd button
+{
+    background-color: var(--cor-secundaria);
+    border-radius: 9px;
+    border: none;
+    width: 40%;
+    height: 5vh;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+
+/*Criacao md-block*/
+
+
+#ContainerText-CriacaoMd
+{
+    width: 80%;
+}
+#ContainerText-CriacaoMd h1
+{
+    font-weight: bold;
+    font-size: 4vh;
+}
+#ContainerText-CriacaoMd p
+{
+    font-size: 2.3vh;
+    text-align: justify;
+}
+#line-CriacaoMd
+{
+    width: 60px;
+    background-color: black;
+    height: 3px;
+    margin-top: -10px;
+    margin-left: 2px;
+    margin-bottom: 5%;
+}
+#img-Criacao
+{
+    margin-top: -8%;
+    width: 350px;
+}
