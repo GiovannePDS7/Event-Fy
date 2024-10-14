@@ -22,6 +22,8 @@ import { CriacaoInicialComponent } from './Components/Inicial/criacao-inicial/cr
 import { HeaderComponent } from './Components/CP-Principais/header/header.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FormularioComponent } from './Pages/formulario/formulario.component';
+import { FormularioCriacaoComponent } from './Components/Formulario-criacao/formulario-criacao/formulario-criacao.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     FuncionalidadesInicialComponent,
     CriacaoInicialComponent,
     HeaderComponent,
+    FormularioComponent,
+    FormularioCriacaoComponent,
   ],
   imports: [
     ReactiveFormsModule,
