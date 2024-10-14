@@ -1,0 +1,102 @@
+#Background{
+    background-color:#f6bb7c;
+    height:115vh;
+    width:100%;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    
+}
+#Title{
+    padding-top: 25px;
+    
+    opacity: 1;
+    font-size:40px;
+    font-weight: bold;
+    text-align: center;
+}
+.card{
+    height:10vh;
+    width:100%;
+    background-color: white;
+}
+#Body{
+    height:90vh;
+    width:90%;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #000;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+img{
+    margin-top: 5%;
+}
+
+#btnPhoto{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    background-color: #EF820D;
+    font-size: 15px;
+    font-family: "Myriad pro Semibold"
+}
+
+.formFieldset {
+    border-radius: 8px;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: revert;
+    margin: revert;
+    padding: 0 0% 1.5% 3%;
+    border: 1.5px solid var(--cor-secundaria);
+    margin-bottom: 30px;
+}
+
+legend {
+    float: none;
+    width: auto;
+    margin: 0;
+    font-size: 4.5vw;
+    padding: 0 3%;
+    font-style: italic;
+}
+.textForm{
+    all:unset;
+    font-size:4vw;
+    width:100%;
+    margin-left: 15px;
+    
+}
+
+#containerBox{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    justify-content: flex-end
+}
+#Box{
+    border:0px;
+    margin-bottom: 15px;;
+    font-size: 20px;
+    margin-right:15px;
+}
+
+#chbx{
+    background-color:#EF820D;
+    margin-right: 10px;
+    margin-left: 20px;
+    height:3vw;
+}
+
+#btnEvent{
+    background-color: #EF820D;
+    font-weight: bold;
+    height:12vw;
+    font-size:30px;
+    margin-top: 7vw;
+    
+}
