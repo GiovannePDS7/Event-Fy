@@ -1,6 +1,6 @@
 #Background{
     background-color:#f6bb7c;
-    height:115vh;
+    height:950px;
     width:100%;
     align-items: center;
     flex-direction: column;
@@ -21,7 +21,7 @@
     background-color: white;
 }
 #Body{
-    height:90vh;
+    height:750px;
     width:90%;
     background-color: white;
     border-radius: 15px;
