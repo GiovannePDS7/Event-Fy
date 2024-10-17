@@ -8,11 +8,11 @@
 #espaco{
     height: 1px;
 }
-#containerCard-Funcionalidades
+#containerCard-Funcionalidades,#containerCard-FuncionalidadesMd
 {
     margin-top: 10%;
 }
-.formFieldset 
+.formFieldset, .formFieldsetMD, .formFieldsetMDright
 {
     border-radius: 15px;
     width: 80vw;
@@ -52,11 +52,16 @@ legend {
     margin-top: 10%;
     width: 80%;
 }
+#containerCard-Conteudo
+{
+    width: 90%;
+}
 #containerCard-Conteudo h1
 {
     font-weight: bold;
     margin-top: 2%;
     margin-bottom: 0;
+
 }
 #containerCard-Conteudo p
 {
@@ -71,4 +76,29 @@ legend {
     border-radius: 5px;
     font-weight: bold;
     font-size: 1.5vh;
+}
+
+
+
+/*tela desktop*/
+
+#containerCard-FuncionalidadesMdRight
+{
+    margin-right: 15%;
+}
+#containerCard-FuncionalidadesMdLeft
+{
+    margin-right: 10%;
+}
+.formFieldsetMD
+{
+  width: 35vw;
+}
+.formFieldsetMDright
+{
+  width: 35vw;
+}
+.backgroundMd
+{
+  background: #f6bb7c;
 }
