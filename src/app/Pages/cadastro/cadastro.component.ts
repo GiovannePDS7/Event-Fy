@@ -17,7 +17,7 @@ export class CadastroComponent {
   typeConfirmSenha: string = 'password';
 
   emailExiste: boolean = false;
-  apiUrl: string = 'http://localhost:8080/organizadores';
+  apiUrl: string = 'https://cadastroeventfy-production.up.railway.app/organizadores';
 
   visibilidadeSenha(): void {
     this.typeSenha = this.typeSenha === 'password' ? 'text' : 'password';
@@ -37,7 +37,7 @@ export class CadastroComponent {
 
 
   verificarEmail() {
-    const email = this.cadastroForm.get('emailOrganizador')?.value;  // corrigido para 'emailOrganizador'
+    const email = this.cadastroForm.get('emailOrganizador')?.value;  
   
     if (email) {
       this.http.get<{ existe: boolean }>(`${this.apiUrl}/verificar-email?email=${email}`).pipe(
