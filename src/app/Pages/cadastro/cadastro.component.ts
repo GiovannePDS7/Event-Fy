@@ -58,6 +58,7 @@ export class CadastroComponent {
       this.http.post(`${this.apiUrl}/cadastrar`, formData).subscribe(
         resposta => {
           console.log('Cadastro realizado com sucesso!', resposta);
+          console.log(formData);
         },
         erro => {
           console.log('Erro ao cadastrar', erro);
