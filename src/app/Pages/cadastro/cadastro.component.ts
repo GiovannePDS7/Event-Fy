@@ -62,7 +62,7 @@ export class CadastroComponent {
         },
         erro => {
           console.log('Erro ao cadastrar', erro);
-          
+          console.log(formData);
         }
       );
     } else {
