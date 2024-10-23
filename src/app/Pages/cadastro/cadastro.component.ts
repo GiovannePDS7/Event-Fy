@@ -26,7 +26,7 @@ export class CadastroComponent {
     this.typeConfirmSenha = this.typeConfirmSenha === 'password' ? 'text' : 'password';
   }
 
-  constructor(private formBuilder: FormBuilder,  private http: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
 
   cadastroForm = this.formBuilder.group({
     nomeOrganizador: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(60)]),
@@ -37,20 +37,20 @@ export class CadastroComponent {
 
 
   verificarEmail() {
-    const email = this.cadastroForm.get('emailOrganizador')?.value;  
-  
+    const email = this.cadastroForm.get('emailOrganizador')?.value;
+
     if (email) {
       this.http.get<{ existe: boolean }>(`${this.apiUrl}/verificar-email?email=${email}`).pipe(
-        catchError(() => of({ existe: false })) 
+        catchError(() => of({ existe: false }))
       ).subscribe(resposta => {
         this.emailExiste = resposta.existe;
         if (this.emailExiste) {
-          this.cadastroForm.get('emailOrganizador')?.setErrors({ emailJaExiste: true });  // corrigido para 'emailOrganizador'
+          this.cadastroForm.get('emailOrganizador')?.setErrors({ emailJaExiste: true });
         }
       });
     }
   }
-  
+
   onEnviar() {
     this.cadastroForm.markAllAsTouched();
     if (this.cadastroForm.valid && !this.emailExiste) {
@@ -69,5 +69,5 @@ export class CadastroComponent {
       console.log('Formulário inválido');
     }
   }
-  
+
 }

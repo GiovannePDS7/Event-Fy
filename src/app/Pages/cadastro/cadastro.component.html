@@ -26,7 +26,7 @@
         <fieldset>
           <legend>E-mail</legend>
           <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com" formControlName="emailOrganizador"
-          maxlength="50">
+          maxlength="50" (blur)="verificarEmail();">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
         </fieldset>
       <div id="container-erro-Email-Mobile">
@@ -34,7 +34,9 @@
           *ngIf="cadastroForm.controls.emailOrganizador.hasError('required') && cadastroForm.controls.emailOrganizador.touched">'E-mail' é
           obrigatório</mat-error>
         <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('email')">E-mail inválido</mat-error>
-        <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('emailJaExiste')">Este e-mail já está cadastrado</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('emailJaExiste')">
+          Este e-mail já está cadastrado
+        </mat-error>
       </div>
         <fieldset>
           <legend>Senha</legend>
@@ -106,7 +108,7 @@
 
           <fieldset id="containerInputUser">
             <legend class="legendLg">Nome</legend>
-            <input class="input-formLg" type="text" placeholder="Ex: Luiz Henrique" matInput formControlName="nomeOrganizador"
+            <input class="input-formLg" type="text" placeholder="Ex: Luiz Henrique" matInput formControlName="nomeOrganizador" 
               minlength="3" maxlength="60">
             <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/username.png">
           </fieldset>
