@@ -40,12 +40,13 @@
       </div>
         <fieldset>
           <legend>Senha</legend>
-          <input class="input-form" matInput [type]="typeInput" placeholder="* * * *" formControlName="senhaOrganizador"
+          <input class="input-form" matInput [type]="typeSenha" placeholder="* * * *" formControlName="senhaOrganizador"
           minlength="8" maxlength="50">
           <img class="img-fluid icon-form"
-            [src]="typeInput === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
+            [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
             (click)="visibilidadeSenha()">
         </fieldset>
+
         <div id="container-erro-Senha-Mobile">
           <mat-error
             *ngIf="cadastroForm.controls.senhaOrganizador.hasError('required') && cadastroForm.controls.senhaOrganizador.touched">'Senha' é
@@ -68,9 +69,9 @@
         </div>
         <fieldset>
           <legend>Confirmar Senha</legend>
-          <input class="input-form" matInput [type]="typeInputConfirm" placeholder="* * * *"  formControlName="confirmarSenha" maxlength="50">
+          <input class="input-form" matInput [type]="typeConfirmSenha" placeholder="* * * *"  formControlName="confirmarSenha" maxlength="50">
           <img class="img-fluid icon-form"
-            [src]="typeInputConfirm === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
+            [src]="typeConfirmSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
             (click)="visibilidadeConfirmSenha()">
         </fieldset>
         <div id="container-erro-ConfirmSenha-Mobile">
@@ -179,6 +180,7 @@
               [src]="typeConfirmSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
               (click)="visibilidadeConfirmSenha()">
           </fieldset>
+          
           <div id="container-erro-ConfirmSenha">
 
             <mat-error

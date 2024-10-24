@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class CadastroComponent {
-  typeInput: string = 'password';
+
   typeInputConfirm: string = 'password';
   typeSenha: string = 'password';
   typeConfirmSenha: string = 'password';
