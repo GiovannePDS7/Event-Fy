@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -26,7 +27,7 @@ export class CadastroComponent {
     this.typeConfirmSenha = this.typeConfirmSenha === 'password' ? 'text' : 'password';
   }
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) { }
 
   cadastroForm = this.formBuilder.group({
     nomeOrganizador: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(60)]),
@@ -58,7 +59,8 @@ export class CadastroComponent {
       this.http.post(`${this.apiUrl}/cadastrar`, formData).subscribe(
         resposta => {
           console.log('Cadastro realizado com sucesso!', resposta);
-          console.log(formData);
+          alert('Cadastro efetuado');
+          this.router.navigate(['/login']);
         },
         erro => {
           console.log('Erro ao cadastrar', erro);
@@ -67,6 +69,7 @@ export class CadastroComponent {
       );
     } else {
       console.log('Formulário inválido');
+      alert('Cadastro inválido, verifique os avisos');
     }
   }
 
