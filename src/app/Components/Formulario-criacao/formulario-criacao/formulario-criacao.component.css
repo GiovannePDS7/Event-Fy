@@ -102,7 +102,25 @@ legend {
 }
 #backgroundDesk{
   background-color:#f6bb7c;
-  height:10em;
+  height:55vh;
   width:100%;
 
+}
+#body{
+  background-color: white;
+  height:35vh;
+  width:90%;
+  border-radius: 15px;
+  border: 1px solid #000;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  margin-left: 5%;
+}
+
+#Title3{
+  padding-top: 2vh;
+  font-size:2.5vw;
+  font-weight: bold;
+  text-align: center
 }
