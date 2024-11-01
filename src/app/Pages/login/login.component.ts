@@ -65,7 +65,6 @@ export class LoginComponent {
   this.LoginForm.markAllAsTouched();
 
   if (this.LoginForm.valid && !this.emailExiste) {
-    alert('entrou')
     const { emailLogin, senhaLogin } = this.LoginForm.value;
 
     // Envia a requisição de autenticação para o backend
@@ -74,6 +73,7 @@ export class LoginComponent {
       senhaOrganizador: senhaLogin
     }).subscribe({
       next: (response) => {
+        alert('entrou -> next');
         localStorage.setItem('token', response.token);
         localStorage.setItem('organizadorId', response.id.toString());
         localStorage.setItem('nomeOrganizador', response.nome);
