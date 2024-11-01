@@ -51,7 +51,12 @@ export class LoginComponent {
         .pipe(catchError(() => of({ existe: false })))
         .subscribe((resposta) => {
           this.emailExiste = resposta.existe;
-          if (!this.emailExiste) {
+
+          // Mensagem no console para indicar o status da verificação de email
+          if (this.emailExiste) {
+            console.log('O email existe no sistema.');
+          } else {
+            console.log('O email não existe no sistema.');
             this.LoginForm.get('emailLogin')?.setErrors({
               emailNaoExiste: true,
             });
@@ -59,6 +64,7 @@ export class LoginComponent {
         });
     }
   }
+
 
   onEnviar() {
     this.LoginForm.markAllAsTouched();
