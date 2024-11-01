@@ -8,22 +8,44 @@
     </div>
     <div id="Login">
       <h1 class="text-center" id="h1-Login">Login</h1>
-      <ng-form method="get" id="formulario">
+      <form method="post" id="formulario" class="example-form" [formGroup]="LoginForm" (ngSubmit)="onEnviar()">
 
         <fieldset>
           <legend>E-mail</legend>
-          <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com">
+          <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com" formControlName="emailLogin">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
         </fieldset>
 
+        <div id="container-erro-Email-Mobile">
+          <mat-error
+            *ngIf="LoginForm.controls.emailLogin.hasError('required') && LoginForm.controls.emailLogin.touched">'E-mail' é obrigatório</mat-error>
+          <mat-error *ngIf="LoginForm.controls.emailLogin.hasError('email')">E-mail inválido</mat-error>
+          <mat-error *ngIf="LoginForm.controls.emailLogin.hasError('emailJaExiste')">Este e-mail já está cadastrado</mat-error>
+        </div>
+
         <fieldset>
           <legend>Senha</legend>
-          <input class="input-form" matInput [type]="typeSenha" placeholder="* * * *">
+          <input class="input-form" matInput [type]="typeSenha" placeholder="* * * *" formControlName="senhaLogin" >
           <img class="img-fluid icon-form"
             [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
             (click)="visibilidadeSenha()">
         </fieldset>
-        
+
+        <div id="container-erro-Senha-Mobile">
+          <mat-error
+            *ngIf="LoginForm.controls.senhaLogin.hasError('required') && LoginForm.controls.senhaLogin.touched">'Senha'é obrigatório</mat-error>
+          <mat-error *ngIf="LoginForm.controls.senhaLogin.hasError('minlength') && LoginForm.controls.senhaLogin.hasError('pattern')">
+            A senha deve ter de 8 a 50 caracteres e não pode conter espaços.
+          </mat-error>
+
+          <mat-error *ngIf="LoginForm.controls.senhaLogin.hasError('minlength') && !LoginForm.controls.senhaLogin.hasError('pattern')">
+            A senha deve ter de 8 a 50 caracteres
+          </mat-error>
+          <mat-error *ngIf="LoginForm.controls.senhaLogin.hasError('pattern') && !LoginForm.controls.senhaLogin.hasError('minlength')">
+            A senha não pode conter espaços.
+          </mat-error>
+        </div>
+
         <div class="w-100 d-flex align-items-center flex-column">
           <button id="button-submit">Entrar</button>
           <div id="container-EsqueceuSenha">
@@ -35,7 +57,7 @@
           <span id="span-SignUp">Ainda não tem uma conta? <a id="a-SignUp"
               [routerLink]="['/cadastro']">Cadastre-se</a></span>
         </div>
-      </ng-form>
+      </form>
     </div>
   </section>
 </div>
@@ -60,6 +82,13 @@
             <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
           </fieldset>
 
+          <div id="container-erro-Email">
+            <mat-error
+              *ngIf="LoginForm.controls.emailLogin.hasError('required') && LoginForm.controls.emailLogin.touched">'E-mail' é obrigatório</mat-error>
+            <mat-error *ngIf="LoginForm.controls.emailLogin.hasError('email')">E-mail inválido</mat-error>
+            <mat-error *ngIf="LoginForm.controls.emailLogin.hasError('emailJaExiste')">Este e-mail já está cadastrado</mat-error>
+          </div>
+
           <fieldset id="containerInputEmail">
             <legend class="legendLg">Senha</legend>
             <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *" formControlName="senhaLogin">
@@ -67,11 +96,28 @@
               [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
               (click)="visibilidadeSenha()">
           </fieldset>
+
+          <div id="container-erro-Senha">
+            <mat-error
+              *ngIf="LoginForm.controls.senhaLogin.hasError('required') && LoginForm.controls.senhaLogin.touched">'Senha'é obrigatório</mat-error>
+            <mat-error *ngIf="LoginForm.controls.senhaLogin.hasError('minlength') && LoginForm.controls.senhaLogin.hasError('pattern')">
+              A senha deve ter de 8 a 50 caracteres e não pode conter espaços.
+            </mat-error>
+
+            <mat-error *ngIf="LoginForm.controls.senhaLogin.hasError('minlength') && !LoginForm.controls.senhaLogin.hasError('pattern')">
+              A senha deve ter de 8 a 50 caracteres
+            </mat-error>
+            <mat-error *ngIf="LoginForm.controls.senhaLogin.hasError('pattern') && !LoginForm.controls.senhaLogin.hasError('minlength')">
+              A senha não pode conter espaços.
+            </mat-error>
+          </div>
+
+
           <div id="btn-formLg">
             <button id="button-submitLg">Entrar</button>
             <div id="container-EsqueceuSenha-Lg">
               <a id="a-ES-Lg" [routerLink]="['/']">Esqueceu a senha?</a>
-            </div>
+          </div>
 
           </div>
         </form>
