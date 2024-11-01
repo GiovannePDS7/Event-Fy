@@ -79,7 +79,7 @@
         <form method="post" id="formularioLg" class="example-form" [formGroup]="LoginForm" (ngSubmit)="onEnviar()">
           <fieldset id="containerInputUser">
             <legend class="legendLg">E-mail</legend>
-            <input class="input-formLg" matInput type="email" placeholder="seuemail@gmail.com" (blur)="verificarEmail()" formControlName="emailLogin">
+            <input class="input-formLg" matInput type="email" placeholder="seuemail@gmail.com" formControlName="emailLogin">
             <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
           </fieldset>
 
@@ -87,7 +87,6 @@
             <mat-error
               *ngIf="LoginForm.controls.emailLogin.hasError('required') && LoginForm.controls.emailLogin.touched">'E-mail' é obrigatório</mat-error>
             <mat-error *ngIf="LoginForm.controls.emailLogin.hasError('email')">E-mail inválido</mat-error>
-            <mat-error *ngIf="LoginForm.controls.emailLogin.hasError('emailJaExiste')">Este e-mail já está cadastrado</mat-error>
           </div>
 
           <fieldset id="containerInputEmail">

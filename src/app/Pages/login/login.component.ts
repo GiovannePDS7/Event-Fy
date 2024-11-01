@@ -41,7 +41,7 @@ export class LoginComponent {
   });
 
   verificarEmail() {
-    const email = this.LoginForm.get('emailOrganizador')?.value;
+    const email = this.LoginForm.get('emailLogin')?.value;
 
     if (email) {
       this.http
@@ -51,44 +51,43 @@ export class LoginComponent {
         .pipe(catchError(() => of({ existe: false })))
         .subscribe((resposta) => {
           this.emailExiste = resposta.existe;
-          if (this.emailExiste) {
-            this.LoginForm.get('emailOrganizador')?.setErrors({
-              emailJaExiste: true,
+          if (!this.emailExiste) {
+            this.LoginForm.get('emailLogin')?.setErrors({
+              emailNaoExiste: true,
             });
           }
         });
     }
   }
 
+  onEnviar() {
+    this.LoginForm.markAllAsTouched();
+    this.verificarEmail(); // Chama a verificação antes de enviar
 
- onEnviar() {
-  this.LoginForm.markAllAsTouched();
+    if (this.LoginForm.valid && this.emailExiste) {
+      const { emailLogin, senhaLogin } = this.LoginForm.value;
 
-  if (this.LoginForm.valid && !this.emailExiste) {
-    const { emailLogin, senhaLogin } = this.LoginForm.value;
+      // Envia a requisição de autenticação para o backend
+      this.http.post<LoginResponseDTO>(`${this.apiUrl}/login`, {
+        emailOrganizador: emailLogin,
+        senhaOrganizador: senhaLogin
+      }).subscribe({
+        next: (response) => {
+          localStorage.setItem('token', response.token);
+          localStorage.setItem('organizadorId', response.id.toString());
+          localStorage.setItem('nomeOrganizador', response.nome);
+          localStorage.setItem('emailOrganizador', response.email);
+          localStorage.setItem('contatoOrganizador', response.contato);
+          localStorage.setItem('fotoOrganizador', response.foto);
 
-    // Envia a requisição de autenticação para o backend
-    this.http.post<LoginResponseDTO>('/login', {
-      emailOrganizador: emailLogin,
-      senhaOrganizador: senhaLogin
-    }).subscribe({
-      next: (response) => {
-        alert('entrou -> next');
-        localStorage.setItem('token', response.token);
-        localStorage.setItem('organizadorId', response.id.toString());
-        localStorage.setItem('nomeOrganizador', response.nome);
-        localStorage.setItem('emailOrganizador', response.email);
-        localStorage.setItem('contatoOrganizador', response.contato);
-        localStorage.setItem('fotoOrganizador', response.foto);
-
-
-        this.router.navigate(['/inicial']);
-      },
-      error: (err) => {
-        console.error('Erro de autenticação', err);
-      }
-    });
+          this.router.navigate(['/inicial']);
+        },
+        error: (err) => {
+          console.error('Erro de autenticação', err);
+        }
+      });
+    } else {
+      console.warn('Email não existe ou formulário inválido.');
+    }
   }
-}
-
 }
