@@ -23,7 +23,7 @@
             [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
             (click)="visibilidadeSenha()">
         </fieldset>
-        
+
         <div class="w-100 d-flex align-items-center flex-column">
           <button id="button-submit">Entrar</button>
           <div id="container-EsqueceuSenha">
@@ -56,7 +56,7 @@
         <form method="get" id="formularioLg" class="example-form" [formGroup]="LoginForm" (ngSubmit)="onEnviar()">
           <fieldset id="containerInputUser">
             <legend class="legendLg">E-mail</legend>
-            <input class="input-formLg" matInput type="email" placeholder="seuemail@gmail.com" formControlName="emailLogin">
+            <input class="input-formLg" matInput type="email" placeholder="seuemail@gmail.com" (blur)="verificarEmail()" formControlName="emailLogin">
             <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
           </fieldset>
 
