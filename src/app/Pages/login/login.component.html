@@ -76,7 +76,7 @@
         <h1>Login</h1>
       </section>
       <section id="section-formLg">
-        <form method="get" id="formularioLg" class="example-form" [formGroup]="LoginForm" (ngSubmit)="onEnviar()">
+        <form method="post" id="formularioLg" class="example-form" [formGroup]="LoginForm" (ngSubmit)="onEnviar()">
           <fieldset id="containerInputUser">
             <legend class="legendLg">E-mail</legend>
             <input class="input-formLg" matInput type="email" placeholder="seuemail@gmail.com" (blur)="verificarEmail()" formControlName="emailLogin">

@@ -69,7 +69,7 @@ export class LoginComponent {
     const { emailLogin, senhaLogin } = this.LoginForm.value;
 
     // Envia a requisição de autenticação para o backend
-    this.http.post<LoginResponseDTO>('/api/login', {
+    this.http.post<LoginResponseDTO>('/login', {
       emailOrganizador: emailLogin,
       senhaOrganizador: senhaLogin
     }).subscribe({
