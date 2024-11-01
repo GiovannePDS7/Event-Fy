@@ -7,41 +7,43 @@
       <img class="img-fluid" id="iso-logo" src="../../../assets/Logo/isoLogo.png">
     </div>
     <div id="cadastro">
-      <h1 class="text-center" id="h1-signUp">Sign Up</h1>
-      <form method="post" id="formulario" class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()" >
+      <h1 class="text-center" id="h1-signUp">Cadastro</h1>
+      <form method="post" id="formulario" class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()">
         <fieldset>
-          <legend>Username</legend>
-          <input class="input-form" matInput type="text" placeholder="usuário_1234" formControlName="nomeOrganizador"
-          minlength="3" maxlength="60">
+          <legend>Nome</legend>
+          <input class="input-form" matInput type="text" placeholder="Luiz Henrique" formControlName="nomeOrganizador" minlength="3"
+            maxlength="60">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/username.png">
         </fieldset>
         <div id="container-erro-Nome-Mobile">
           <mat-error
             *ngIf="cadastroForm.controls.nomeOrganizador.hasError('required') && cadastroForm.controls.nomeOrganizador.touched">'Nome'
             é obrigatório</mat-error>
-          <mat-error *ngIf="cadastroForm.controls.nomeOrganizador.hasError('minlength')">'Nome' precisa conter entre 3 e 60
+          <mat-error *ngIf="cadastroForm.controls.nomeOrganizador.hasError('minlength')">'Nome' precisa conter entre 3 e
+            60
             caracteres </mat-error>
         </div>
 
         <fieldset>
           <legend>E-mail</legend>
-          <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com" formControlName="emailOrganizador"
-          maxlength="50" (blur)="verificarEmail();">
+          <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com"
+            formControlName="emailOrganizador" maxlength="50" (blur)="verificarEmail();">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
         </fieldset>
-      <div id="container-erro-Email-Mobile">
-        <mat-error
-          *ngIf="cadastroForm.controls.emailOrganizador.hasError('required') && cadastroForm.controls.emailOrganizador.touched">'E-mail' é
-          obrigatório</mat-error>
-        <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('email')">E-mail inválido</mat-error>
-        <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('emailJaExiste')">
-          Este e-mail já está cadastrado
-        </mat-error>
-      </div>
+        <div id="container-erro-Email-Mobile">
+          <mat-error
+            *ngIf="cadastroForm.controls.emailOrganizador.hasError('required') && cadastroForm.controls.emailOrganizador.touched">'E-mail'
+            é
+            obrigatório</mat-error>
+          <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('email')">E-mail inválido</mat-error>
+          <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('emailJaExiste')">
+            Este e-mail já está cadastrado
+          </mat-error>
+        </div>
         <fieldset>
           <legend>Senha</legend>
           <input class="input-form" matInput [type]="typeSenha" placeholder="* * * *" formControlName="senhaOrganizador"
-          minlength="8" maxlength="50">
+            minlength="8" maxlength="50">
           <img class="img-fluid icon-form"
             [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
             (click)="visibilidadeSenha()">
@@ -49,7 +51,8 @@
 
         <div id="container-erro-Senha-Mobile">
           <mat-error
-            *ngIf="cadastroForm.controls.senhaOrganizador.hasError('required') && cadastroForm.controls.senhaOrganizador.touched">'Senha' é
+            *ngIf="cadastroForm.controls.senhaOrganizador.hasError('required') && cadastroForm.controls.senhaOrganizador.touched">'Senha'
+            é
             obrigatório</mat-error>
 
           <mat-error
@@ -69,7 +72,8 @@
         </div>
         <fieldset>
           <legend>Confirmar Senha</legend>
-          <input class="input-form" matInput [type]="typeConfirmSenha" placeholder="* * * *"  formControlName="confirmarSenha" maxlength="50">
+          <input class="input-form" matInput [type]="typeConfirmSenha" placeholder="* * * *"
+            formControlName="confirmarSenha" maxlength="50">
           <img class="img-fluid icon-form"
             [src]="typeConfirmSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
             (click)="visibilidadeConfirmSenha()">
@@ -85,10 +89,10 @@
             *ngIf="cadastroForm.controls.senhaOrganizador.value != cadastroForm.controls.confirmarSenha.value && cadastroForm.controls.confirmarSenha.touched &&  (cadastroForm.controls.confirmarSenha.value?.length != 0)">A
             senha deve ser igual</mat-error>
         </div>
-        <button id="button-submit">Sign Up</button>
+        <button id="button-submit">Cadastre-se</button>
 
         <div id="container-SignIn">
-          <span id="span-SignIn">Já tem uma conta ? <a id="a-SignIn" [routerLink]="['/login']">Sign In</a></span>
+          <span id="span-SignIn">Já tem uma conta ? <a id="a-SignIn" [routerLink]="['/login']">Login</a></span>
         </div>
       </form>
     </div>
@@ -102,33 +106,35 @@
         <button id="button-setaLg" [routerLink]="['/login']">
           <img class="img-fluid" id="setaLg" src="../../../assets/Elementos/SetaP.png">
         </button>
-        <h1 class="text-center" id="h1-signUpLg">Sign Up</h1>
+        <h1 class="text-center" id="h1-signUpLg">Cadastro</h1>
       </section>
       <section>
         <form id="formularioLg" class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()">
 
           <fieldset id="containerInputUser">
             <legend class="legendLg">Nome</legend>
-            <input class="input-formLg" type="text" placeholder="Ex: Luiz Henrique" matInput formControlName="nomeOrganizador" 
-              minlength="3" maxlength="60">
+            <input class="input-formLg" type="text" placeholder="Ex: Luiz Henrique" matInput
+              formControlName="nomeOrganizador" minlength="3" maxlength="60">
             <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/username.png">
           </fieldset>
           <div id="container-erro-Nome">
             <mat-error
               *ngIf="cadastroForm.controls.nomeOrganizador.hasError('required') && cadastroForm.controls.nomeOrganizador.touched">'Nome'
               é obrigatório</mat-error>
-            <mat-error *ngIf="cadastroForm.controls.nomeOrganizador.hasError('minlength')">'Nome' precisa conter entre 3 e 60
+            <mat-error *ngIf="cadastroForm.controls.nomeOrganizador.hasError('minlength')">'Nome' precisa conter entre 3
+              e 60
               caracteres </mat-error>
           </div>
 
           <fieldset id="containerInputEmail">
             <legend class="legendLg">E-mail</legend>
-            <input class="input-formLg" type="email" placeholder="seuemail@gmail.com"
-              matInput formControlName="emailOrganizador" (blur)="verificarEmail()" maxlength="50">
+            <input class="input-formLg" type="email" placeholder="seuemail@gmail.com" matInput
+              formControlName="emailOrganizador" (blur)="verificarEmail()" maxlength="50">
             <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
           </fieldset>
           <div id="container-erro-Email">
-            <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('required') && cadastroForm.controls.emailOrganizador.touched">
+            <mat-error
+              *ngIf="cadastroForm.controls.emailOrganizador.hasError('required') && cadastroForm.controls.emailOrganizador.touched">
               'E-mail' é obrigatório
             </mat-error>
             <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('email')">
@@ -142,15 +148,16 @@
 
           <fieldset id="containerInputPass">
             <legend class="legendLg">Senha</legend>
-            <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *" formControlName="senhaOrganizador"
-              minlength="8" maxlength="50">
+            <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *"
+              formControlName="senhaOrganizador" minlength="8" maxlength="50">
             <img class="img-fluid icon-form icon-form-password" id="icon-formlg"
               [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
               (click)="visibilidadeSenha()">
           </fieldset>
           <div id="container-erro-Senha">
             <mat-error
-              *ngIf="cadastroForm.controls.senhaOrganizador.hasError('required') && cadastroForm.controls.senhaOrganizador.touched">'Senha' é
+              *ngIf="cadastroForm.controls.senhaOrganizador.hasError('required') && cadastroForm.controls.senhaOrganizador.touched">'Senha'
+              é
               obrigatório</mat-error>
 
             <mat-error
@@ -180,7 +187,7 @@
               [src]="typeConfirmSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
               (click)="visibilidadeConfirmSenha()">
           </fieldset>
-          
+
           <div id="container-erro-ConfirmSenha">
 
             <mat-error
@@ -194,11 +201,11 @@
           </div>
 
           <div id="btn-formLg">
-            <button mat-flat-button id="button-submitLg">Login</button>
+            <button mat-flat-button id="button-submitLg">Cadastre-se</button>
           </div>
         </form>
         <div id="container-SignInLg">
-          <span id="span-SignInLg">Já tem uma conta? <a id="a-SignIn" [routerLink]="['/login']">Sign In</a></span>
+          <span id="span-SignInLg">Já tem uma conta? <a id="a-SignIn" [routerLink]="['/login']">Login</a></span>
         </div>
       </section>
     </mat-grid-tile>

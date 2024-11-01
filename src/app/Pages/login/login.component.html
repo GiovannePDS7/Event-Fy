@@ -40,7 +40,6 @@
   </section>
 </div>
 
-
 <div class="d-none d-md-block d-lg-block">
   <mat-grid-list cols="2" rowHeight="100vh">
     <mat-grid-tile id="background">
@@ -54,28 +53,28 @@
         <h1>Login</h1>
       </section>
       <section id="section-formLg">
-        <ng-form method="get" id="formularioLg">
+        <form method="get" id="formularioLg" class="example-form" [formGroup]="LoginForm" (ngSubmit)="onEnviar()">
           <fieldset id="containerInputUser">
             <legend class="legendLg">E-mail</legend>
-            <input class="input-formLg" matInput type="email" placeholder="seuemail@gmail.com">
+            <input class="input-formLg" matInput type="email" placeholder="seuemail@gmail.com" formControlName="emailLogin">
             <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
           </fieldset>
 
           <fieldset id="containerInputEmail">
             <legend class="legendLg">Senha</legend>
-            <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *">
+            <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *" formControlName="senhaLogin">
             <img class="img-fluid icon-form icon-form-password" id="icon-formlg"
               [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
               (click)="visibilidadeSenha()">
           </fieldset>
           <div id="btn-formLg">
-            <button id="button-submitLg">Login</button>
+            <button id="button-submitLg">Entrar</button>
             <div id="container-EsqueceuSenha-Lg">
               <a id="a-ES-Lg" [routerLink]="['/']">Esqueceu a senha?</a>
             </div>
 
           </div>
-        </ng-form>
+        </form>
         <div id="container-SignInLg">
           <span id="span-SignInLg">Ainda não tem conta? <a id="a-SignUp"
               [routerLink]="['/cadastro']">Cadastre-se</a></span>
