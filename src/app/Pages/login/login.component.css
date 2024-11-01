@@ -287,3 +287,14 @@ legend {
 .icon-form-password {
   cursor: pointer;
 }
+
+#container-erro-Email-Mobile, #container-erro-Senha-Mobile{
+  margin-top: -10%;
+  margin-bottom: -10%;
+  height: 2vh;
+  width: 80%;
+}
+
+#container-erro-Nome, #container-erro-Email, #container-erro-Senha, #container-erro-ConfirmSenha {
+  width: 70%;
+}
