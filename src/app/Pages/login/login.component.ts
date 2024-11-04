@@ -47,28 +47,20 @@ export class LoginComponent {
     this.typeSenha = this.typeSenha === 'password' ? 'text' : 'password';
   }
   verificarEmail() {
-    const email = this.LoginForm.get('emailLogin')?.value;
+    const email = this.LoginForm.get('emailOrganizador')?.value;
 
     if (email) {
-      this.http
-        .get<EmailCheckResponse>(
-          `${this.apiUrl}/verificar-email?email=${email}`
-        )
-        .pipe(catchError(() => of({ existe: false })))
-        .subscribe((resposta: EmailCheckResponse) => {  // Agora está definido
-          this.emailExiste = resposta.existe;
-
-          if (this.emailExiste) {
-            console.log('O email existe no sistema.');
-          } else {
-            console.log('O email não existe no sistema.');
-            this.LoginForm.get('emailLogin')?.setErrors({
-              emailNaoExiste: true,
-            });
-          }
-        });
+      this.http.get<EmailCheckResponse>(`${this.apiUrl}/verificar-email?email=${email}`).pipe(
+        catchError(() => of({ existe: false }))
+      ).subscribe((resposta: EmailCheckResponse) => {
+        this.emailExiste = resposta.existe;
+        if (this.emailExiste) {
+          this.LoginForm.get('emailOrganizador')?.setErrors({ emailJaExiste: true });
+        }
+      });
     }
   }
+
 
   onEnviar() {
     this.LoginForm.markAllAsTouched();
