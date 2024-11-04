@@ -79,7 +79,7 @@ export class LoginComponent {
       if (this.LoginForm.valid && existe) {
         const { emailOrganizador, senhaOrganizador } = this.LoginForm.value;
         console.log('entrou 2');
-        this.http.post<LoginResponseDTO>(`${this.apiUrl}/login`, {
+        this.http.post<LoginResponseDTO>(`${this.apiUrl}/login/authenticate`, {
           emailOrganizador: emailOrganizador,
           senhaOrganizador: senhaOrganizador
         }).subscribe({
