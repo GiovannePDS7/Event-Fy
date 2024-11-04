@@ -69,20 +69,23 @@ export class LoginComponent {
       return of(false);
     }
   }
-
   onEnviar() {
     this.LoginForm.markAllAsTouched();
 
-    this.verificarEmail().subscribe((existe: any) => {
-      console.log('entrou 1');
-      console.log(this.LoginForm); // Exibe os erros do formulário
-      console.log(existe);
+    this.verificarEmail().subscribe(existe => {
+      console.log('Entrou 1');
+      console.log('Erros do formulário:', this.LoginForm.errors); // Mostra erros do formulário
+      console.log('Email existe:', existe);
+
+      // Verifique também erros específicos dos campos
+      console.log('Erros do campo email:', this.LoginForm.get('emailOrganizador')?.errors);
+      console.log('Erros do campo senha:', this.LoginForm.get('senhaLogin')?.errors);
 
       if (this.LoginForm.valid && existe) {
         const { emailOrganizador, senhaLogin } = this.LoginForm.value;
-        console.log('entrou 2');
+        console.log('Entrou 2');
         this.http.post<LoginResponseDTO>(`${this.apiUrl}/login`, {
-          emailOrganizador: emailOrganizador,
+          emailOrganizador,
           senhaOrganizador: senhaLogin
         }).subscribe({
           next: (response: LoginResponseDTO) => {
@@ -105,7 +108,7 @@ export class LoginComponent {
           }
         });
       } else {
-        console.warn('formulário inválido.');
+        console.warn('Formulário inválido.');
       }
     });
   }
