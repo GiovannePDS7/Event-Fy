@@ -47,18 +47,15 @@ export class LoginComponent {
     this.typeSenha = this.typeSenha === 'password' ? 'text' : 'password';
   }
   verificarEmail() {
-    const email = this.LoginForm.get('emailLogin')?.value;
+      const email = this.LoginForm.get('emailLogin')?.value;
 
-    if (email) {
-      this.http.get<EmailCheckResponse>(`${this.apiUrl}/verificar-email?email=${email}`).pipe(
-        catchError(() => of({ existe: false }))
-      ).subscribe((resposta: EmailCheckResponse) => {
-        this.emailExiste = resposta.existe;
-        if (this.emailExiste) {
-          this.LoginForm.get('emailLogin')?.setErrors({ emailJaExiste: true });
-        }
-      });
-    }
+      if (email) {
+          return this.http
+              .get<{ existe: boolean }>(`${this.apiUrl}/verificar-email?email=${email}`)
+              .pipe(catchError(() => of({ existe: false }))); // Correct usage
+      } else {
+          return of({ existe: false });
+      }
   }
 
 
