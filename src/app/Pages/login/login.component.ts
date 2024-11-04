@@ -93,6 +93,11 @@ export class LoginComponent {
         },
         error: (err: HttpErrorResponse) => {
           console.error('Erro de autenticação', err);
+          if (err.error && err.error.message) {
+            alert(`Erro: ${err.error.message}`);
+          } else {
+            alert('Erro desconhecido, tente novamente.');
+          }
         }
       });
     } else {
