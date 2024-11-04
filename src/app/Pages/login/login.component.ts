@@ -50,7 +50,7 @@ export class LoginComponent {
     const email = this.LoginForm.get('emailOrganizador')?.value;
 
     if (email) {
-      return this.http.get<EmailCheckResponse>(`${this.apiUrl}/verificar-email?email=${email}`).pipe(
+      return this.http.get<EmailCheckResponse>(`${this.apiUrl}/organizadores/verificar-email?email=${email}`).pipe(
         map((resposta: EmailCheckResponse) => {
           this.emailExiste = resposta.existe;
           if (this.emailExiste) {
@@ -67,7 +67,7 @@ export class LoginComponent {
       this.emailExiste = false;
       return of(false);
     }
-  }
+  }''
   onEnviar() {
     this.LoginForm.markAllAsTouched();
 
