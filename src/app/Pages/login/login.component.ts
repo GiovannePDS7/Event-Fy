@@ -36,7 +36,7 @@ export class LoginComponent {
       Validators.required,
       Validators.maxLength(50),
     ]),
-    senhaLogin: this.formBuilder.control('', [
+    senhaOrganizador: this.formBuilder.control('', [
       Validators.required,
       Validators.pattern('^(?!.*\\s).*$'),
       Validators.minLength(8),
@@ -78,11 +78,11 @@ export class LoginComponent {
       console.log(existe);
 
       if (this.LoginForm.valid && existe) {
-        const { emailOrganizador, senhaLogin } = this.LoginForm.value;
+        const { emailOrganizador, senhaOrganizador } = this.LoginForm.value;
         console.log('entrou 2');
         this.http.post<LoginResponseDTO>(`${this.apiUrl}/login`, {
           emailOrganizador: emailOrganizador,
-          senhaOrganizador: senhaLogin
+          senhaOrganizador: senhaOrganizador
         }).subscribe({
           next: (response: LoginResponseDTO) => {
             localStorage.setItem('token', response.token);
