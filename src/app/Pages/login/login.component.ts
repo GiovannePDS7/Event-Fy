@@ -65,10 +65,11 @@ export class LoginComponent {
   onEnviar() {
     this.LoginForm.markAllAsTouched();
     this.verificarEmail();
+    console.log('entrou 1')
 
     if (this.LoginForm.valid && this.emailExiste) {
       const { emailLogin, senhaLogin } = this.LoginForm.value;
-
+      console.log('entrou 2')
       this.http.post<LoginResponseDTO>(`${this.apiUrl}/login`, {
         emailOrganizador: emailLogin,
         senhaOrganizador: senhaLogin
