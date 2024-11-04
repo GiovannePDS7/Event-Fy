@@ -101,7 +101,7 @@ export class LoginComponent {
         }
       });
     } else {
-      console.warn('Email não existe ou formulário inválido.');
+      console.warn('formulário inválido.');
     }
   }
 }
