@@ -16,7 +16,7 @@ interface EmailCheckResponse {  // Definindo a interface aqui
 })
 export class LoginComponent {
   typeSenha: string = 'password';
-  apiUrl: string = 'https://logineventfy-production.up.railway.app/organizadores';
+  apiUrl: string = 'https://logineventfy-production.up.railway.app/login';
   emailExiste: boolean = false;
 
   constructor(
@@ -79,7 +79,7 @@ export class LoginComponent {
       if (this.LoginForm.valid && existe) {
         const { emailOrganizador, senhaOrganizador } = this.LoginForm.value;
         console.log('entrou 2');
-        this.http.post<LoginResponseDTO>(`${this.apiUrl}/login/authenticate`, {
+        this.http.post<LoginResponseDTO>(`${this.apiUrl}/authenticate`, {
           emailOrganizador: emailOrganizador,
           senhaOrganizador: senhaOrganizador
         }).subscribe({
