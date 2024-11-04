@@ -38,7 +38,7 @@ export class CadastroComponent {
     this.typeConfirmSenha = this.typeConfirmSenha === 'password' ? 'text' : 'password';
   }
   verificarEmail() {
-    const email = this.cadastroForm.get('emailLogin')?.value;
+    const email = this.cadastroForm.get('emailOrganizador')?.value;
 
     if (email) {
       this.http.get<EmailCheckResponse>(`${this.apiUrl}/verificar-email?email=${email}`).pipe(
@@ -46,7 +46,7 @@ export class CadastroComponent {
       ).subscribe((resposta: EmailCheckResponse) => {
         this.emailExiste = resposta.existe;
         if (this.emailExiste) {
-          this.cadastroForm.get('emailLogin')?.setErrors({ emailJaExiste: true });
+          this.cadastroForm.get('emailOrganizador')?.setErrors({ emailJaExiste: true });
           console.log("Email verificado no banco");
         }
       });

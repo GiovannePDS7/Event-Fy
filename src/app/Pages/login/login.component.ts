@@ -47,7 +47,7 @@ export class LoginComponent {
     this.typeSenha = this.typeSenha === 'password' ? 'text' : 'password';
   }
   verificarEmail() {
-    const email = this.LoginForm.get('emailOrganizador')?.value;
+    const email = this.LoginForm.get('emailLogin')?.value;
 
     if (email) {
       this.http.get<EmailCheckResponse>(`${this.apiUrl}/verificar-email?email=${email}`).pipe(
@@ -55,7 +55,7 @@ export class LoginComponent {
       ).subscribe((resposta: EmailCheckResponse) => {
         this.emailExiste = resposta.existe;
         if (this.emailExiste) {
-          this.LoginForm.get('emailOrganizador')?.setErrors({ emailJaExiste: true });
+          this.LoginForm.get('emailLogin')?.setErrors({ emailJaExiste: true });
         }
       });
     }
