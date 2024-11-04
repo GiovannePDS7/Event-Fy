@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { catchError, of } from 'rxjs';
+import { catchError, map, of } from 'rxjs';
 import { LoginResponseDTO } from 'src/app/models/login-response-dto';
 
 interface EmailCheckResponse {  // Definindo a interface aqui
@@ -31,7 +31,7 @@ export class LoginComponent {
   }
 
   LoginForm = this.formBuilder.group({
-    emailLogin: this.formBuilder.control('', [
+    emailOrganizador: this.formBuilder.control('', [
       Validators.email,
       Validators.required,
       Validators.maxLength(50),
@@ -47,15 +47,19 @@ export class LoginComponent {
     this.typeSenha = this.typeSenha === 'password' ? 'text' : 'password';
   }
   verificarEmail() {
-      const email = this.LoginForm.get('emailLogin')?.value;
+    const email = this.LoginForm.get('emailOrganizador')?.value;
 
-      if (email) {
-          return this.http
-              .get<{ existe: boolean }>(`${this.apiUrl}/verificar-email?email=${email}`)
-              .pipe(catchError(() => of({ existe: false }))); // Correct usage
-      } else {
-          return of({ existe: false });
-      }
+    if (email) {
+      this.http.get<EmailCheckResponse>(`${this.apiUrl}/verificar-email?email=${email}`).pipe(
+        catchError(() => of({ existe: false }))
+      ).subscribe((resposta: EmailCheckResponse) => {
+        this.emailExiste = resposta.existe;
+        if (this.emailExiste) {
+          this.LoginForm.get('emailOrganizador')?.setErrors({ emailJaExiste: true });
+          console.log("Email verificado no banco");
+        }
+      });
+    }
   }
 
 
@@ -67,10 +71,10 @@ export class LoginComponent {
     console.log(this.emailExiste);
 
     if (this.LoginForm.valid && this.emailExiste) {
-      const { emailLogin, senhaLogin } = this.LoginForm.value;
+      const { emailOrganizador, senhaLogin } = this.LoginForm.value;
       console.log('entrou 2')
       this.http.post<LoginResponseDTO>(`${this.apiUrl}/login`, {
-        emailOrganizador: emailLogin,
+        emailOrganizador: emailOrganizador,
         senhaOrganizador: senhaLogin
       }).subscribe({
         next: (response: LoginResponseDTO) => {
