@@ -16,7 +16,7 @@ interface EmailCheckResponse {  // Definindo a interface aqui
 })
 export class LoginComponent {
   typeSenha: string = 'password';
-  apiUrl: string = 'https://cadastroeventfy-production.up.railway.app/organizadores';
+  apiUrl: string = 'logineventfy-production.up.railway.app/organizadores';
   emailExiste: boolean = false;
 
   constructor(
