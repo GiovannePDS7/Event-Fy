@@ -67,6 +67,7 @@ export class LoginComponent {
     this.verificarEmail();
     console.log('entrou 1')
     console.log(this.LoginForm); // Exibe os erros do formulário
+    console.log(this.emailExiste);
 
     if (this.LoginForm.valid && this.emailExiste) {
       const { emailLogin, senhaLogin } = this.LoginForm.value;
