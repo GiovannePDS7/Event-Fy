@@ -54,7 +54,6 @@ export class LoginComponent {
         map((resposta: EmailCheckResponse) => {
           this.emailExiste = resposta.existe;
           if (this.emailExiste) {
-            this.LoginForm.get('emailOrganizador')?.setErrors({ emailJaExiste: true });
             console.log("Email verificado no banco");
           }
           return this.emailExiste;
