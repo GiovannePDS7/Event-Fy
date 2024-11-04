@@ -29,13 +29,14 @@ export class CadastroComponent {
     emailOrganizador: this.formBuilder.control('', [Validators.email, Validators.required, Validators.maxLength(50)]),
     senhaOrganizador: this.formBuilder.control('', [Validators.required, Validators.pattern('^(?!.*\\s).*$'), Validators.minLength(8), Validators.maxLength(50)]),
     confirmarSenha: this.formBuilder.control('', [Validators.required])
-  }, { validators: this.senhasCoincidem });
+  });
 
-  senhasCoincidem(formGroup: any) {
-    return formGroup.get('senhaOrganizador')?.value === formGroup.get('confirmarSenha')?.value
-      ? null : { senhasNaoCoincidem: true };
+  visibilidadeSenha(): void {
+    this.typeSenha = this.typeSenha === 'password' ? 'text' : 'password';
   }
-
+  visibilidadeConfirmSenha(): void {
+    this.typeConfirmSenha = this.typeConfirmSenha === 'password' ? 'text' : 'password';
+  }
   verificarEmail() {
     const email = this.cadastroForm.get('emailOrganizador')?.value;
 

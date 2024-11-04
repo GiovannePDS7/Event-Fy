@@ -43,7 +43,9 @@ export class LoginComponent {
       Validators.maxLength(50),
     ]),
   });
-
+  visibilidadeSenha(): void {
+    this.typeSenha = this.typeSenha === 'password' ? 'text' : 'password';
+  }
   verificarEmail() {
     const email = this.LoginForm.get('emailLogin')?.value;
 
