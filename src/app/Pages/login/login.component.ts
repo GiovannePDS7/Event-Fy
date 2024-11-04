@@ -67,7 +67,7 @@ export class LoginComponent {
       this.emailExiste = false;
       return of(false);
     }
-  }''
+  }
   onEnviar() {
     this.LoginForm.markAllAsTouched();
 
