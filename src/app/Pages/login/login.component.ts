@@ -103,8 +103,10 @@ export class LoginComponent {
             }
           }
         });
-      } else {
-        console.warn('formulário inválido.');
+      }  else {
+        console.warn('Formulário inválido:', this.LoginForm.errors);
+        console.log('Erros do campo email:', this.LoginForm.get('emailOrganizador')?.errors);
+        console.log('Erros do campo senha:', this.LoginForm.get('senhaOrganizador')?.errors);
       }
     });
   }
