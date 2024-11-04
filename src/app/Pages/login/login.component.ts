@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { catchError } from 'rxjs/operators';
-import { of } from 'rxjs';
+import { catchError, of } from 'rxjs';
 import { LoginResponseDTO } from 'src/app/models/login-response-dto';
+
+interface EmailCheckResponse {  // Definindo a interface aqui
+  existe: boolean;
+}
 
 @Component({
   selector: 'app-login',
@@ -16,15 +19,16 @@ export class LoginComponent {
   apiUrl: string = 'https://cadastroeventfy-production.up.railway.app/organizadores';
   emailExiste: boolean = false;
 
-  visibilidadeSenha(): void {
-    this.typeSenha = this.typeSenha === 'password' ? 'text' : 'password';
-  }
-
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private router: Router
-  ) {}
+  ) {
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.router.navigate(['/inicial']);
+    }
+  }
 
   LoginForm = this.formBuilder.group({
     emailLogin: this.formBuilder.control('', [
@@ -45,14 +49,13 @@ export class LoginComponent {
 
     if (email) {
       this.http
-        .get<{ existe: boolean }>(
+        .get<EmailCheckResponse>(
           `${this.apiUrl}/verificar-email?email=${email}`
         )
         .pipe(catchError(() => of({ existe: false })))
-        .subscribe((resposta) => {
+        .subscribe((resposta: EmailCheckResponse) => {  // Agora está definido
           this.emailExiste = resposta.existe;
 
-          // Mensagem no console para indicar o status da verificação de email
           if (this.emailExiste) {
             console.log('O email existe no sistema.');
           } else {
@@ -65,20 +68,18 @@ export class LoginComponent {
     }
   }
 
-
   onEnviar() {
     this.LoginForm.markAllAsTouched();
-    this.verificarEmail(); // Chama a verificação antes de enviar
+    this.verificarEmail();
 
     if (this.LoginForm.valid && this.emailExiste) {
       const { emailLogin, senhaLogin } = this.LoginForm.value;
 
-      // Envia a requisição de autenticação para o backend
       this.http.post<LoginResponseDTO>(`${this.apiUrl}/login`, {
         emailOrganizador: emailLogin,
         senhaOrganizador: senhaLogin
       }).subscribe({
-        next: (response) => {
+        next: (response: LoginResponseDTO) => {
           localStorage.setItem('token', response.token);
           localStorage.setItem('organizadorId', response.id.toString());
           localStorage.setItem('nomeOrganizador', response.nome);
@@ -88,7 +89,7 @@ export class LoginComponent {
 
           this.router.navigate(['/inicial']);
         },
-        error: (err) => {
+        error: (err: HttpErrorResponse) => {
           console.error('Erro de autenticação', err);
         }
       });

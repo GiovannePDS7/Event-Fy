@@ -5,6 +5,10 @@ import { of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
+interface EmailCheckResponse {
+  existe: boolean;
+}
+
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
@@ -12,20 +16,11 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class CadastroComponent {
-
   typeInputConfirm: string = 'password';
   typeSenha: string = 'password';
   typeConfirmSenha: string = 'password';
-
   emailExiste: boolean = false;
   apiUrl: string = 'https://cadastroeventfy-production.up.railway.app/organizadores';
-
-  visibilidadeSenha(): void {
-    this.typeSenha = this.typeSenha === 'password' ? 'text' : 'password';
-  }
-  visibilidadeConfirmSenha(): void {
-    this.typeConfirmSenha = this.typeConfirmSenha === 'password' ? 'text' : 'password';
-  }
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) { }
 
@@ -34,16 +29,20 @@ export class CadastroComponent {
     emailOrganizador: this.formBuilder.control('', [Validators.email, Validators.required, Validators.maxLength(50)]),
     senhaOrganizador: this.formBuilder.control('', [Validators.required, Validators.pattern('^(?!.*\\s).*$'), Validators.minLength(8), Validators.maxLength(50)]),
     confirmarSenha: this.formBuilder.control('', [Validators.required])
-  });
+  }, { validators: this.senhasCoincidem });
 
+  senhasCoincidem(formGroup: any) {
+    return formGroup.get('senhaOrganizador')?.value === formGroup.get('confirmarSenha')?.value
+      ? null : { senhasNaoCoincidem: true };
+  }
 
   verificarEmail() {
     const email = this.cadastroForm.get('emailOrganizador')?.value;
 
     if (email) {
-      this.http.get<{ existe: boolean }>(`${this.apiUrl}/verificar-email?email=${email}`).pipe(
+      this.http.get<EmailCheckResponse>(`${this.apiUrl}/verificar-email?email=${email}`).pipe(
         catchError(() => of({ existe: false }))
-      ).subscribe(resposta => {
+      ).subscribe((resposta: EmailCheckResponse) => {
         this.emailExiste = resposta.existe;
         if (this.emailExiste) {
           this.cadastroForm.get('emailOrganizador')?.setErrors({ emailJaExiste: true });
@@ -72,5 +71,4 @@ export class CadastroComponent {
       alert('Cadastro inválido, verifique os avisos');
     }
   }
-
 }
