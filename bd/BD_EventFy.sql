@@ -7,7 +7,7 @@ CREATE TABLE Organizador(
 	Nome_Organizador	  CHAR(60) NOT NULL,
   Foto_Organizador    VARBINARY(1000),
 	Email_Organizador	  VARCHAR(50)  UNIQUE NOT NULL,
-	Senha_Oganizador	  VARCHAR(50) NOT NULL,
+	Senha_Organizador	  VARCHAR(300) NOT NULL,
 	Contato_Organizador	VARCHAR(20),
 	Data_Cadastro		    DATETIME
 )
