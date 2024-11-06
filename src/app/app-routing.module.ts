@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'apresentacao', component: ApresentacaoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
-  { path: 'inicial', component: InicialComponent, canActivate: [AuthGuard] }, // Proteja a rota
+  { path: 'inicial', component: InicialComponent }, // Proteja a rota *canActivate: [AuthGuard]
   { path: 'formulario', component: FormularioComponent },
   { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
 ];
