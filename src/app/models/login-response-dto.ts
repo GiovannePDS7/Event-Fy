@@ -1,9 +1,8 @@
-
 export interface LoginResponseDTO {
   token: string;
   id: number;
   nome: string;
-  email: string;
-  contato: string;
-  foto: string;
+  emailOrganizador: string;
+  contato: string | null;
+  foto: string | null;
 }

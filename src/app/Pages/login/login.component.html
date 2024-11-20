@@ -84,8 +84,7 @@
           </fieldset>
 
           <div id="container-erro-Email">
-            <mat-error
-              *ngIf="LoginForm.controls.emailOrganizador.hasError('required') && LoginForm.controls.emailOrganizador.touched">'E-mail' é obrigatório</mat-error>
+            <mat-error *ngIf="LoginForm.controls.emailOrganizador.hasError('required') && LoginForm.controls.emailOrganizador.touched">E-mail é obrigatório</mat-error>
             <mat-error *ngIf="LoginForm.controls.emailOrganizador.hasError('email')">E-mail inválido</mat-error>
           </div>
 
@@ -93,39 +92,27 @@
             <legend class="legendLg">Senha</legend>
             <input class="input-formLg" matInput [type]="typeSenha" placeholder="* * * *" formControlName="senhaOrganizador">
             <img class="img-fluid icon-form icon-form-password" id="icon-formlg"
-              [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png': '../../../assets/Elementos/password_view.png'"
+              [src]="typeSenha === 'password' ? '../../../assets/Elementos/password_hide.png' : '../../../assets/Elementos/password_view.png'"
               (click)="visibilidadeSenha()">
           </fieldset>
 
           <div id="container-erro-Senha">
-            <mat-error
-              *ngIf="LoginForm.controls.senhaOrganizador.hasError('required') && LoginForm.controls.senhaOrganizador.touched">'Senha'é obrigatório</mat-error>
-            <mat-error *ngIf="LoginForm.controls.senhaOrganizador.hasError('minlength') && LoginForm.controls.senhaOrganizador.hasError('pattern')">
-              A senha deve ter de 8 a 50 caracteres e não pode conter espaços.
-            </mat-error>
-
-            <mat-error *ngIf="LoginForm.controls.senhaOrganizador.hasError('minlength') && !LoginForm.controls.senhaOrganizador.hasError('pattern')">
-              A senha deve ter de 8 a 50 caracteres
-            </mat-error>
-            <mat-error *ngIf="LoginForm.controls.senhaOrganizador.hasError('pattern') && !LoginForm.controls.senhaOrganizador.hasError('minlength')">
-              A senha não pode conter espaços.
-            </mat-error>
+            <mat-error *ngIf="LoginForm.controls.senhaOrganizador.hasError('required') && LoginForm.controls.senhaOrganizador.touched">Senha é obrigatória</mat-error>
+            <mat-error *ngIf="LoginForm.controls.senhaOrganizador.hasError('minlength') && LoginForm.controls.senhaOrganizador.hasError('pattern')">A senha deve ter de 8 a 50 caracteres e não pode conter espaços.</mat-error>
+            <mat-error *ngIf="LoginForm.controls.senhaOrganizador.hasError('minlength') && !LoginForm.controls.senhaOrganizador.hasError('pattern')">A senha deve ter de 8 a 50 caracteres</mat-error>
+            <mat-error *ngIf="LoginForm.controls.senhaOrganizador.hasError('pattern') && !LoginForm.controls.senhaOrganizador.hasError('minlength')">A senha não pode conter espaços.</mat-error>
           </div>
-
 
           <div id="btn-formLg">
-            <button id="button-submitLg">Entrar</button>
-            <div id="container-EsqueceuSenha-Lg">
-              <a id="a-ES-Lg" [routerLink]="['/']">Esqueceu a senha?</a>
-          </div>
-
+            <button id="button-submitLg" type="submit" [disabled]="LoginForm.invalid">Entrar</button>
           </div>
         </form>
+
         <div id="container-SignInLg">
-          <span id="span-SignInLg">Ainda não tem conta? <a id="a-SignUp"
-              [routerLink]="['/cadastro']">Cadastre-se</a></span>
+          <span id="span-SignInLg">Ainda não tem conta? <a id="a-SignUp" [routerLink]="['/cadastro']">Cadastre-se</a></span>
         </div>
       </section>
     </mat-grid-tile>
   </mat-grid-list>
+
 </div>
