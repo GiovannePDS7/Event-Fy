@@ -20,7 +20,6 @@
           <mat-error
             *ngIf="LoginForm.controls.emailOrganizador.hasError('required') && LoginForm.controls.emailOrganizador.touched">'E-mail' é obrigatório</mat-error>
           <mat-error *ngIf="LoginForm.controls.emailOrganizador.hasError('email')">E-mail inválido</mat-error>
-          <mat-error *ngIf="LoginForm.controls.emailOrganizador.hasError('emailJaExiste')">Este e-mail já está cadastrado</mat-error>
         </div>
 
         <fieldset>
