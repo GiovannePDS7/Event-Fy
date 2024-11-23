@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'inicial', component: InicialComponent, canActivate: [AuthGuard]}, // Proteja a rota *canActivate: [AuthGuard]
-  { path: 'formulario', component: FormularioComponent, canActivate: [AuthGuard] },
+  { path: 'formulario', component: FormularioComponent/*, canActivate: [AuthGuard]*/ },
   { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
 ];
 

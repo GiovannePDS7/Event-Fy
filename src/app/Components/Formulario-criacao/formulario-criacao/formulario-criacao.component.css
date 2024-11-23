@@ -1,27 +1,28 @@
-#Background{
-    background-color:#f6bb7c;
-    height:120vh;
-    width:100%;
+#Background {
+    background-color: #f6bb7c;
+    height: 120vh;
+    width: 100%;
     align-items: center;
     flex-direction: column;
     display: flex;
 
 }
-#Title{
+
+#Title {
     padding-top: 2vh;
-    font-size:5vw;
+    font-size: 5vw;
     font-weight: bold;
     text-align: center;
 }
-#Title2{
-  font-size:5vw;
-  font-weight: bold;
-  text-align: center;
+
+#Title2 {
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
 }
 
-#Body{
-    height:95vh;
-    width:90%;
+#formularioMobile {
+    width: 90%;
     background-color: white;
     border-radius: 15px;
     border: 1px solid #000;
@@ -29,21 +30,26 @@
     flex-direction: column;
     display: flex;
 }
-img{
+
+img {
     margin-top: 5%;
 }
 
-#btnPhoto{
-    height:8vh;
+#btnPhoto {
+    height: 5vh;
     margin-top: 2vh;
     margin-bottom: 4vh;
     background-color: #EF820D;
-    font-size: 15px;
+    font-size: 3vw;
     font-family: "Myriad pro Semibold"
 }
 
+fieldset:disabled {
+    pointer-events: revert;
+    opacity: revert;
+}
+
 .formFieldset {
-    height:15vh;
     border-radius: 8px;
     width: 80vw;
     display: flex;
@@ -64,63 +70,86 @@ legend {
     padding: 0 3%;
     font-style: italic;
 }
-.textForm{
-    all:unset;
-    font-size:3.5vw;
-    width:100%;
-    margin-left: 15px;
+
+.container-erro {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container-erro:has(.error-box) {
+    padding-bottom: 2vh;
 
 }
 
-#containerBox{
+.error-box {
+    width: 80vw;
+    font-size: 3.5vw;
+}
+
+
+
+.textForm {
+    all: unset;
+    font-size: 4vw;
+    width: 100%;
+    padding-left: 4%;
+}
+
+#containerBox {
     width: 100%;
     flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
     justify-content: flex-end
 }
-#Box{
-    border:0px;
+
+#Box {
+    border: 0px;
     font-size: 3.5vw;
-    margin-right:15px;
+    margin-right: 15px;
     margin-bottom: 2%;
 }
 
-#chbx{
-    background-color:#EF820D;
-    margin-left:5vw;
-    margin-right: 2vw;;
-    height:4vw;
+#chbx {
+    background-color: #EF820D;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    ;
+    height: 4vw;
 }
 
-#btnEvent{
+#btnEvent {
     background-color: #EF820D;
     font-weight: bold;
-    height:12vw;
-    font-size:30px;
+    height: 12vw;
+    font-size: 30px;
     margin-top: 7vw;
 
 }
-#backgroundDesk{
-  background-color:#f6bb7c;
-  height:55vh;
-  width:100%;
+
+#backgroundDesk {
+    background-color: #f6bb7c;
+    height: 55vh;
+    width: 100%;
 
 }
-#body{
-  background-color: white;
-  height:35vh;
-  width:90%;
-  border-radius: 15px;
-  border: 1px solid #000;
-  align-items: center;
-  flex-direction: column;
-  display: flex;
-  margin-left: 5%;
+
+#body {
+    background-color: white;
+    height: 35vh;
+    width: 90%;
+    border-radius: 15px;
+    border: 1px solid #000;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-left: 5%;
 }
 
-#Title3{
-  padding-top: 2vh;
-  font-size:2.5vw;
-  font-weight: bold;
-  text-align: center
+#Title3 {
+    padding-top: 2vh;
+    font-size: 2.5vw;
+    font-weight: bold;
+    text-align: center
 }

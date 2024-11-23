@@ -24,6 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioComponent } from './Pages/formulario/formulario.component';
 import { FormularioCriacaoComponent } from './Components/Formulario-criacao/formulario-criacao/formulario-criacao.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { FormularioCriacaoComponent } from './Components/Formulario-criacao/form
     MatFormFieldModule,
     MatInputModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDatepickerModule,
+MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

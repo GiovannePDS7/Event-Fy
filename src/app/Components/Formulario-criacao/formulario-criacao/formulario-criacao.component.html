@@ -1,22 +1,40 @@
 <div class=".d-xs-block d-md-none">
     <div id="Background">
         <p id="Title">Criação do Evento,</p>
-
         <p id="Title2">Nome do Evento</p>
-        <div id="Body">
-            <img src="../../../../assets/Elementos/IconFormulario.png">
+        <form id="formularioMobile" [formGroup]="CadastroEventoForm">
+            <img class="img-fluid" src="../../../../assets/Elementos/IconFormulario.png">
             <button mat-stroked-button id="btnPhoto">Inserir Foto</button>
 
-                <fieldset class="formFieldset">
-                    <legend>Nome do Evento</legend>
-                    <input type="text" placeholder="Qual o nome do seu evento?" class="textForm">
-                </fieldset>
+            <fieldset class="formFieldset">
+                <legend>Nome do Evento</legend>
+                <input type="text" placeholder="Qual o nome do seu evento?" class="textForm"
+                    formControlName="nomeEvento" minlength="3" maxlength="45">
+            </fieldset>
+            <div class="container-erro">
+                <mat-error class="error-box"
+                    *ngIf="CadastroEventoForm.controls.nomeEvento.hasError('required') && CadastroEventoForm.controls.nomeEvento.touched">'Nome
+                    do Evento'
+                    é obrigatório</mat-error>
+                <mat-error class="error-box" *ngIf="CadastroEventoForm.controls.nomeEvento.hasError('minlength')">'Nome
+                    do Evento' precisa conter entre 3
+                    e 45
+                    caracteres </mat-error>
+            </div>
 
-                <fieldset class="formFieldset">
-                    <legend>Data do Evento</legend>
-                    <input type="text" placeholder="Qual dia acontecerá seu evento?" class="textForm">
-                </fieldset>
+            <fieldset class="formFieldset">
+                <legend>Data do Evento</legend>
+                <input type="date" placeholder="Qual dia acontecerá seu evento?" class="textForm"
+                    formControlName="dataEvento" [min]="hoje">
+            </fieldset>
 
+            <div class="container-erro">
+                <mat-error class="error-box"
+                    *ngIf="CadastroEventoForm.controls.dataEvento.hasError('required') && CadastroEventoForm.controls.dataEvento.touched">'Data
+                    do Evento'
+                    é obrigatório</mat-error>
+            </div>
+            <!--
                 <fieldset class="formFieldset">
                     <legend>Horário que inicia o Evento</legend>
                     <input type="text" placeholder="Qual horário que começará seu evento?" class="textForm">
@@ -51,24 +69,22 @@
                 <fieldset id="Box">
                     <input type="checkbox" id="chbx"/>
                     <label for="chbx">Fornecedores</label>
-                </fieldset>
-            </div>
-        </div>
-        <button mat-stroked-button id="btnEvent">Criar Evento</button>
+                </fieldset> 
+            </div>-->
+        </form>
+        <button mat-stroked-button (click)="onEnviar()" id="btnEvent">Criar Evento</button>
     </div>
 </div>
 
 <div class="d-none d-md-block d-xxl-block">
     <div id="backgroundDesk">
-      <h1 id="Title3">Criação do evento, Nome do evento</h1>
+        <h1 id="Title3">Criação do evento, Nome do evento</h1>
         <div id="body">
-        <mat-grid-list cols="2" rowHeight="2:1">
-          <mat-grid-tile>aaaaaaaaaaaa</mat-grid-tile>
-          <mat-grid-tile>aaaaaaaaa</mat-grid-tile>
-        </mat-grid-list>
-      </div>
+            <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile>aaaaaaaaaaaa</mat-grid-tile>
+                <mat-grid-tile>aaaaaaaaa</mat-grid-tile>
+            </mat-grid-list>
+        </div>
     </div>
 
 </div>
-
-
