@@ -1,8 +1,8 @@
 <div class=".d-xs-block d-md-none">
-    <div id="Background">
+    <div id="Background" class="pb-3">
         <p id="Title">Criação do Evento,</p>
         <p id="Title2">Nome do Evento</p>
-        <form id="formularioMobile" [formGroup]="CadastroEventoForm">
+        <form id="formularioMobile" [formGroup]="CadastroEventoForm" class="pb-1">
             <img class="img-fluid" src="../../../../assets/Elementos/IconFormulario.png">
             <button mat-stroked-button id="btnPhoto">Inserir Foto</button>
 
@@ -34,43 +34,58 @@
                     do Evento'
                     é obrigatório</mat-error>
             </div>
-            <!--
-                <fieldset class="formFieldset">
-                    <legend>Horário que inicia o Evento</legend>
-                    <input type="text" placeholder="Qual horário que começará seu evento?" class="textForm">
-                </fieldset>
+            <fieldset class="formFieldset">
+                <legend>Horário que inicia o Evento</legend>
+                <input type="time" placeholder="Qual horário que começará seu evento?" class="textForm"
+                    formControlName="horarioInicio">
+            </fieldset>
+            <div class="container-erro">
+                <mat-error class="error-box"
+                    *ngIf="CadastroEventoForm.controls.horarioInicio.hasError('required') && CadastroEventoForm.controls.horarioInicio.touched">'Horário
+                    que inicia'
+                    é obrigatório</mat-error>
+            </div>
+            <fieldset class="formFieldset">
+                <legend>Horário que finaliza o Evento</legend>
+                <input type="time" placeholder="Qual horário acabará seu evento?" class="textForm"
+                    formControlName="horarioFim">
+            </fieldset>
+            <div class="container-erro">
+                <mat-error class="error-box"
+                    *ngIf="CadastroEventoForm.controls.horarioFim.hasError('required') && CadastroEventoForm.controls.horarioFim.touched">'Horário
+                    que finaliza'
+                    é obrigatório</mat-error>
+            </div>
+            <fieldset class="formFieldset">
+                <legend>Local do Evento</legend>
+                <input type="text" placeholder="Qual o endereço do seu evento?" class="textForm" minlength="3"
+                    maxlength="300" formControlName="localEvento">
+            </fieldset>
+            <div class="container-erro">
+                <mat-error class="error-box"
+                    *ngIf="CadastroEventoForm.controls.localEvento.hasError('required') && CadastroEventoForm.controls.localEvento.touched">'Local
+                    do Evento'
+                    é obrigatório</mat-error>
+                <mat-error class="error-box" *ngIf="CadastroEventoForm.controls.localEvento.hasError('minlength')">'Nome
+                    do Evento' precisa conter entre 3
+                    e 300
+                    caracteres </mat-error>
+            </div>
 
-                <fieldset class="formFieldset">
-                    <legend>Horário que inicia o Evento</legend>
-                    <input type="text" placeholder="Qual horário acabará seu evento?" class="textForm">
-                </fieldset>
-
-                <fieldset class="formFieldset">
-                    <legend>Local do Evento</legend>
-                    <input type="text" placeholder="Qual o endereço do seu evento?" class="textForm">
-                </fieldset>
-
-                <fieldset class="formFieldset">
-                    <legend>Tipo do Evento</legend>
-                    <input type="text" placeholder="Qual o tipo do seu evento?" class="textForm">
-                </fieldset>
-
-                <div id="containerBox">
-                <fieldset id="Box">
-                    <input type="checkbox" id="chbx"/>
-                    <label for="chbx">Incluir Tarefas</label>
-                </fieldset>
-
-                <fieldset id="Box">
-                    <input type="checkbox" id="chbx"/>
-                    <label for="chbx">Lista de Convidados</label>
-                </fieldset>
-
-                <fieldset id="Box">
-                    <input type="checkbox" id="chbx"/>
-                    <label for="chbx">Fornecedores</label>
-                </fieldset> 
-            </div>-->
+            <div id="containerBox">
+                <div class="container-checkBox">
+                    <input type="checkbox" id="chbx1" />
+                    <label for="chbx1">Incluir Tarefas</label>
+                </div>
+                <div class="container-checkBox">
+                    <input type="checkbox" id="chbx2" />
+                    <label for="chbx2">Lista de Convidados</label>
+                </div>
+                <div class="container-checkBox">
+                    <input type="checkbox" id="chbx3" />
+                    <label for="chbx3">Fornecedores</label>
+                </div>
+            </div>
         </form>
         <button mat-stroked-button (click)="onEnviar()" id="btnEvent">Criar Evento</button>
     </div>

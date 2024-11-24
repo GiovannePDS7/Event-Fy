@@ -1,6 +1,5 @@
 #Background {
     background-color: #f6bb7c;
-    height: 120vh;
     width: 100%;
     align-items: center;
     flex-direction: column;
@@ -99,23 +98,77 @@ legend {
 
 #containerBox {
     width: 100%;
-    flex-wrap: wrap-reverse;
-    flex-direction: row-reverse;
-    justify-content: flex-end
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#Box {
-    border: 0px;
-    font-size: 3.5vw;
-    margin-right: 15px;
-    margin-bottom: 2%;
+.container-checkBox {
+    display: flex;
+    align-items: center;
+
 }
 
-#chbx {
-    background-color: #EF820D;
+.container-checkBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    display: none;
+    /* Oculta o checkbox padrão */
+}
+
+label {
+    position: relative;
+    cursor: pointer;
+    width: 80vw;
+    font-size: 3.4vw;
+    display: flex;
+    align-items: center;
+}
+
+label::before {
+    margin-right: 2.5%;
+    display: inline-flex;
+    justify-content: space-between;
+    content: '';
+    height: 3vh;
+    width: 3vh;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="checkbox"]:checked+label::before {
+    background-color: orange;
+    /* Cor laranja quando marcado */
+    border-color: orange;
+}
+
+label::after {
+    content: '✓';
+    left: 6px;
+    top: 9px;
+    width: 8px;
+    height: 4px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+input[type="checkbox"]:checked+label::after {
+    opacity: 1;
+}
+
+#chbx1, #chbx2, #chbx3 {
+    accent-color: #EF820D;
     margin-left: 5vw;
     margin-right: 2vw;
-    ;
     height: 4vw;
 }
 
@@ -123,10 +176,12 @@ legend {
     background-color: #EF820D;
     font-weight: bold;
     height: 12vw;
-    font-size: 30px;
+
+    font-size: 4vw;
     margin-top: 7vw;
 
 }
+
 
 #backgroundDesk {
     background-color: #f6bb7c;

@@ -22,7 +22,7 @@ export class FormularioCriacaoComponent {
     dataEvento: this.formBuilder.control(this.hoje, [Validators.required]),
     horarioInicio: this.formBuilder.control('', [Validators.required]),
     horarioFim: this.formBuilder.control('', [Validators.required]),
-    localEvento: this.formBuilder.control('', [Validators.required]),
+    localEvento: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(300)]),
     tipoEvento: this.formBuilder.control(''),
     incluirTarefas: this.formBuilder.control(false), 
     listaConvidados: this.formBuilder.control(false), 
@@ -30,6 +30,8 @@ export class FormularioCriacaoComponent {
   });
 
   onEnviar() {
+
+    this.CadastroEventoForm.markAllAsTouched();
     if (this.CadastroEventoForm.valid) {
       alert('Formulário enviado com sucesso!');
       console.log(this.CadastroEventoForm.value);
