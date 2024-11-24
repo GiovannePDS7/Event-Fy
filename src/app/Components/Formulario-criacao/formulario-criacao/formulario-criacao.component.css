@@ -144,13 +144,16 @@ label::before {
 }
 
 input[type="checkbox"]:checked+label::before {
-    background-color: orange;
-    /* Cor laranja quando marcado */
-    border-color: orange;
+    content: "✓";
+    background-color: #EF820D;
+    border-color: #EF820D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vw;
 }
 
 label::after {
-    content: '✓';
     left: 6px;
     top: 9px;
     width: 8px;
