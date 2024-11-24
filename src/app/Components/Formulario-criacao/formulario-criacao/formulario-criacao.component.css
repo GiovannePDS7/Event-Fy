@@ -59,6 +59,7 @@ fieldset:disabled {
     padding: 0 0% 1.5% 3%;
     border: 1.5px solid var(--cor-secundaria);
     margin-bottom: 2vh;
+    white-space: nowrap;
 }
 
 legend {

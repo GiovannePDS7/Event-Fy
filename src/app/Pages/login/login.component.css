@@ -180,6 +180,7 @@ legend {
 }
 
 .legendLg {
+  white-space: nowrap;
   font-size: 1.8vw;
 }
 
@@ -288,7 +289,7 @@ legend {
   cursor: pointer;
 }
 
-#container-erro-Email-Mobile, #container-erro-Senha-Mobile{
+#container-erro-Email-Mobile, #container-erro-Senha-Mobile {
   margin-top: -10%;
   margin-bottom: -10%;
   height: 2vh;
