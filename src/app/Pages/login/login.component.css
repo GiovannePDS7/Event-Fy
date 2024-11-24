@@ -89,7 +89,7 @@ legend {
   float: none;
   width: auto;
   margin: 0;
-  font-size: 4.5vw;
+  font-size: 4vw;
   padding: 0 3%;
   font-style: italic;
 }
@@ -101,7 +101,7 @@ legend {
   height: 100%;
   width: 80%;
   padding-left: 4%;
-  font-size: 4vw;
+  font-size: 3.5vw;
 }
 
 .input-form::placeholder {
