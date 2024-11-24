@@ -65,7 +65,7 @@ legend {
     float: none;
     width: auto;
     margin: 0;
-    font-size: 4.5vw;
+    font-size: 4vw;
     padding: 0 3%;
     font-style: italic;
 }
@@ -91,7 +91,7 @@ legend {
 
 .textForm {
     all: unset;
-    font-size: 4vw;
+    font-size: 3.5vw;
     width: 100%;
     padding: 1% 0 2% 4%;
 }
