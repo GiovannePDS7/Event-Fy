@@ -1,0 +1,35 @@
+header{
+  width:100%;
+  height:7vh;
+  align-items: center;
+  display: flex;
+}
+i{
+  font-size:5.5vw;
+  margin-left:1.5vw;
+}
+#inputM{
+  border-radius: 2vw;
+  height:6vw;
+  margin-left: 35vw;
+  padding-left:1.5vw;
+  font-size: 3.5vw;
+}
+#inputPc{
+  border-radius: 2vw;
+  height:4vw;
+  margin-left: 40vw;
+  padding-left:1.5vw;
+  font-size: 2vw;
+}
+#emailPc, #bellPc, #personPc {
+  font-size:4vw;
+  margin-left:2vw;
+}
+#headerPc{
+  height:12vh;
+}
+
+#headerT{
+  height:9vw;
+}
