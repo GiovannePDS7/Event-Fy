@@ -12,11 +12,11 @@ export class InicialComponent implements OnInit {
   ngOnInit(): void {
     // Acessar os dados do localStorage
     const token = localStorage.getItem('token');
-    const id = localStorage.getItem('id');
-    const nome = localStorage.getItem('nome');
+    const id = localStorage.getItem('organizadorId');
+    const nome = localStorage.getItem('nomeOrganizador');
     const emailOrganizador = localStorage.getItem('emailOrganizador');
-    const contato = localStorage.getItem('contato');
-    const foto = localStorage.getItem('foto');
+    const contato = localStorage.getItem('contatoOrganizador');
+    const foto = localStorage.getItem('fotoOrganizador');
 
     // Exibir os dados no console
     console.log('Dados do usuário no localStorage:');
