@@ -34,7 +34,7 @@ img {
     margin-top: 5%;
 }
 
-#btnPhoto {
+#btnPhoto, #btnPhotoLG {
     height: 5vh;
     margin-top: 2vh;
     margin-bottom: 4vh;
@@ -43,12 +43,19 @@ img {
     font-family: "Myriad pro Semibold"
 }
 
+#btnPhotoLG{
+    font-size: 1.3vw;
+    width: 15%;
+    height: 7vh;
+    font-weight: bold;
+}
+
 fieldset:disabled {
     pointer-events: revert;
     opacity: revert;
 }
 
-.formFieldset {
+.formFieldset, .formFieldsetLG {
     border-radius: 8px;
     width: 80vw;
     display: flex;
@@ -71,7 +78,7 @@ legend {
     font-style: italic;
 }
 
-.container-erro {
+.container-erro .container-erroLG {
     width: 100%;
     height: auto;
     display: flex;
@@ -83,14 +90,14 @@ legend {
 
 }
 
-.error-box {
+.error-box .error-boxLG {
     width: 80vw;
     font-size: 3.5vw;
 }
 
 
 
-.textForm {
+.textForm, .textFormLG {
     all: unset;
     font-size: 3.5vw;
     width: 100%;
@@ -105,19 +112,13 @@ legend {
     justify-content: center;
 }
 
-.container-checkBox {
-    display: flex;
-    align-items: center;
-
-}
-
-.container-checkBox {
+.container-checkBox, .container-checkBoxLG{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-input[type="checkbox"] {
+#chbx1, #chbx2, #chbx3 {
     display: none;
     /* Oculta o checkbox padrão */
 }
@@ -189,9 +190,7 @@ input[type="checkbox"]:checked+label::after {
 
 #backgroundDesk {
     background-color: #f6bb7c;
-    height: 55vh;
     width: 100%;
-
 }
 
 #body {
@@ -211,4 +210,101 @@ input[type="checkbox"]:checked+label::after {
     font-size: 2.5vw;
     font-weight: bold;
     text-align: center
+}
+
+/*LG*/
+
+#imgLG
+{
+  margin-top: 2%;   
+}
+.gridLG
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #EF820D;
+}
+#titleLG
+{
+    text-align: center;
+    font-weight: bold;
+
+}
+
+#bodyLG
+{
+    background-color: white;
+    width: 90%;
+    border-radius: 15px;
+    border: 1px solid #000;
+    margin-left: 5%;
+
+}
+#container-btnLG 
+{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 2%;
+}
+.img-fluid 
+{
+    max-width: 100%; 
+    height: auto; 
+}
+
+#btnPhoto {
+    padding: 10px 20px; 
+    font-size: 16px; 
+}
+
+.formFieldsetLG 
+{
+    width: 65%;
+    margin-left: 17%;
+}
+.legendLG
+{
+    font-size: 1.5vw;
+}
+.textFormLG
+{
+    font-size: 1.5vw;
+    height: 3vh;
+    
+}
+.containerlittle-inputLG, #containerlittle-inputLGleft
+{
+    width: 100%;
+}
+#containerlittle-inputLGleft
+{
+  position: absolute;
+  top: 10%;
+}
+.error-boxLG
+{
+    font-size: 1vw;
+    margin-left: 17%;
+}
+.container-erroLG
+{
+    margin-bottom: 10px;
+}
+#containerBoxLG 
+{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#chbx1LG, #chbx2LG, #chbx3LG {
+    margin-left: 18%;
+    margin-right: 2vw;
+    height: 1vw;
+}
+#espaco
+{
+    width: 100%;
+    height: 5vh;
 }
