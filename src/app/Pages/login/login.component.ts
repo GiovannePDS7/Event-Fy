@@ -11,8 +11,8 @@ import { LoginResponseDTO } from 'src/app/models/login-response-dto';
 export class LoginComponent {
 
   typeSenha: string = 'password';
-  apiUrl: string = 'https://logineventfy-production.up.railway.app/login';
-  // apiUrl: string = 'http://localhost:8080';
+  //apiUrl: string = 'https://logineventfy-production.up.railway.app/login';
+   apiUrl: string = 'http://localhost:8080';
 
   // Definindo o LoginForm no construtor do componente
   LoginForm = this.formBuilder.group({
@@ -54,7 +54,7 @@ export class LoginComponent {
     if (this.LoginForm.valid) {
       const { emailOrganizador, senhaOrganizador } = this.LoginForm.value;
 
-      this.http.post<LoginResponseDTO>(`${this.apiUrl}/authenticate?usuario=${emailOrganizador}&senha=${senhaOrganizador}`, {
+      this.http.post<LoginResponseDTO>(`${this.apiUrl}/login/authenticate?usuario=${emailOrganizador}&senha=${senhaOrganizador}`, {
       }).subscribe({
         next: (response: LoginResponseDTO) => {
           // Armazenando no localStorage os dados recebidos

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,33 +9,55 @@ import { Router } from '@angular/router';
   styleUrls: ['./formulario-criacao.component.css']
 })
 export class FormularioCriacaoComponent {
- hoje = new Date().toISOString().split('T')[0];
+  hoje = new Date();
 
+  apiUrl : string = 'http://localhost:8082'  
   constructor(
-    private formBuilder: FormBuilder, 
-    private http: HttpClient, 
-    private router: Router
-  ) { }
-  
+    private formBuilder: FormBuilder,
+    private http: HttpClient
+  ) {
+    
+  }
+
   CadastroEventoForm = this.formBuilder.group({
-    nomeEvento: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(45)]), // Corrigido maxLength para 45
+    nomeEvento: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(45)]),
     dataEvento: this.formBuilder.control(this.hoje, [Validators.required]),
     horarioInicio: this.formBuilder.control('', [Validators.required]),
     horarioFim: this.formBuilder.control('', [Validators.required]),
     localEvento: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(300)]),
     tipoEvento: this.formBuilder.control(''),
-    incluirTarefas: this.formBuilder.control(false), 
-    listaConvidados: this.formBuilder.control(false), 
-    fornecedores: this.formBuilder.control(false) 
+    incluirTarefas: this.formBuilder.control(false),
+    listaConvidados: this.formBuilder.control(false),
+    fornecedores: this.formBuilder.control(false)
   });
 
   onEnviar() {
-
+    // Marca todos os campos como tocados (para validação)
     this.CadastroEventoForm.markAllAsTouched();
+
     if (this.CadastroEventoForm.valid) {
-      alert('Formulário enviado com sucesso!');
-      console.log(this.CadastroEventoForm.value);
-      // Aqui você pode adicionar a lógica para enviar os dados ao backend
+      const idOrganizador = localStorage.getItem('id'); // Obtém o id do localStorage
+
+      if (idOrganizador) {
+        const eventoData = {
+          ...this.CadastroEventoForm.value,
+          idOrganizador: idOrganizador // Passa o idOrganizador no corpo da requisição
+        };
+
+        this.http.post(`${this.apiUrl}/eventos/criarEvento?idOrganizador=${idOrganizador}`, eventoData)
+          .subscribe(
+            (response) => {
+              alert('Evento criado com sucesso!');
+              console.log(response);
+            },
+            (error) => {
+              alert('Erro ao criar o evento.');
+              console.error(error);
+            }
+          );
+      } else {
+        alert('Organizador não encontrado no localStorage.');
+      }
     } else {
       alert('Por favor, preencha os campos corretamente.');
     }
