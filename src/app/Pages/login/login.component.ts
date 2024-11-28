@@ -36,7 +36,7 @@ export class LoginComponent {
   ) {
     const token = localStorage.getItem('token');
     if (token) {
-      this.router.navigate(['/inicial']);
+     this.router.navigate(['/inicial']);
     }
   }
 
