@@ -61,11 +61,10 @@ legend {
     font-weight: bold;
     margin-top: 2%;
     margin-bottom: 0;
-
 }
 #containerCard-Conteudo p
 {
-    font-size: 1.5vh;
+    font-size: 1.3vw;
 }
 #containerCard-Conteudo button
 {
