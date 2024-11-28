@@ -11,8 +11,8 @@
       <form method="post" id="formulario" class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()">
         <fieldset>
           <legend>Nome</legend>
-          <input class="input-form" matInput type="text" placeholder="Luiz Henrique" formControlName="nomeOrganizador" minlength="3"
-            maxlength="60">
+          <input class="input-form" matInput type="text" placeholder="Luiz Henrique" formControlName="nomeOrganizador"
+            minlength="3" maxlength="60">
           <img class="img-fluid icon-form" src="../../../assets/Elementos/username.png">
         </fieldset>
         <div id="container-erro-Nome-Mobile">
@@ -31,9 +31,12 @@
           <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
         </fieldset>
         <div id="container-erro-Email-Mobile">
-          <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('required') && cadastroForm.controls.emailOrganizador.touched">'E-mail' é obrigatório</mat-error>
+          <mat-error
+            *ngIf="cadastroForm.controls.emailOrganizador.hasError('required') && cadastroForm.controls.emailOrganizador.touched">'E-mail'
+            é obrigatório</mat-error>
           <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('email')">E-mail inválido</mat-error>
-          <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('emailJaExiste')">Este e-mail já está cadastrado</mat-error>
+          <mat-error *ngIf="cadastroForm.controls.emailOrganizador.hasError('emailJaExiste')">Este e-mail já está
+            cadastrado</mat-error>
         </div>
         <fieldset>
           <legend>Senha</legend>
@@ -46,15 +49,19 @@
 
         <div id="container-erro-Senha-Mobile">
           <mat-error
-            *ngIf="cadastroForm.controls.senhaOrganizador.hasError('required') && cadastroForm.controls.senhaOrganizador.touched">'Senha'é obrigatório</mat-error>
-          <mat-error *ngIf="cadastroForm.controls.senhaOrganizador.hasError('minlength') && cadastroForm.controls.senhaOrganizador.hasError('pattern')">
+            *ngIf="cadastroForm.controls.senhaOrganizador.hasError('required') && cadastroForm.controls.senhaOrganizador.touched">'Senha'é
+            obrigatório</mat-error>
+          <mat-error
+            *ngIf="cadastroForm.controls.senhaOrganizador.hasError('minlength') && cadastroForm.controls.senhaOrganizador.hasError('pattern')">
             A senha deve ter de 8 a 50 caracteres e não pode conter espaços.
           </mat-error>
 
-          <mat-error *ngIf="cadastroForm.controls.senhaOrganizador.hasError('minlength') && !cadastroForm.controls.senhaOrganizador.hasError('pattern')">
+          <mat-error
+            *ngIf="cadastroForm.controls.senhaOrganizador.hasError('minlength') && !cadastroForm.controls.senhaOrganizador.hasError('pattern')">
             A senha deve ter de 8 a 50 caracteres
           </mat-error>
-          <mat-error *ngIf="cadastroForm.controls.senhaOrganizador.hasError('pattern') && !cadastroForm.controls.senhaOrganizador.hasError('minlength')">
+          <mat-error
+            *ngIf="cadastroForm.controls.senhaOrganizador.hasError('pattern') && !cadastroForm.controls.senhaOrganizador.hasError('minlength')">
             A senha não pode conter espaços.
           </mat-error>
         </div>
@@ -198,7 +205,10 @@
       </section>
     </mat-grid-tile>
     <mat-grid-tile id="background">
-      <img src="../../../assets/Elementos/imgSingUp.png">
+      <div id="card-right">
+        <img src="../../../assets/Elementos/imgSingUp.png">
+        <span id="span-termos-md">Ao continuar você aceita os <a class="a-termos-uso" [routerLink]="['/termosUso']">Termos de Uso</a> garantindo a privacidade e segurança dos dados utilizados</span>
+      </div>
     </mat-grid-tile>
   </mat-grid-list>
 </div>

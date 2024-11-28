@@ -2,7 +2,22 @@
 
 #background {
   height: 100vh;
-  background: #000;
+  background: hsl(0, 0%, 0%);
+}
+
+#card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#span-termos-md {
+  padding-top: 3vw;
+  width: 45vw;
+  color: #fff;
+  font-size: 1.3vw;
+  line-height: 1.7vw;
 }
 
 #button-seta {
@@ -11,6 +26,10 @@
   position: absolute;
   background: none;
   border: none;
+}
+
+.a-termos-uso {
+  color: #2256e4;
 }
 
 #button-setaLg {
@@ -251,15 +270,16 @@ legend {
 #container-erro-Email {
   top: 45%
 }
-#container-erro-Senha{
+
+#container-erro-Senha {
   top: 60%;
 }
 
-#container-erro-ConfirmSenha{
+#container-erro-ConfirmSenha {
   top: 75%
 }
 
-#container-erro-Nome-Mobile, #container-erro-Email-Mobile, #container-erro-Senha-Mobile, #container-erro-ConfirmSenha-Mobile{
+#container-erro-Nome-Mobile, #container-erro-Email-Mobile, #container-erro-Senha-Mobile, #container-erro-ConfirmSenha-Mobile {
   height: 2vh;
   width: 80%;
 }

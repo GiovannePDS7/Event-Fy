@@ -26,6 +26,7 @@ import { FormularioComponent } from './Pages/formulario/formulario.component';
 import { FormularioCriacaoComponent } from './Components/Formulario-criacao/formulario-criacao/formulario-criacao.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { TermosUsoComponent } from './Pages/termos-uso/termos-uso.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     HeaderComponent,
     FormularioComponent,
     FormularioCriacaoComponent,
+    TermosUsoComponent,
   ],
   imports: [
     ReactiveFormsModule,

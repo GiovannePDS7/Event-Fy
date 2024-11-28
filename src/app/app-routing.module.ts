@@ -6,14 +6,16 @@ import { CadastroComponent } from './Pages/cadastro/cadastro.component';
 import { InicialComponent } from './Pages/inicial/inicial.component';
 import { FormularioComponent } from './Pages/formulario/formulario.component';
 import { AuthGuard } from './security/AuthGuard';
+import { TermosUsoComponent } from './Pages/termos-uso/termos-uso.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "/apresentacao", pathMatch: 'full' },
   { path: 'apresentacao', component: ApresentacaoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
-  { path: 'inicial', component: InicialComponent, canActivate: [AuthGuard]}, // Proteja a rota *canActivate: [AuthGuard]
+  { path: 'inicial', component: InicialComponent, canActivate: [AuthGuard] }, // Proteja a rota *canActivate: [AuthGuard]
   { path: 'formulario', component: FormularioComponent/*, canActivate: [AuthGuard]*/ },
+  { path: 'termosUso', component: TermosUsoComponent },
   { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
 ];
 
