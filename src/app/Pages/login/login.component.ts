@@ -11,7 +11,7 @@ import { LoginResponseDTO } from 'src/app/models/login-response-dto';
 export class LoginComponent {
 
   typeSenha: string = 'password';
-  apiUrl: string = 'https://logineventfy-production.up.railway.app/login';
+  apiUrl: string = 'https://logineventfy-production.up.railway.app';
    //apiUrl: string = 'http://localhost:8080';
 
   // Definindo o LoginForm no construtor do componente
