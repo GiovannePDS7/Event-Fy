@@ -8,17 +8,17 @@ header {
 }
 
 i {
-  font-size: 3.5vw;
+  font-size: 6vw;
   margin-left: 1.5vw;
 }
 
 .container-input {
-  border-radius: 2vw;
+  border-radius: 3vw;
   margin-left: 50vw;
-  padding-left: 1.5vw;
+  padding-left: 1.8vw;
   font-size: 2vw;
-  border: 0.5px solid rgb(187, 186, 186);
-  height: 4.5vw;
+  border: 0.5px solid rgb(207, 207, 207);
+  height: 6.5vw;
   width: 26vw;
   display: inline-flex;
   justify-content: space-around;
@@ -30,7 +30,7 @@ i {
 }
 
 .img-search {
-  width: 1.5vw;
+  width: 3vw;
 }
 
 .inputM {
@@ -38,19 +38,21 @@ i {
   border: none;
   background: none;
   width: 82%;
+  font-size: 2.5vw;
 }
 
 #imgM {
   margin-left: 2vw;
-  width: 4.5vw;
+  width: 6vw;
 }
 
 #emailPc, #bellPc {
   font-size: 3vw;
   margin-left: 2vw;
 }
-#personPc{
-  width:3vw;
+
+#personPc {
+  width: 3vw;
   margin-left: 2vw;
 }
 

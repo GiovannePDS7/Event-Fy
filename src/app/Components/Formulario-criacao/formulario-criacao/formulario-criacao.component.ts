@@ -37,7 +37,7 @@ export class FormularioCriacaoComponent {
 
     if (this.CadastroEventoForm.valid) {
       const idOrganizador = localStorage.getItem('organizadorId'); // Obtém o id do localStorage
-
+      console.log(this.CadastroEventoForm);
       if (idOrganizador) {
         const eventoData = {
           ...this.CadastroEventoForm.value,
