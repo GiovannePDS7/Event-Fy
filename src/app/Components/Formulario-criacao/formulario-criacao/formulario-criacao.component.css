@@ -225,9 +225,13 @@ input[type="checkbox"]:checked+label::after {
 {
     text-align: center;
     font-weight: bold;
-
 }
-
+#btnPhotoLG
+{
+    font-size: 1.7vh;
+    height: 5vh;
+    width: 18%;
+}
 #bodyLG
 {
     background-color: white;
