@@ -11,12 +11,13 @@ import { Router } from '@angular/router';
 export class FormularioCriacaoComponent {
   hoje = new Date();
 
-  apiUrl : string = 'http://localhost:8082'  
+  // apiUrl : string = 'http://localhost:8082'
+  apiUrl: string = 'cadastroeventoeventfy-production.up.railway.app'
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient
   ) {
-    
+
   }
 
   CadastroEventoForm = this.formBuilder.group({
@@ -25,7 +26,7 @@ export class FormularioCriacaoComponent {
     horarioInicio: this.formBuilder.control('', [Validators.required]),
     horarioFim: this.formBuilder.control('', [Validators.required]),
     localEvento: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(300)]),
-    tipoEvento: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(30)] ),
+    tipoEvento: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
     incluirTarefas: this.formBuilder.control(false),
     listaConvidados: this.formBuilder.control(false),
     fornecedores: this.formBuilder.control(false)
