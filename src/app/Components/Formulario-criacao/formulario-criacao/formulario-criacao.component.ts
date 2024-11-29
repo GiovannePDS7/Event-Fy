@@ -25,17 +25,23 @@ export class FormularioCriacaoComponent {
     horarioInicio: this.formBuilder.control('', [Validators.required]),
     horarioFim: this.formBuilder.control('', [Validators.required]),
     localEvento: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(300)]),
-    tipoEvento: this.formBuilder.control(''),
+    tipoEvento: this.formBuilder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(30)] ),
     incluirTarefas: this.formBuilder.control(false),
     listaConvidados: this.formBuilder.control(false),
     fornecedores: this.formBuilder.control(false)
   });
+
+  onCheckboxChange(controlName: string, event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.CadastroEventoForm.get(controlName)?.setValue(input.checked);
+  }
 
   onEnviar() {
     // Marca todos os campos como tocados (para validação)
     this.CadastroEventoForm.markAllAsTouched();
 
     if (this.CadastroEventoForm.valid) {
+      console.table(this.CadastroEventoForm.value)
       const idOrganizador = localStorage.getItem('organizadorId'); // Obtém o id do localStorage
 
       if (idOrganizador) {

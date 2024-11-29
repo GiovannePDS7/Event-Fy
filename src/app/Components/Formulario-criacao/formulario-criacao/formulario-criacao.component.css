@@ -193,7 +193,6 @@ input[type="checkbox"]:checked+label::after {
 
 #body {
     background-color: white;
-    height: 35vh;
     width: 90%;
     border-radius: 15px;
     border: 1px solid #000;
@@ -272,14 +271,9 @@ input[type="checkbox"]:checked+label::after {
     height: 3vh;
     
 }
-.containerlittle-inputLG, #containerlittle-inputLGleft
+.containerlittle-inputLG, #containerlittle-inputRightLG, #containerlittle-inputleftLG
 {
     width: 100%;
-}
-#containerlittle-inputLGleft
-{
-  position: absolute;
-  top: 12%;
 }
 .error-boxLG
 {
@@ -292,9 +286,7 @@ input[type="checkbox"]:checked+label::after {
 }
 #containerBoxLG 
 {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
 }
 #chbx1LG, #chbx2LG, #chbx3LG {
     margin-left: 18%;

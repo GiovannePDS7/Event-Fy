@@ -37,7 +37,6 @@ footer {
   color: var(--text-color);
   text-align: center;
   display: flex;
-
 }
 
 #littleContainerFooterLeft, #littleContainerFooterCenter, #littleContainerFooterRight {
@@ -116,10 +115,6 @@ a {
 
 .bi bi-instagram {
   color: white
-}
-
-#grandContainerFooter {
-  margin-top: 2vh;
 }
 
 i {
