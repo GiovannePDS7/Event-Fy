@@ -1,19 +1,24 @@
-#background
-{
+#background {
     width: 100%;
     background-color: #f6bb7c;
     margin-bottom: 10%;
     padding-bottom: 1.5vh;
 }
-#espaco{
+
+#espaco {
     height: 1px;
 }
-#containerCard-Funcionalidades,#containerCard-FuncionalidadesMd
-{
-    margin-top: 10%;
+
+#containerCard-Funcionalidades, #container-funcionalidades {
+    padding-top: 25vw;
 }
-.formFieldset, .formFieldsetMD, .formFieldsetMDright
-{
+
+#container-funcionalidades {
+    background-color: #f6bb7c;
+    padding-top: 7vw;
+}
+
+.formFieldset, .formFieldsetMD, .formFieldsetMDright {
     border-radius: 15px;
     width: 80vw;
     display: flex;
@@ -27,14 +32,14 @@
     background-color: aliceblue;
     margin-left: 10%;
 }
+
 legend {
     float: none;
     width: auto;
     margin: 0;
 }
 
-#block-Icon
-{
+#block-Icon {
     width: 45px;
     background-color: var(--cor-secundaria);
     height: 45px;
@@ -42,32 +47,31 @@ legend {
     text-align: center;
 }
 
-.icon
-{
+.icon {
     width: 60%;
     margin-top: 20%;
 }
-.icon2
-{
+
+.icon2 {
     margin-top: 10%;
     width: 80%;
 }
-#containerCard-Conteudo
-{
+
+#containerCard-Conteudo {
     width: 90%;
 }
-#containerCard-Conteudo h1
-{
+
+#containerCard-Conteudo h1 {
     font-weight: bold;
     margin-top: 2%;
     margin-bottom: 0;
 }
-#containerCard-Conteudo p
-{
+
+#containerCard-Conteudo p {
     font-size: 1.3vw;
 }
-#containerCard-Conteudo button
-{
+
+#containerCard-Conteudo button {
     border: none;
     background-color: var(--cor-secundaria);
     width: 30%;
@@ -81,23 +85,22 @@ legend {
 
 /*tela desktop*/
 
-#containerCard-FuncionalidadesMdRight
-{
+#containerCard-FuncionalidadesMdRight {
     margin-right: 15%;
 }
-#containerCard-FuncionalidadesMdLeft
-{
+
+#containerCard-FuncionalidadesMdLeft {
     margin-right: 10%;
 }
-.formFieldsetMD
-{
-  width: 35vw;
+
+.formFieldsetMD {
+    width: 35vw;
 }
-.formFieldsetMDright
-{
-  width: 35vw;
+
+.formFieldsetMDright {
+    width: 35vw;
 }
-.backgroundMd
-{
-  background: #f6bb7c;
+
+.backgroundMd {
+    background: #f6bb7c;
 }

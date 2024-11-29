@@ -5,11 +5,18 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0 1.8vw;
+  position: fixed;
+  background: #ffffff;
+  z-index: 999;
 }
 
-i {
+i, #i-desktop {
   font-size: 6vw;
   margin-left: 1.5vw;
+}
+
+#i-desktop {
+  font-size: 2.8vw;
 }
 
 .container-input {
@@ -23,6 +30,19 @@ i {
   display: inline-flex;
   justify-content: space-around;
   padding-right: 1vw;
+}
+
+#container-input-desktop {
+  height: 3vw;
+
+}
+
+#img-search-desktop {
+  width: 1.3vw;
+}
+
+#inputM-desktop {
+  font-size: 1vw;
 }
 
 #iT {
@@ -46,14 +66,20 @@ i {
   width: 6vw;
 }
 
+#icons {
+  width: 10vw;
+  display: flex;
+  align-items: center;
+justify-content: space-around;
+}
+
 #emailPc, #bellPc {
-  font-size: 3vw;
-  margin-left: 2vw;
+  font-size: 1.8vw;
+  margin: 0;
 }
 
 #personPc {
-  width: 3vw;
-  margin-left: 2vw;
+  width: 1.8vw;
 }
 
 #headerPc {
