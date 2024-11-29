@@ -1,48 +1,65 @@
-header{
-  width:100%;
-  height:9vh;
+header {
+  width: 100%;
+  height: 9vh;
   align-items: center;
   display: flex;
+  justify-content: space-between;
+  padding: 0 1.8vw;
 }
-i{
-  font-size:5.5vw;
-  margin-left:1.5vw;
+
+i {
+  font-size: 5.5vw;
+  margin-left: 1.5vw;
 }
-#iT{
+
+.container-input {
+  border-radius: 2vw;
+  margin-left: 50vw;
+  padding-left: 1.5vw;
+  font-size: 2vw;
+  border: 0.5px solid rgb(187, 186, 186);
+  height: 5vw;
+  width: 26vw;
+  display: inline-flex;
+  justify-content: space-around;
+  padding-right: 1vw;
+}
+
+#iT {
   font-size: 2.5vw;
 }
-#divInput{
-  border-radius: 2vw;
-  height:4vw;
-  margin-left: 60vw;
-  padding-left:1.5vw;
-  font-size: 1.5vw;
+
+.img-search {
+  width: 1.5vw;
 }
-#inputPc{
-  border-radius: 2vw;
-  height:4vw;
-  margin-left: 50vw;
-  padding-left:1.5vw;
-  font-size: 2vw;
+
+.inputM {
+  all: unset;
+  border: none;
+  background: none;
+  width: 82%;
 }
-#imgM{
+
+#imgM {
   margin-left: 2vw;
   width: 4.5vw;
 }
+
 #emailPc, #bellPc, #personPc {
-  font-size:3vw;
-  margin-left:2vw;
+  font-size: 3vw;
+  margin-left: 2vw;
 }
 
 
-#headerPc{
-  height:12vh;
+#headerPc {
+  height: 12vh;
 }
 
-#headerT{
-  height:9vw;
+#headerT {
+  height: 9vw;
 }
-#iconsPc{
+
+#iconsPc {
   display: flex;
 
 }
