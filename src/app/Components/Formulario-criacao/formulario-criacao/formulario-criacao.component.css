@@ -284,10 +284,6 @@ input[type="checkbox"]:checked+label::after {
 {
     margin-bottom: 10px;
 }
-#containerBoxLG 
-{
-
-}
 #chbx1LG, #chbx2LG, #chbx3LG {
     margin-left: 18%;
     margin-right: 2vw;
