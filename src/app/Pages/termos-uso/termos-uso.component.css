@@ -14,7 +14,7 @@
     text-align: center;
     margin-top: 20%;
 }
-#container-h1Termos h1
+#container-h1Termos h1, #container-h1TermosLG h1
 {
     font-weight: bold;
     font-family: inherit;
@@ -30,4 +30,15 @@
 }
 
 
-/**/
+/*LG*/
+
+#container-h1TermosLG
+{
+    margin-top: 10%;
+    margin-left: 13%;
+}
+
+#container-pTermosLG
+{
+    margin-left: 13%;
+}
