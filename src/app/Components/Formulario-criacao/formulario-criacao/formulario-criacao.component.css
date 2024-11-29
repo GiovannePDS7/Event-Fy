@@ -39,11 +39,11 @@ img {
     margin-top: 2vh;
     margin-bottom: 4vh;
     background-color: #EF820D;
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-family: "Myriad pro Semibold"
 }
 
-#btnPhotoLG{
+#btnPhotoLG {
     font-size: 1.3vw;
     width: 15%;
     height: 7vh;
@@ -112,7 +112,7 @@ legend {
     justify-content: center;
 }
 
-.container-checkBox, .container-checkBoxLG{
+.container-checkBox, .container-checkBoxLG {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -212,25 +212,23 @@ input[type="checkbox"]:checked+label::after {
 
 /*LG*/
 
-#imgLG
-{
-  margin-top: 2%;   
+#imgLG {
+    margin-top: 2%;
 }
-.gridLG
-{
+
+.gridLG {
     width: 100%;
     height: 100vh;
     background-color: #EF820D;
 }
-#titleLG
-{
+
+#titleLG {
     text-align: center;
     font-weight: bold;
 
 }
 
-#bodyLG
-{
+#bodyLG {
     background-color: white;
     width: 90%;
     border-radius: 15px;
@@ -238,81 +236,80 @@ input[type="checkbox"]:checked+label::after {
     margin-left: 5%;
 
 }
-#container-btnLG 
-{
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 10px; 
+
+#container-btnLG {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     margin-top: 2%;
 }
-.img-fluid 
-{
-    max-width: 100%; 
-    height: auto; 
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }
 
 #btnPhoto {
-    padding: 10px 20px; 
-    font-size: 16px; 
+    padding: 10px 20px;
 }
 
-.formFieldsetLG 
-{
+.formFieldsetLG {
     width: 65%;
     margin-left: 17%;
 }
-.legendLG
-{
+
+.legendLG {
     font-size: 1.5vw;
 }
-.textFormLG
-{
+
+.textFormLG {
     font-size: 1.5vw;
     height: 3vh;
-    
+
 }
-.containerlittle-inputLG, #containerlittle-inputLGleft
-{
+
+.containerlittle-inputLG, #containerlittle-inputLGleft {
     width: 100%;
 }
-#containerlittle-inputLGleft
-{
-  position: absolute;
-  top: 12%;
+
+#containerlittle-inputLGleft {
+    position: absolute;
+    top: 12%;
 }
-.error-boxLG
-{
+
+.error-boxLG {
     font-size: 1vw;
     margin-left: 17%;
 }
-.container-erroLG
-{
+
+.container-erroLG {
     margin-bottom: 10px;
 }
-#containerBoxLG 
-{
+
+#containerBoxLG {
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 #chbx1LG, #chbx2LG, #chbx3LG {
     margin-left: 18%;
     margin-right: 2vw;
     height: 1vw;
 }
-#espaco
-{
+
+#espaco {
     width: 100%;
     height: 5vh;
 }
-#container-btnEventLG
-{
+
+#container-btnEventLG {
     margin-top: 5%;
     text-align: center;
 }
-#btnEventLG
-{
+
+#btnEventLG {
     height: 4vw;
     font-size: 2vw;
     margin-top: 0;
