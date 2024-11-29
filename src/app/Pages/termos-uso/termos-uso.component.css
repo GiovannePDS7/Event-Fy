@@ -1,0 +1,33 @@
+#button-seta {
+    left: 5%;
+    top: 4%;
+    position: absolute;
+    background: none;
+    border: none;
+}
+#seta
+{
+    width: 70%;
+}
+#container-h1Termos
+{
+    text-align: center;
+    margin-top: 20%;
+}
+#container-h1Termos h1
+{
+    font-weight: bold;
+    font-family: inherit;
+}
+#container-pTermos
+{
+    width: 80%;
+    margin-left: 10%;
+}
+#container-pTermos p
+{
+    text-align: justify;
+}
+
+
+/**/
