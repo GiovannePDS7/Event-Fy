@@ -16,10 +16,21 @@
   padding-top: 3vw;
   width: 45vw;
   color: #fff;
-  font-size: 1.3vw;
+  font-size: 1.2vw;
+  line-height: 1.7vw;
+  margin-left: 5%;
+}
+#span-termos-xs
+{
+  color: #000;
+  font-size: 2.3vw;
   line-height: 1.7vw;
 }
-
+#container-Termos
+{
+ margin-top: -12%;
+ margin-bottom: 2%;
+}
 #button-seta {
   left: 5%;
   top: 4%;
