@@ -27,6 +27,8 @@ import { FormularioCriacaoComponent } from './Components/Formulario-criacao/form
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { TermosUsoComponent } from './Pages/termos-uso/termos-uso.component';
+import { EventoExistenteComponent } from './Pages/evento-existente/evento-existente.component';
+import { EventosComponent } from './Components/eventos/eventos.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { TermosUsoComponent } from './Pages/termos-uso/termos-uso.component';
     FormularioComponent,
     FormularioCriacaoComponent,
     TermosUsoComponent,
+    EventoExistenteComponent,
+    EventosComponent,
   ],
   imports: [
     ReactiveFormsModule,

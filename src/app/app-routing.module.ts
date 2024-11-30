@@ -7,6 +7,7 @@ import { InicialComponent } from './Pages/inicial/inicial.component';
 import { FormularioComponent } from './Pages/formulario/formulario.component';
 import { AuthGuard } from './security/AuthGuard';
 import { TermosUsoComponent } from './Pages/termos-uso/termos-uso.component';
+import { EventoExistenteComponent } from './Pages/evento-existente/evento-existente.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "/apresentacao", pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'inicial', component: InicialComponent, canActivate: [AuthGuard] }, // Proteja a rota *canActivate: [AuthGuard]
   { path: 'formulario', component: FormularioComponent/*, canActivate: [AuthGuard]*/ },
   { path: 'termosUso', component: TermosUsoComponent },
+  { path: 'eventoExistente', component: EventoExistenteComponent /*, canActivate: [AuthGuard]*/ },
   { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
 ];
 
