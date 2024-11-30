@@ -15,7 +15,8 @@ export class FormularioCriacaoComponent {
   apiUrl: string = 'https://cadastroeventoeventfy-production.up.railway.app'
   constructor(
     private formBuilder: FormBuilder,
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) {
 
   }
@@ -56,6 +57,7 @@ export class FormularioCriacaoComponent {
             (response) => {
               alert('Evento criado com sucesso!');
               console.log(response);
+              this.router.navigate(['/eventoExistente']);
             },
             (error) => {
               alert('Erro ao criar o evento.');

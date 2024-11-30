@@ -6,6 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
+  nomeUsuario: string = '';
+
+  ngOnInit(): void {
+    const nomeCompleto = localStorage.getItem('nomeOrganizador') || 'Usuário não identificado';
+    const nomes = nomeCompleto.split(' ');
+    this.nomeUsuario = nomes.slice(0, 2).join(' '); 
+  }
   isSidebarActive = false;
 
   toggleSidebar(): void {
