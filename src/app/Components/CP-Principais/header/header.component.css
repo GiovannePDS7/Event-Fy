@@ -107,6 +107,20 @@ i, #i-desktop {
   z-index: 1000;
 }
 
+.sidebarMobile {
+  position: fixed;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+
 .sidebar ul {
   list-style: none;
   padding: 20px;
@@ -143,7 +157,7 @@ i, #i-desktop {
   display: block;
 }
 
-.containerClose{
+.containerClose, .containerCloseMobile{
   width: 2vw;
   height: 4vh;
   display: flex;
@@ -155,13 +169,15 @@ i, #i-desktop {
   outline: none;
 }
 
-.containerUsuario{
+.containerUsuario, .containerUsuarioMobile{
   width: 100%;
   height: 8vh;
   display: flex;
-  margin-top: 10%;
+  margin-top: 7%;
   margin-bottom: 7%;
 }
+
+
 
 .iconUsuario{
   margin-left: 7%;
@@ -209,12 +225,11 @@ i, #i-desktop {
   margin-left: auto; 
 }
 
-
 .containerSair{
   width: 100%;
   height: 5vh;
   display: flex;
-  margin-top: 10%;
+  margin-top: 4%;
   margin-bottom: 7%;
   cursor: pointer;
 }
@@ -228,4 +243,86 @@ i, #i-desktop {
   margin-top: 2%;
   font-size: 150%;
   color: #D10000;
+}
+#sidebarMobile {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+#sidebarMobile.active {
+  transform: translateX(0);
+}
+
+#sidebarMobile .containerClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+#overlay.active {
+  display: block;
+}
+
+#sidebarMobile .containerSair {
+  cursor: pointer;
+}
+
+.containerElementoMobile {
+  width: 95%;
+  height: 8.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.containerElementoMobile a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+.containerElementoMobile img.imgElemento {
+  margin-right: 10px;
+}
+
+.containerElementoMobile h2.textoElemento {
+  color: #000;
+  text-align: left;
+  margin: 0;
+}
+
+.containerElementoMobile img.playMobile {
+  margin-left: auto;
+}
+
+.containerSairMobile {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 7%;
+  cursor: pointer;
+}
+
+.containerUsuarioMobile {
+  margin-bottom: 10%;
 }
