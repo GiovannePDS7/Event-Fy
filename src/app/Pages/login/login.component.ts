@@ -12,7 +12,7 @@ export class LoginComponent {
 
   typeSenha: string = 'password';
   apiUrl: string = 'https://logineventfy-production.up.railway.app';
-   //apiUrl: string = 'http://localhost:8080';
+  // apiUrl: string = 'http://localhost:8080';
 
   // Definindo o LoginForm no construtor do componente
   LoginForm = this.formBuilder.group({
