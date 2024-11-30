@@ -9,7 +9,7 @@
     height: 1px;
 }
 
-#containerCard-Funcionalidades{
+#containerCard-Funcionalidades {
     padding-top: 18vw;
 }
 
@@ -68,7 +68,9 @@ legend {
 }
 
 #containerCard-Conteudo p {
-    font-size: 1.3vw;
+    font-size: 3.3vw;
+    line-height: normal;
+    padding: 1vw 0;
 }
 
 #containerCard-Conteudo button {
@@ -79,6 +81,7 @@ legend {
     border-radius: 5px;
     font-weight: bold;
     font-size: 1.5vh;
+    margin-bottom: 1vw;
 }
 
 
