@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  isSidebarActive = false;
 
+  toggleSidebar(): void {
+    this.isSidebarActive = !this.isSidebarActive;
+  }
+
+  closeSidebar(): void {
+    this.isSidebarActive = false;
+  }
 }

@@ -13,6 +13,7 @@ header {
 i, #i-desktop {
   font-size: 6vw;
   margin-left: 1.5vw;
+  cursor: pointer;
 }
 
 #i-desktop {
@@ -34,7 +35,6 @@ i, #i-desktop {
 
 #container-input-desktop {
   height: 3vw;
-
 }
 
 #img-search-desktop {
@@ -70,7 +70,7 @@ i, #i-desktop {
   width: 10vw;
   display: flex;
   align-items: center;
-justify-content: space-around;
+  justify-content: space-around;
 }
 
 #emailPc, #bellPc {
@@ -92,5 +92,140 @@ justify-content: space-around;
 
 #iconsPc {
   display: flex;
+}
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -50%;
+  width: 30%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.containerClose{
+  width: 2vw;
+  height: 4vh;
+  display: flex;
+  margin: 7% 0 0 10%;
+}
+
+.close-button {
+  cursor: pointer;
+  outline: none;
+}
+
+.containerUsuario{
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 7%;
+}
+
+.iconUsuario{
+  margin-left: 7%;
+}
+
+.nameUsuario{
+  margin-left: 2%;
+  margin-top: 4.5%;
+  font-size: 150%;
+}
+
+.containerElemento {
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  align-items: center; 
+}
+
+.containerElemento a {
+  display: flex; 
+  align-items: center; 
+  width: 100%; 
+  justify-content: space-between; 
+  text-decoration: none; 
+}
+
+.containerElemento:hover{
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+}
+
+.imgElemento, .imgElemento2 {
+  margin-left: 8%; 
+}
+
+.imgElemento2{
+  margin-left: 6%; 
+}
+
+.textoElemento {
+  margin: 0 0 0 5% 
+}
+
+.play {
+  margin-left: auto; 
+}
+
+
+.containerSair{
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 7%;
+  cursor: pointer;
+}
+
+.iconSair{
+  margin-left: 7%;
+}
+
+.sair{
+  margin-left: 2%;
+  margin-top: 2%;
+  font-size: 150%;
+  color: #D10000;
 }
