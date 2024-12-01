@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'inicial', component: InicialComponent, canActivate: [AuthGuard] },
-   { path: 'formulario', component: FormularioComponent , /*canActivate: [AuthGuard]*/},
+   { path: 'formulario', component: FormularioComponent , canActivate: [AuthGuard]},
   { path: 'termosUso', component: TermosUsoComponent },
   { path: 'eventoExistente', component: EventoExistenteComponent, canActivate: [AuthGuard]},
   { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
