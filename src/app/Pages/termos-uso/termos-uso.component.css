@@ -17,6 +17,10 @@
     width: 10vw;
 }
 
+#seta-desktop {
+    width: 3vw;
+}
+
 #container-h1Termos {
     text-align: center;
     margin-top: 20%;
@@ -56,8 +60,14 @@
     padding: 2vw 0;
 }
 
+
+
 .ul-mobile {
     padding: 2vw 0 0.5vw 3vw;
+}
+
+.ul-desktop {
+    padding: 1vw 0 0.5vw 1.3vw;
 }
 
 .li-mobile {
@@ -66,11 +76,15 @@
     padding: 1.5vw 0;
 }
 
+
+
 .sub-li-mobile {
     font-weight: normal;
     font-size: 3vw;
     padding: 1.5vw 0;
 }
+
+
 
 .span-li-mobile {
     font-weight: normal;
@@ -78,13 +92,63 @@
     font-size: 3vw;
 }
 
+
+
 /*LG*/
 
 #container-h1TermosLG {
-    margin-top: 10%;
-    margin-left: 13%;
+    margin-top: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#container-pTermosLG {
-    margin-left: 13%;
+#main-desktop {
+    width: 80%;
+}
+
+#h1-desktop {
+    font-size: 3vw;
+}
+
+#h2-desktop {
+    padding: 1.5vw 0 0 0;
+    font-size: 1.3vw;
+}
+
+#h3-desktop {
+    font-size: 1.3vw;
+}
+
+#section-container-desktop {
+    width: 80%;
+}
+
+#p-desktop {
+    margin: 0;
+    font-size: 1.2vw;
+}
+
+#ol-desktop {
+    padding: 1vw 0;
+}
+
+.li-desktop {
+    font-size: 1.4vw;
+    font-weight: bold;
+    padding: 1vw 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-li-desktop {
+    font-weight: normal;
+    font-size: 1.2vw;
+    padding: 0.6vw 0;
+}
+
+.span-li-desktop {
+    font-weight: normal;
+    font-size: 1.2vw;
+    padding: 1vw 0;
 }
