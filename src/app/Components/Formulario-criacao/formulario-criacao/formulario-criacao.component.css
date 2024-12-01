@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     display: flex;
-
+    padding-top: 20vw;
 }
 
 #Title {
@@ -43,7 +43,7 @@ img {
     font-family: "Myriad pro Semibold"
 }
 
-#btnPhotoLG{
+#btnPhotoLG {
     font-size: 1.3vw;
     width: 15%;
     height: 7vh;
@@ -112,7 +112,7 @@ legend {
     justify-content: center;
 }
 
-.container-checkBox, .container-checkBoxLG{
+.container-checkBox, .container-checkBoxLG {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -211,29 +211,28 @@ input[type="checkbox"]:checked+label::after {
 
 /*LG*/
 
-#imgLG
-{
-  margin-top: 2%;   
+#imgLG {
+    margin-top: 2%;
 }
-.gridLG
-{
+
+.gridLG {
     width: 100%;
     height: 100vh;
     background-color: #EF820D;
 }
-#titleLG
-{
+
+#titleLG {
     text-align: center;
     font-weight: bold;
 }
-#btnPhotoLG
-{
+
+#btnPhotoLG {
     font-size: 1.7vh;
     height: 5vh;
     width: 18%;
 }
-#bodyLG
-{
+
+#bodyLG {
     background-color: white;
     width: 90%;
     border-radius: 15px;
@@ -241,76 +240,76 @@ input[type="checkbox"]:checked+label::after {
     margin-left: 5%;
 
 }
-#container-btnLG 
-{
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 10px; 
+
+#container-btnLG {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     margin-top: 2%;
 }
-.img-fluid 
-{
-    max-width: 100%; 
-    height: auto; 
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }
 
 #btnPhoto {
-    padding: 10px 20px; 
-    font-size: 16px; 
+    padding: 10px 20px;
+    font-size: 16px;
 }
 
-.formFieldsetLG 
-{
+.formFieldsetLG {
     width: 65%;
     margin-left: 17%;
 }
-.legendLG
-{
+
+.legendLG {
     font-size: 1.5vw;
 }
-.textFormLG
-{
+
+.textFormLG {
     font-size: 1.5vw;
     height: 3vh;
-    
+
 }
-.containerlittle-inputLG, #containerlittle-inputRightLG, #containerlittle-inputleftLG
-{
+
+.containerlittle-inputLG, #containerlittle-inputRightLG, #containerlittle-inputleftLG {
     width: 100%;
 }
-.error-boxLG
-{
+
+.error-boxLG {
     font-size: 1vw;
     margin-left: 17%;
 }
-.container-erroLG
-{
+
+.container-erroLG {
     margin-bottom: 10px;
 }
+
 #chbx1LG, #chbx2LG, #chbx3LG {
     margin-left: 18%;
     margin-right: 2vw;
     height: 1vw;
 }
-#espaco
-{
+
+#espaco {
     width: 100%;
     height: 5vh;
 }
-#container-btnEventLG
-{
+
+#container-btnEventLG {
     margin-top: 5%;
     text-align: center;
     padding-bottom: 3vh;
 }
-#btnEventLG
-{
+
+#btnEventLG {
     height: 4vw;
     font-size: 2vw;
     margin-top: 0;
 }
-#container-titleLG
-{
+
+#container-titleLG {
     padding-top: 3vh;
 }
