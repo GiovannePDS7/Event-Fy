@@ -1,3 +1,10 @@
+* {
+    color: #000;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
 #button-seta {
     left: 5%;
     top: 4%;
@@ -5,40 +12,79 @@
     background: none;
     border: none;
 }
-#seta
-{
-    width: 70%;
+
+#seta-mobile {
+    width: 10vw;
 }
-#container-h1Termos
-{
+
+#container-h1Termos {
     text-align: center;
     margin-top: 20%;
 }
-#container-h1Termos h1, #container-h1TermosLG h1
-{
+
+#container-h1Termos h1, #container-h1TermosLG h1 {
     font-weight: bold;
     font-family: inherit;
 }
-#container-pTermos
-{
-    width: 80%;
-    margin-left: 10%;
-}
-#container-pTermos p
-{
-    text-align: justify;
+
+#container-Termos {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+#main-mobile {
+    width: 80%;
+}
+
+#h2-mobile {
+    font-size: 4vw;
+    text-align: center;
+}
+
+#h3-mobile {
+    font-size: 3vw;
+}
+
+.p-mobile {
+    margin: 0;
+    font-size: 3vw;
+}
+
+#ol-mobile {
+    padding: 2vw 0;
+}
+
+.ul-mobile {
+    padding: 2vw 0 0.5vw 3vw;
+}
+
+.li-mobile {
+    font-size: 3.8vw;
+    font-weight: bold;
+    padding: 1.5vw 0;
+}
+
+.sub-li-mobile {
+    font-weight: normal;
+    font-size: 3vw;
+    padding: 1.5vw 0;
+}
+
+.span-li-mobile {
+    font-weight: normal;
+    padding: 2vw 0;
+    font-size: 3vw;
+}
 
 /*LG*/
 
-#container-h1TermosLG
-{
+#container-h1TermosLG {
     margin-top: 10%;
     margin-left: 13%;
 }
 
-#container-pTermosLG
-{
+#container-pTermosLG {
     margin-left: 13%;
 }

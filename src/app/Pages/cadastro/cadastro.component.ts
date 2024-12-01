@@ -57,7 +57,7 @@ export class CadastroComponent {
 
   onEnviar() {
     this.cadastroForm.markAllAsTouched();
-    if (this.cadastroForm.valid && !this.emailExiste) {
+    if (this.cadastroForm.valid && !this.emailExiste && this.cadastroForm.get('senhaOrganizador')?.value === this.cadastroForm.get('confirmarSenha')?.value) {
       const formData = this.cadastroForm.value;
       this.http.post(`${this.apiUrl}/cadastrar`, formData).subscribe(
         resposta => {
