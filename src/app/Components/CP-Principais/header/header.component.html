@@ -77,8 +77,10 @@
 
     <!-- Botão Sair -->
     <div class="containerSairMobile" (click)="closeSidebar()">
-      <img class="iconSair" src="../../../../assets/Elementos/sair.png">
-      <p class="sair">Sair</p>
+      <a class="a-link-sair" (click)="SairConta()">
+        <img class="iconSair" src="../../../../assets/Elementos/sair.png">
+        <p class="sair">Sair</p>
+      </a>
     </div>
   </div>
 
@@ -117,7 +119,7 @@
     <ul id="ul-desktop">
 
       <li class="containerElemento">
-        <a  [routerLink]="['']">
+        <a [routerLink]="['']">
           <div class="container-img-desktop">
             <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/historicoImg.png">
           </div>
@@ -182,8 +184,10 @@
     </ul>
 
     <div class="containerSair" id="containerSair-desktop">
-      <img class="iconSair" id="iconSair-desktop" src="../../../../assets/Elementos/sair.png">
-      <p class="sair" id="sair-desktop" (click)="SairConta()">Sair</p>
+      <a class="a-link-sair" (click)="SairConta()">
+        <img class="iconSair" id="iconSair-desktop" src="../../../../assets/Elementos/sair.png">
+        <p class="sair" id="sair-desktop" >Sair</p>
+      </a>
     </div>
 
   </div>

@@ -293,6 +293,12 @@ i, #i-desktop {
   font-size: 1.3vw;
 }
 
+.a-link-sair {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 #sidebarMobile {
   position: fixed;
   top: 0;
