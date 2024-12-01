@@ -18,63 +18,63 @@
     <div class="containerCloseMobile">
       <img class="close-button" (click)="toggleSidebar()" src="../../../../assets/Elementos/Close.png">
     </div>
-    
+
     <div class="containerUsuarioMobile">
       <img class="iconUsuario" src="../../../../assets/Elementos/IconFormulario.png">
       <p class="nameUsuario">{{nomeUsuario}}</p>
     </div>
-  
-    <ul>
+
+    <ul id="ul-mobile">
       <li class="containerElementoMobile">
         <a href="#">
-          <img class="imgElemento" src="../../../../assets/Elementos/historicoImg.png" >
+          <img class="imgElemento" src="../../../../assets/Elementos/historicoImg.png">
           <h2 class="textoElemento">Histórico</h2>
-          <img class="playMobile" src="../../../../assets/Elementos/play.png" >
+          <img class="playMobile" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
-  
+
       <li class="containerElementoMobile">
         <a href="#">
-          <img class="imgElemento2" src="../../../../assets/Elementos/agendaImg.png" >
+          <img class="imgElemento" src="../../../../assets/Elementos/agendaImg.png">
           <h2 class="textoElemento">Calendário</h2>
-          <img class="playMobile" src="../../../../assets/Elementos/play.png" >
+          <img class="playMobile" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
-  
+
       <li class="containerElementoMobile">
         <a href="#">
-          <img class="imgElemento" src="../../../../assets/Elementos/financeiroImg.png" >
+          <img class="imgElemento" src="../../../../assets/Elementos/financeiroImg.png">
           <h2 class="textoElemento">Financeiro</h2>
-          <img class="playMobile" src="../../../../assets/Elementos/play.png" >
+          <img class="playMobile" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
-      
+
       <li class="containerElementoMobile">
         <a href="#">
-          <img class="imgElemento" src="../../../../assets/Elementos/futurosImg.png" >
+          <img class="imgElemento" src="../../../../assets/Elementos/futurosImg.png">
           <h2 class="textoElemento">Futuros Eventos</h2>
-          <img class="playMobile" src="../../../../assets/Elementos/play.png" >
+          <img class="playMobile" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
-  
+
       <li class="containerElementoMobile">
         <a href="#">
-          <img class="imgElemento" src="../../../../assets/Elementos/criarEvento.png" >
+          <img class="imgElemento" src="../../../../assets/Elementos/criarEvento.png">
           <h2 class="textoElemento">Criar Evento</h2>
-          <img class="playMobile" src="../../../../assets/Elementos/play.png" >
+          <img class="playMobile" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
-      
+
       <li class="containerElementoMobile">
         <a href="#">
-          <img class="imgElemento" src="../../../../assets/Elementos/plano.png" >
+          <img class="imgElemento" src="../../../../assets/Elementos/plano.png">
           <h2 class="textoElemento">Planos</h2>
-          <img class="playMobile" src="../../../../assets/Elementos/play.png" >
+          <img class="playMobile" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
 
     </ul>
-  
+
     <!-- Botão Sair -->
     <div class="containerSairMobile" (click)="closeSidebar()">
       <img class="iconSair" src="../../../../assets/Elementos/sair.png">
@@ -91,86 +91,101 @@
 
   <header id="headerPc">
     <i class="bi bi-list" id="i-desktop" (click)="toggleSidebar()"></i>
-  
+
     <div class="container-input" id="container-input-desktop">
       <input class="inputM" id="inputM-desktop" type="text" placeholder="Eventos">
       <img class="img-search img-fluid" id="img-search-desktop" src="../../../../assets/Elementos/Search.svg">
     </div>
-  
+
     <div id="icons">
       <i id="emailPc" class="bi bi-envelope"></i>
       <i id="bellPc" class="bi bi-bell"></i>
       <img id="personPc" src="../../../../assets/Elementos/IconFormulario.png">
     </div>
   </header>
-  
+
   <div id="sidebar" class="sidebar" [class.active]="isSidebarActive">
-    <div class="containerClose">
+    <div id="ContainerClose-desktop">
       <img class="close-button" (click)="toggleSidebar()" src="../../../../assets/Elementos/Close.png">
     </div>
-    
-    <div class="containerUsuario">
-      <img class="iconUsuario" src="../../../../assets/Elementos/IconFormulario.png">
-      <p class="nameUsuario">{{nomeUsuario}}</p>
+
+    <div class="containerUsuario" id="containerUsuario-desktop">
+      <img class="iconUsuario" id="iconUsuario-desktop" src="../../../../assets/Elementos/IconFormulario.png">
+      <p class="nameUsuario" id="nameUsuario-desktop">{{nomeUsuario}}</p>
     </div>
-  
-    
-    <ul>
-  
+
+    <ul id="ul-desktop">
+
       <li class="containerElemento">
         <a href="#">
-          <img class="imgElemento" src="../../../../assets/Elementos/historicoImg.png" >
-          <h2 class="textoElemento">Histórico</h2>
-          <img class="play" src="../../../../assets/Elementos/play.png" >
+          <div class="container-img-desktop">
+            <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/historicoImg.png">
+          </div>
+          <h2 class="textoElemento textoElemento-desktop">Histórico</h2>
+          <img class="play" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
-  
+
       <li class="containerElemento">
         <a href="#">
-          <img class="imgElemento2" src="../../../../assets/Elementos/agendaImg.png" >
-          <h2 class="textoElemento">Calendário</h2>
-          <img class="play" src="../../../../assets/Elementos/play.png" >
+          <div class="container-img-desktop">
+
+            <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/agendaImg.png">
+          </div>
+          <h2 class="textoElemento textoElemento-desktop">Calendário</h2>
+          <img class="play" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
-  
+
       <li class="containerElemento">
         <a href="#">
-          <img class="imgElemento" src="../../../../assets/Elementos/financeiroImg.png" >
-          <h2 class="textoElemento">Financeiro</h2>
-          <img class="play" src="../../../../assets/Elementos/play.png" >
+          <div class="container-img-desktop">
+            <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/financeiroImg.png">
+          </div>
+          <h2 class="textoElemento textoElemento-desktop">Financeiro</h2>
+          <img class="play" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
-      
+
       <li class="containerElemento">
         <a href="#">
-          <img class="imgElemento" src="../../../../assets/Elementos/futurosImg.png" >
-          <h2 class="textoElemento">Futuros Eventos</h2>
-          <img class="play" src="../../../../assets/Elementos/play.png" >
+          <div class="container-img-desktop">
+
+            <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/futurosImg.png">
+          </div>
+          <h2 class="textoElemento textoElemento-desktop">Futuros Eventos</h2>
+          <img class="play" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
-  
+
       <li class="containerElemento">
         <a href="#">
-          <img class="imgElemento" src="../../../../assets/Elementos/criarEvento.png" >
-          <h2 class="textoElemento">Criar Evento</h2>
-          <img class="play" src="../../../../assets/Elementos/play.png" >
+          <div class="container-img-desktop">
+
+            <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/criarEvento.png">
+          </div>
+          <h2 class="textoElemento textoElemento-desktop">Criar Evento</h2>
+          <img class="play" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
-      
+
       <li class="containerElemento">
         <a href="#">
-          <img class="imgElemento" src="../../../../assets/Elementos/plano.png" >
-          <h2 class="textoElemento">Planos</h2>
-          <img class="play" src="../../../../assets/Elementos/play.png" >
+          <div class="container-img-desktop">
+
+            <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/plano.png">
+          </div>
+          <h2 class="textoElemento textoElemento-desktop">Planos</h2>
+          <img class="play" src="../../../../assets/Elementos/play.png">
         </a>
       </li>
     </ul>
-  
-    <div class="containerSair">
-      <img class="iconSair" src="../../../../assets/Elementos/sair.png">
-      <p class="sair">Sair</p>
+
+    <div class="containerSair" id="containerSair-desktop">
+      <img class="iconSair" id="iconSair-desktop" src="../../../../assets/Elementos/sair.png">
+      <p class="sair" id="sair-desktop">Sair</p>
     </div>
-  
+
   </div>
   <div id="overlay" class="overlay" [class.active]="isSidebarActive" (click)="closeSidebar()"></div>
 </div>
