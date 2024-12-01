@@ -18,7 +18,7 @@ export class FormularioCriacaoComponent {
     private http: HttpClient,
     private router: Router
   ) {
-
+""
   }
 
   CadastroEventoForm = this.formBuilder.group({
@@ -49,7 +49,7 @@ export class FormularioCriacaoComponent {
       if (idOrganizador) {
         const eventoData = {
           ...this.CadastroEventoForm.value,
-          idOrganizador: idOrganizador // Passa o idOrganizador no corpo da requisição
+          idOrganizador: idOrganizador
         };
 
         this.http.post(`${this.apiUrl}/eventos/criarEvento?idOrganizador=${idOrganizador}`, eventoData)

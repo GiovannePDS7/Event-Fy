@@ -1,13 +1,104 @@
-#background
-{
+* {
+    color: #000;
+}
+
+#background {
     background-color: #FFC585;
 }
-#container-title h1
-{
+
+#container-title {
+    padding: 18vw 0 1.5vw 0;
+}
+
+#h1-mobile {
     text-align: center;
+    color: #000;
+    font-size: 6vw;
     font-weight: bold;
 }
-.card
-{
-    
+
+#main-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.section-eventos-mobile {
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 15px;
+    width: 80%;
+    margin: 2.5vw 0;
+    padding: 2vw 0 2vw 3vw;
+
+}
+
+.containerNome-mobile {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.h1-nomeEvento-mobile {
+    width: 45%;
+    padding-top: 3vw;
+    font-size: 5vw;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.img-evento-mobile {
+    width: 6vw;
+}
+
+.imgfotoEvento-mobile {
+    border: 1px solid #000;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12vw;
+    height: 12vw;
+    background: #fff;
+    margin-left: 4vw;
+    border-radius: 10px;
+}
+
+.infoEventos-mobile {
+    display: inline-flex;
+    width: 100%;
+}
+
+.containerLeftInfo-mobile, .containerRightInfo-mobile {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 34vw;
+    padding-right: 1.5vw;
+}
+
+.containerRightInfo-mobile {
+    padding-left: 3vw;
+    width: auto;
+}
+
+.infoDataEvento-mobile, .infoLocalEvento-mobile {
+    padding: 1vw 0;
+    font-size: 3vw;
+}
+
+.infoLinha-mobile {
+    height: 13.5vw;
+    width: 0.25vw;
+    background: #000;
+}
+
+.infoHInicioEvento-mobile, .infoHFimEvento-mobile {
+    font-size: 3vw;
+    padding: 1vw 0;
 }

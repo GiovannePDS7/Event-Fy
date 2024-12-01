@@ -1,12 +1,27 @@
 <div class="d-xs-block d-md-none" id="background">
-    <section id="container-title">
-      <h1>Meus Eventos</h1>
-    </section>
-    <section *ngFor="let evento of eventos">
-        <div class="card">
-          <h1>{{ evento.nomeEvento }}</h1>
+  <section id="container-title">
+    <h1 id="h1-mobile">Meus Eventos</h1>
+  </section>
+  <main id="main-mobile">
+    <section class="section-eventos-mobile" *ngFor="let evento of eventos">
+      <div class="containerNome-mobile">
+        <h1 class="h1-nomeEvento-mobile">{{ evento.nomeEvento }}</h1>
+        <div class="imgfotoEvento-mobile">
+          <img class="img-fluid img-evento-mobile" src="../../../assets/Elementos/imgEventoExistente.svg">
         </div>
-      </section>
-      
-  </div>
-  
+      </div>
+      <div class="infoEventos-mobile">
+        <div class="containerLeftInfo-mobile">
+          <span class="infoDataEvento-mobile"><b>Data: </b>{{evento.dataEvento | date: 'dd/MM/yyyy'}}</span>
+          <span class="infoLocalEvento-mobile"><b>Local: </b> {{evento.localEvento}}</span>
+        </div>
+        <div class="infoLinha-mobile"></div>
+        <div class="containerRightInfo-mobile">
+          <span class="infoHInicioEvento-mobile"><b>Horário início: </b>{{evento.horarioInicio}}</span>
+          <span class="infoHFimEvento-mobile"><b>Horário término: </b> {{evento.horarioFim}}</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</div>
