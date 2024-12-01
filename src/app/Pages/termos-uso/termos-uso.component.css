@@ -23,12 +23,11 @@
 
 #container-h1Termos {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 15vw;
 }
 
-#container-h1Termos h1, #container-h1TermosLG h1 {
-    font-weight: bold;
-    font-family: inherit;
+#h1-mobile {
+    font-size: 6.5vw;
 }
 
 #container-Termos {
