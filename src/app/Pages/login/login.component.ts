@@ -34,10 +34,10 @@ export class LoginComponent {
     private http: HttpClient,
     private router: Router
   ) {
-   // const token = localStorage.getItem('token');
-   //if (token) {
-    // this.router.navigate(['/inicial']);
-    //}
+   const token = localStorage.getItem('token');
+   if (token) {
+    this.router.navigate(['/inicial']);
+    }
   }
 
   // Função para alternar a visibilidade da senha
