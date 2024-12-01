@@ -26,7 +26,7 @@
 
     <ul id="ul-mobile">
       <li class="containerElementoMobile">
-        <a href="#">
+        <a [routerLink]="['']">
           <img class="imgElemento" src="../../../../assets/Elementos/historicoImg.png">
           <h2 class="textoElemento">Histórico</h2>
           <img class="playMobile" src="../../../../assets/Elementos/play.png">
@@ -34,7 +34,7 @@
       </li>
 
       <li class="containerElementoMobile">
-        <a href="#">
+        <a [routerLink]="['']">
           <img class="imgElemento" src="../../../../assets/Elementos/agendaImg.png">
           <h2 class="textoElemento">Calendário</h2>
           <img class="playMobile" src="../../../../assets/Elementos/play.png">
@@ -42,7 +42,7 @@
       </li>
 
       <li class="containerElementoMobile">
-        <a href="#">
+        <a [routerLink]="['']">
           <img class="imgElemento" src="../../../../assets/Elementos/financeiroImg.png">
           <h2 class="textoElemento">Financeiro</h2>
           <img class="playMobile" src="../../../../assets/Elementos/play.png">
@@ -50,7 +50,7 @@
       </li>
 
       <li class="containerElementoMobile">
-        <a href="#">
+        <a [routerLink]="['/eventoExistente']">
           <img class="imgElemento" src="../../../../assets/Elementos/futurosImg.png">
           <h2 class="textoElemento">Futuros Eventos</h2>
           <img class="playMobile" src="../../../../assets/Elementos/play.png">
@@ -58,7 +58,7 @@
       </li>
 
       <li class="containerElementoMobile">
-        <a href="#">
+        <a [routerLink]="['/formulario']">
           <img class="imgElemento" src="../../../../assets/Elementos/criarEvento.png">
           <h2 class="textoElemento">Criar Evento</h2>
           <img class="playMobile" src="../../../../assets/Elementos/play.png">
@@ -66,7 +66,7 @@
       </li>
 
       <li class="containerElementoMobile">
-        <a href="#">
+        <a  [routerLink]="['']">
           <img class="imgElemento" src="../../../../assets/Elementos/plano.png">
           <h2 class="textoElemento">Planos</h2>
           <img class="playMobile" src="../../../../assets/Elementos/play.png">
@@ -117,7 +117,7 @@
     <ul id="ul-desktop">
 
       <li class="containerElemento">
-        <a href="#">
+        <a  [routerLink]="['']">
           <div class="container-img-desktop">
             <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/historicoImg.png">
           </div>
@@ -127,7 +127,7 @@
       </li>
 
       <li class="containerElemento">
-        <a href="#">
+        <a  [routerLink]="['']">
           <div class="container-img-desktop">
 
             <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/agendaImg.png">
@@ -138,7 +138,7 @@
       </li>
 
       <li class="containerElemento">
-        <a href="#">
+        <a  [routerLink]="['']">
           <div class="container-img-desktop">
             <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/financeiroImg.png">
           </div>
@@ -148,7 +148,7 @@
       </li>
 
       <li class="containerElemento">
-        <a href="#">
+        <a  [routerLink]="['/eventoExistente']">
           <div class="container-img-desktop">
 
             <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/futurosImg.png">
@@ -159,7 +159,7 @@
       </li>
 
       <li class="containerElemento">
-        <a href="#">
+        <a [routerLink]="['/formulario']">
           <div class="container-img-desktop">
 
             <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/criarEvento.png">
@@ -170,7 +170,7 @@
       </li>
 
       <li class="containerElemento">
-        <a href="#">
+        <a [routerLink]="['']">
           <div class="container-img-desktop">
 
             <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/plano.png">
@@ -183,7 +183,7 @@
 
     <div class="containerSair" id="containerSair-desktop">
       <img class="iconSair" id="iconSair-desktop" src="../../../../assets/Elementos/sair.png">
-      <p class="sair" id="sair-desktop">Sair</p>
+      <p class="sair" id="sair-desktop" (click)="SairConta()">Sair</p>
     </div>
 
   </div>

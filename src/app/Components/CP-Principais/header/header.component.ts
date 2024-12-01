@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  constructor(private router: Router){
 
+  }
   nomeUsuario: string = '';
 
   ngOnInit(): void {
@@ -22,5 +25,15 @@ export class HeaderComponent {
 
   closeSidebar(): void {
     this.isSidebarActive = false;
+  }
+
+  SairConta(): void {
+    if (localStorage.getItem('token')) {
+      localStorage.removeItem('token');
+      this.router.navigate(['/login'])
+    } else {
+      console.log('Nenhum token encontrado no localStorage.');
+      this.router.navigate(['/login'])
+    }
   }
 }
