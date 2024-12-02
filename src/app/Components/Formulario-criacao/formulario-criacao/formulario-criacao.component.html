@@ -109,133 +109,132 @@
     </div>
 </div>
 
+<!-- Desktop -->
+
 <div class="d-none d-md-block d-xxl-block">
-    <div id="backgroundDesk">
-        <div id="container-titleLG">
-            <h1 id="titleLG">Criação do evento</h1>
+    <div id="grandContainer">
+        <div id="containerTitle">
+            <h1 id="titleDesktop">Criação do Evento</h1>
         </div>
-        <div id="bodyLG">
-            <section id="container-btnLG">
-                <img class="img-fluid" src="../../../../assets/Elementos/IconFormulario.png">
-                <button mat-stroked-button id="btnPhotoLG">Inserir Foto</button>
+        <div id="containerDesktop">
+            <section id="containerImgEvento">
+                <img class="ImgEvento" src="../../../../assets/Elementos/IconFormulario.png">
+                <button id="btnInserirFoto">Inserir Foto</button>
             </section>
-            <section id="container-inputLG">
-                <mat-grid-list cols="2" rowHeight="30vh">
-                    <mat-grid-tile>
-                        <form id="containerlittle-inputleftLG" [formGroup]="CadastroEventoForm">
-                            <fieldset class="formFieldsetLG">
-                                <legend class="legendLG">Nome do Evento</legend>
-                                <input type="text" placeholder="Qual o nome do seu evento?" class="textFormLG"
-                                    formControlName="nomeEvento" minlength="3" maxlength="45">
-                            </fieldset>
-                            <div class="container-erroLG">
-                                <mat-error class="error-boxLG"
-                                    *ngIf="CadastroEventoForm.controls.nomeEvento.hasError('required') && CadastroEventoForm.controls.nomeEvento.touched">'Nome
-                                    do Evento'é obrigatório</mat-error>
-                                <mat-error class="error-boxLG"
-                                    *ngIf="CadastroEventoForm.controls.nomeEvento.hasError('minlength')">'Nomedo Evento'
-                                    precisa conter entre 3 e 45 caracteres</mat-error>
-                            </div>
-                            <fieldset class="formFieldsetLG">
-                                <legend class="legendLG">Data do Evento</legend>
-                                <input type="date" placeholder="Qual dia acontecerá seu evento?" class="textFormLG"
-                                    formControlName="dataEvento" [min]="hoje">
-                            </fieldset>
-                            <div class="container-erroLG">
-                                <mat-error class="error-boxLG"
-                                    *ngIf="CadastroEventoForm.controls.dataEvento.hasError('required') && CadastroEventoForm.controls.dataEvento.touched">'Data
-                                    do Evento'
-                                    é obrigatório</mat-error>
-                            </div>
-                            <fieldset class="formFieldsetLG">
-                                <legend class="legendLG">Tipo de evento</legend>
-                                <input type="text" placeholder="Qual o tipo do evento?" class="textFormLG"
-                                    formControlName="tipoEvento" minlength="3" maxlength="45">
-                            </fieldset>
-                            <div class="container-erroLG">
-                                <mat-error class="error-boxLG"
-                                    *ngIf="CadastroEventoForm.controls.nomeEvento.hasError('required') && CadastroEventoForm.controls.tipoEvento.touched">'Tipo
-                                    do Evento'
-                                    é obrigatório</mat-error>
-                                <mat-error class="error-box"
-                                    *ngIf="CadastroEventoForm.controls.tipoEvento.hasError('minlength')">'Tipo
-                                    do Evento' precisa conter entre 3
-                                    e 30
-                                    caracteres </mat-error>
-                            </div>
-                            <div class="container-erroLG">
-                                <mat-error class="error-boxLG"
-                                    *ngIf="CadastroEventoForm.controls.dataEvento.hasError('required') && CadastroEventoForm.controls.dataEvento.touched">'Data
-                                    do Evento' é obrigatório</mat-error>
-                            </div>
-                        </form>
-                    </mat-grid-tile>
 
-                    <mat-grid-tile>
-                        <form id="containerlittle-inputRightLG" [formGroup]="CadastroEventoForm">
-                            <fieldset class="formFieldsetLG">
-                                <legend class="legendLG">Horário que inicia o Evento</legend>
-                                <input type="time" class="textFormLG" formControlName="horarioInicio" value="00:00">
+            <div id="grandContainerInputs">
+                <div id="containerLeftInputs">
 
-                            </fieldset>
-                            <div class="container-erroLG">
-                                <mat-error class="error-boxLG"
-                                    *ngIf="CadastroEventoForm.controls.horarioInicio.hasError('required') && CadastroEventoForm.controls.horarioInicio.touched">'Horário
-                                    que inicia' é obrigatório</mat-error>
-                            </div>
+                    <form id="containerlittle-inputleftLG" [formGroup]="CadastroEventoForm">
+                        <fieldset class="formFieldsetLG">
+                            <legend class="legendLG">Nome do Evento</legend>
+                            <input type="text" placeholder="Qual o nome do seu evento?" class="textFormLG"
+                                formControlName="nomeEvento" minlength="3" maxlength="45">
+                        </fieldset>
+                        <div class="container-erroLG">
+                            <mat-error class="error-boxLG"
+                                *ngIf="CadastroEventoForm.controls.nomeEvento.hasError('required') && CadastroEventoForm.controls.nomeEvento.touched">'Nome
+                                do Evento'é obrigatório</mat-error>
+                            <mat-error class="error-boxLG"
+                                *ngIf="CadastroEventoForm.controls.nomeEvento.hasError('minlength')">'Nomedo Evento'
+                                precisa conter entre 3 e 45 caracteres</mat-error>
+                        </div>
+                        <fieldset class="formFieldsetLG">
+                            <legend class="legendLG">Data do Evento</legend>
+                            <input type="date" placeholder="Qual dia acontecerá seu evento?" class="textFormLG"
+                                formControlName="dataEvento" [min]="hoje">
+                        </fieldset>
+                        <div class="container-erroLG">
+                            <mat-error class="error-boxLG"
+                                *ngIf="CadastroEventoForm.controls.dataEvento.hasError('required') && CadastroEventoForm.controls.dataEvento.touched">'Data
+                                do Evento'
+                                é obrigatório</mat-error>
+                        </div>
+                        <fieldset class="formFieldsetLG">
+                            <legend class="legendLG">Tipo de evento</legend>
+                            <input type="text" placeholder="Qual o tipo do evento?" class="textFormLG"
+                                formControlName="tipoEvento" minlength="3" maxlength="45">
+                        </fieldset>
+                        <div class="container-erroLG">
+                            <mat-error class="error-boxLG"
+                                *ngIf="CadastroEventoForm.controls.nomeEvento.hasError('required') && CadastroEventoForm.controls.tipoEvento.touched">'Tipo
+                                do Evento'
+                                é obrigatório</mat-error>
+                            <mat-error class="error-box"
+                                *ngIf="CadastroEventoForm.controls.tipoEvento.hasError('minlength')">'Tipo
+                                do Evento' precisa conter entre 3
+                                e 30
+                                caracteres </mat-error>
+                        </div>
+                        <div class="container-erroLG">
+                            <mat-error class="error-boxLG"
+                                *ngIf="CadastroEventoForm.controls.dataEvento.hasError('required') && CadastroEventoForm.controls.dataEvento.touched">'Data
+                                do Evento' é obrigatório</mat-error>
+                        </div>
+                    </form>
 
-                            <fieldset class="formFieldsetLG">
-                                <legend class="legendLG">Horário que finaliza o Evento</legend>
-                                <input type="time" class="textFormLG" formControlName="horarioFim" value="00:00">
-                            </fieldset>
-                            <div class="container-erroLG">
-                                <mat-error class="error-boxLG"
-                                    *ngIf="CadastroEventoForm.controls.horarioFim.hasError('required') && CadastroEventoForm.controls.horarioFim.touched">'Horário
-                                    que finaliza'
-                                    é obrigatório</mat-error>
-                            </div>
+                </div>
+                
+                <div id="containerRightInputs">
+                    <form id="containerlittle-inputRightLG" [formGroup]="CadastroEventoForm">
+                        <fieldset class="formFieldsetLG">
+                            <legend class="legendLG">Horário que inicia o Evento</legend>
+                            <input type="time" class="textFormLG" formControlName="horarioInicio" value="00:00">
+                        </fieldset>
 
-                            <fieldset class="formFieldsetLG">
-                                <legend class="legendLG">Local do Evento</legend>
-                                <input type="text" placeholder="Qual o endereço do seu evento?" class="textFormLG"
-                                    minlength="3" maxlength="300" formControlName="localEvento">
-                            </fieldset>
-                            <div class="container-erroLG">
-                                <mat-error class="error-boxLG"
-                                    *ngIf="CadastroEventoForm.controls.localEvento.hasError('required') && CadastroEventoForm.controls.localEvento.touched">'Local
-                                    do Evento'
-                                    é obrigatório</mat-error>
-                                <mat-error class="error-boxLG"
-                                    *ngIf="CadastroEventoForm.controls.localEvento.hasError('minlength')">'Nome do
-                                    Evento' precisa conter entre 3 e 300 caracteres </mat-error>
-                            </div>
-                        </form>
-                    </mat-grid-tile>
-                </mat-grid-list>
-            </section>
-            <div id="containerBoxLG">
-                <mat-grid-list cols="2" rowHeight="15vh">
-                    <mat-grid-tile></mat-grid-tile>
-                    <mat-grid-tile>
-                        <form id="containerlittle-inputleftLG" [formGroup]="CadastroEventoForm">
-                            <div class="container-checkBoxLG">
-                                <input type="checkbox" id="chbx1LG" formControlName="incluirTarefas" />Incluir Tarefas
-                            </div>
-                            <div class="container-checkBoxLG">
-                                <input type="checkbox" id="chbx2LG" formControlName="listaConvidados" />Lista de
-                                Convidados
-                            </div>
-                            <div class="container-checkBoxLG">
-                                <input type="checkbox" id="chbx3LG" formControlName="fornecedores" />Fornecedores
-                            </div>
-                        </form>
-                    </mat-grid-tile>
-                </mat-grid-list>
+                        <div class="container-erroLG">
+                            <mat-error class="error-boxLG"
+                                *ngIf="CadastroEventoForm.controls.horarioInicio.hasError('required') && CadastroEventoForm.controls.horarioInicio.touched">'Horário
+                                que inicia' é obrigatório</mat-error>
+                        </div>
+
+                        <fieldset class="formFieldsetLG">
+                            <legend class="legendLG">Horário que finaliza o Evento</legend>
+                            <input type="time" class="textFormLG" formControlName="horarioFim" value="00:00">
+                        </fieldset>
+
+                        <div class="container-erroLG">
+                            <mat-error class="error-boxLG"
+                                *ngIf="CadastroEventoForm.controls.horarioFim.hasError('required') && CadastroEventoForm.controls.horarioFim.touched">'Horário
+                                que finaliza'
+                                é obrigatório</mat-error>
+                        </div>
+
+                        <fieldset class="formFieldsetLG">
+                            <legend class="legendLG">Local do Evento</legend>
+                            <input type="text" placeholder="Qual o endereço do seu evento?" class="textFormLG"
+                                minlength="3" maxlength="300" formControlName="localEvento">
+                        </fieldset>
+                        <div class="container-erroLG">
+                            <mat-error class="error-boxLG"
+                                *ngIf="CadastroEventoForm.controls.localEvento.hasError('required') && CadastroEventoForm.controls.localEvento.touched">'Local
+                                do Evento'
+                                é obrigatório</mat-error>
+                            <mat-error class="error-boxLG"
+                                *ngIf="CadastroEventoForm.controls.localEvento.hasError('minlength')">'Nome do
+                                Evento' precisa conter entre 3 e 300 caracteres </mat-error>
+                        </div>
+                    </form>
+                </div>
             </div>
-
+            
+            <div class="containerChecksBox">
+                <form id="event-form" [formGroup]="CadastroEventoForm">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="taskCheckbox" formControlName="incluirTarefas" />Incluir Tarefas
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="guestListCheckbox" formControlName="listaConvidados" />Lista de Convidados
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="supplierCheckbox" formControlName="fornecedores" />Fornecedores
+                    </div>
+                </form>                
+            </div>
         </div>
-        <div id="container-btnEventLG">
-            <button mat-stroked-button (click)="onEnviar()" id="btnEventLG">Criar Evento</button>
+
+        <div id="containerBtnCriarEvento">
+            <button mat-stroked-button (click)="onEnviar()" id="btnCriarEvento">Criar Evento</button>
         </div>
 
     </div>

@@ -1,6 +1,5 @@
 <div class="d-xs-block d-md-none">
   <header>
-    <!-- Ícone do menu (abre o sidebar) -->
     <i class="bi bi-list" (click)="toggleSidebar()"></i>
 
     <div class="container-input">
@@ -13,7 +12,6 @@
     </div>
   </header>
 
-  <!-- Sidebar -->
   <div id="sidebarMobile" class="sidebarMobile" [class.active]="isSidebarActive">
     <div class="containerCloseMobile">
       <img class="close-button" (click)="toggleSidebar()" src="../../../../assets/Elementos/Close.png">
@@ -75,7 +73,6 @@
 
     </ul>
 
-    <!-- Botão Sair -->
     <div class="containerSairMobile" (click)="closeSidebar()">
       <a class="a-link-sair" (click)="SairConta()">
         <img class="iconSair" src="../../../../assets/Elementos/sair.png">
@@ -84,7 +81,6 @@
     </div>
   </div>
 
-  <!-- Overlay -->
   <div id="overlay" class="overlay" [class.active]="isSidebarActive" (click)="closeSidebar()"></div>
 </div>
 
