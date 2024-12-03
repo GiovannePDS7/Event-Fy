@@ -30,7 +30,6 @@ import { TermosUsoComponent } from './Pages/termos-uso/termos-uso.component';
 import { EventoExistenteComponent } from './Pages/evento-existente/evento-existente.component';
 import { EventosComponent } from './Components/eventos/eventos.component';
 import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.component';
-import { DetalhesEventoComponent } from './Pages/detalhes-evento/detalhes-evento.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +52,6 @@ import { DetalhesEventoComponent } from './Pages/detalhes-evento/detalhes-evento
     EventoExistenteComponent,
     EventosComponent,
     InfoEventosComponent,
-    DetalhesEventoComponent,
   ],
   imports: [
     ReactiveFormsModule,
@@ -67,7 +65,7 @@ import { DetalhesEventoComponent } from './Pages/detalhes-evento/detalhes-evento
     MatGridListModule,
     HttpClientModule,
     MatDatepickerModule,
-MatNativeDateModule
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

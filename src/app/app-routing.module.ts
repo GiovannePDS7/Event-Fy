@@ -10,6 +10,7 @@ import { TermosUsoComponent } from './Pages/termos-uso/termos-uso.component';
 import { EventoExistenteComponent } from './Pages/evento-existente/evento-existente.component';
 import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: "/apresentacao", pathMatch: 'full' },
   { path: 'apresentacao', component: ApresentacaoComponent },
