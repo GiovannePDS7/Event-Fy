@@ -29,11 +29,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { TermosUsoComponent } from './Pages/termos-uso/termos-uso.component';
 import { EventoExistenteComponent } from './Pages/evento-existente/evento-existente.component';
 import { EventosComponent } from './Components/eventos/eventos.component';
-<<<<<<< HEAD
+
 import { AreaUsuarioComponent } from './Pages/area-usuario/area-usuario.component';
-=======
+
 import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.component';
->>>>>>> fe0ef2bc99c40d883074988b24453468c0385f95
 
 @NgModule({
   declarations: [
@@ -55,11 +54,8 @@ import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.componen
     TermosUsoComponent,
     EventoExistenteComponent,
     EventosComponent,
-<<<<<<< HEAD
     AreaUsuarioComponent,
-=======
     InfoEventosComponent,
->>>>>>> fe0ef2bc99c40d883074988b24453468c0385f95
   ],
   imports: [
     ReactiveFormsModule,
