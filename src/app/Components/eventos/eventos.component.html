@@ -23,5 +23,39 @@
       </div>
     </section>
   </main>
-
 </div>
+
+<div class="d-none d-md-block d-xxl-block" id="background">
+  <section id="container-titleDesktop">
+    <h1 id="h1-Desktop">Meus Eventos</h1>
+  </section>
+  <div id="grandContainer">
+    <main id="main-Desktop">
+      <section class="section-eventos-desktop" *ngFor="let evento of eventos" (click)="verDetalhes(evento)">
+        <div class="containerNome-desktop">
+          <h1 class="h1-nomeEvento-desktop">{{ evento.nomeEvento }}</h1>
+          <div class="imgfotoEvento-desktop">
+            <img class="img-fluid img-evento-desktop" src="../../../assets/Elementos/imgEventoExistente.svg">
+          </div>
+        </div>
+        <div class="infoEventos-desktop">
+          <div class="containerLeftInfo-desktop">
+            <span class="infoDataEvento-desktop"><b>Data: </b>{{evento.dataEvento | date: 'dd/MM/yyyy'}}</span>
+            <span class="infoLocalEvento-desktop"><b>Local: </b> {{evento.localEvento}}</span>
+          </div>
+          <div class="infoLinha-desktop"></div>
+          <div class="containerRightInfo-desktop">
+            <span class="infoHInicioEvento-desktop"><b>Horário início: </b>{{evento.horarioInicio}}</span>
+            <span class="infoHFimEvento-desktop"><b>Horário término: </b> {{evento.horarioFim}}</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+
+
+124
+
+,
