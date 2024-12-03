@@ -8,6 +8,7 @@ import { FormularioComponent } from './Pages/formulario/formulario.component';
 import { AuthGuard } from './security/AuthGuard';
 import { TermosUsoComponent } from './Pages/termos-uso/termos-uso.component';
 import { EventoExistenteComponent } from './Pages/evento-existente/evento-existente.component';
+import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "/apresentacao", pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
    { path: 'formulario', component: FormularioComponent, canActivate: [AuthGuard]},
   { path: 'termosUso', component: TermosUsoComponent },
   { path: 'eventoExistente', component: EventoExistenteComponent, canActivate: [AuthGuard]},
+  { path: 'infoEvento/:id', component: InfoEventosComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
 ];
 

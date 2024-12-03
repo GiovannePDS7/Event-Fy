@@ -21,7 +21,7 @@ export class CadastroComponent {
   typeConfirmSenha: string = 'password';
   emailExiste: boolean = false;
   apiUrl: string = 'https://cadastroeventfy-production.up.railway.app/organizadores';
- //apiUrl: string = 'http://localhost:8081/organizadores';
+  // apiUrl: string = 'http://localhost:8081/organizadores';
 
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) { }

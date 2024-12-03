@@ -16,3 +16,4 @@ export class EventoService {
     return this.http.get<Evento[]>(`${this.apiUrl}/organizadorEvents?idOrganizador=${idOrganizador}`);
   }
 }
+""
