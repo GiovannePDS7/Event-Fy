@@ -8,12 +8,11 @@ import { FormularioComponent } from './Pages/formulario/formulario.component';
 import { AuthGuard } from './security/AuthGuard';
 import { TermosUsoComponent } from './Pages/termos-uso/termos-uso.component';
 import { EventoExistenteComponent } from './Pages/evento-existente/evento-existente.component';
-<<<<<<< HEAD
+
 import { AreaUsuarioComponent } from './Pages/area-usuario/area-usuario.component';
-=======
+
 import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.component';
 
->>>>>>> fe0ef2bc99c40d883074988b24453468c0385f95
 
 const routes: Routes = [
   { path: '', redirectTo: "/apresentacao", pathMatch: 'full' },
@@ -21,14 +20,14 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'inicial', component: InicialComponent, canActivate: [AuthGuard] },
-   { path: 'formulario', component: FormularioComponent, canActivate: [AuthGuard]},
+  { path: 'formulario', component: FormularioComponent, canActivate: [AuthGuard] },
   { path: 'termosUso', component: TermosUsoComponent },
-  { path: 'eventoExistente', component: EventoExistenteComponent, canActivate: [AuthGuard]},
-<<<<<<< HEAD
-  { path: 'areaUsuario', component: AreaUsuarioComponent/*, canActivate: [AuthGuard]*/},
-=======
+  { path: 'eventoExistente', component: EventoExistenteComponent, canActivate: [AuthGuard] },
+
+  { path: 'areaUsuario', component: AreaUsuarioComponent/*, canActivate: [AuthGuard]*/ },
+
   { path: 'infoEvento/:id', component: InfoEventosComponent, canActivate: [AuthGuard] },
->>>>>>> fe0ef2bc99c40d883074988b24453468c0385f95
+
   { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
 ];
 
