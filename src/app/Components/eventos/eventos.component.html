@@ -3,7 +3,7 @@
     <h1 id="h1-mobile">Meus Eventos</h1>
   </section>
   <main id="main-mobile">
-    <section class="section-eventos-mobile" *ngFor="let evento of eventos">
+    <section class="section-eventos-mobile" *ngFor="let evento of eventos" (click)="verDetalhes(evento)">
       <div class="containerNome-mobile">
         <h1 class="h1-nomeEvento-mobile">{{ evento.nomeEvento }}</h1>
         <div class="imgfotoEvento-mobile">
