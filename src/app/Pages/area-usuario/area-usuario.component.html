@@ -1,14 +1,55 @@
 <app-header></app-header>
 <div class="d-xs-block d-md-none">
-<div>
-  <body id="background">
-    <div id="userBody">
-      
+  <div id="grandContainerM">
+    <div id="containerTitleM">
+      <h1> Área do Usuário</h1>
     </div>
-  </body>
+    <div id="formularioMobile">
+      <div id="photoM">
+      <img class="ImgEvento" src="../../../../assets/Elementos/IconFormulario.png">
+      <button id="btnInserirFotoM">Editar</button>
+      </div>
+      <div id="grandContainerInputsM">
+        <div id="containerLeftInputsM">
+            <form id="containerlittle-inputleftM" >
+                <fieldset class="formFieldsetM">
+                    <legend class="legendM">Nome do Evento</legend>
+                    <input type="text" placeholder="Nome de Usuário" class="textFormM"
+                        formControlName="nomeEvento" minlength="3" maxlength="45">
+                </fieldset>
+
+                <fieldset class="formFieldsetM">
+                  <legend class="legendM">E-mail</legend>
+                  <input type="text" placeholder="email@gmail.com" class="textFormM"
+                      formControlName="nomeEvento" minlength="3" maxlength="45">
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="containerRightInputsM">
+            <form id="containerlittle-inputRightM">
+              <fieldset class="formFieldsetM">
+                <legend class="legendM">Telefone</legend>
+                <input type="text" placeholder="+55 11 9xxxx-xxxx" class="textFormM"
+                    formControlName="nomeEvento" minlength="3" maxlength="45">
+              </fieldset>
+
+              <fieldset class="formFieldsetM">
+                <legend class="legendM">Data de Nascimento</legend>
+                <input type="date" placeholder="Qual dia acontecerá seu evento?" class="textFormM"
+                    formControlName="dataEvento" >
+            </fieldset>
+            </form>
+        </div>
+    </div>
+    <div id="containerBtnCriarEventoM">
+      <button mat-stroked-button id="btnCriarEvento">Salvar</button>
+  </div>
+    </div>
+  </div>
+<app-footer></app-footer>
 </div>
 
-</div>
 
 
 <div class="d-none d-md-block d-xxl-block">
@@ -37,7 +78,7 @@
                       </fieldset>
                   </form>
               </div>
-              
+
               <div id="containerRightInputs">
                   <form id="containerlittle-inputRightLG">
                     <fieldset class="formFieldsetLG">
@@ -59,7 +100,5 @@
       </div>
   </div>
 </div>
-
-
 
 <app-footer></app-footer>

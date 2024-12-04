@@ -37,38 +37,42 @@ export class FormularioCriacaoComponent {
     const input = event.target as HTMLInputElement;
     this.CadastroEventoForm.get(controlName)?.setValue(input.checked);
   }
-
   onEnviar() {
     // Marca todos os campos como tocados (para validação)
     this.CadastroEventoForm.markAllAsTouched();
 
     if (this.CadastroEventoForm.valid) {
-      console.table(this.CadastroEventoForm.value)
-      const idOrganizador = localStorage.getItem('organizadorId'); // Obtém o id do localStorage
-      console.log(this.CadastroEventoForm);
-      if (idOrganizador) {
-        const eventoData = {
-          ...this.CadastroEventoForm.value,
-          idOrganizador: idOrganizador
-        };
+        console.table(this.CadastroEventoForm.value);
+        const idOrganizador = localStorage.getItem('organizadorId'); // Obtém o id do localStorage
 
-        this.http.post(`${this.apiUrl}/eventos/criarEvento?idOrganizador=${idOrganizador}`, eventoData)
-          .subscribe(
-            (response) => {
-              alert('Evento criado com sucesso!');
-              console.log(response);
-              this.router.navigate(['/eventoExistente']);
-            },
-            (error) => {
-              alert('Erro ao criar o evento.');
-              console.error(error);
-            }
-          );
-      } else {
-        alert('Organizador não encontrado no localStorage.');
-      }
+        if (idOrganizador) {
+            const eventoData = {
+                ...this.CadastroEventoForm.value,
+                idOrganizador: +idOrganizador  // Garantir que o idOrganizador seja convertido para número
+            };
+
+            this.http.post(`${this.apiUrl}/eventos/criarEvento`, eventoData)
+                .subscribe(
+                    (response: any) => {
+                        // Aqui você deve verificar se o `idEvento` está presente na resposta
+                        console.log('Evento criado:', response);
+                        console.log('ID do evento:', response.idEvento); // Verifique se o ID é retornado corretamente
+
+                        // Usar o idEvento para redirecionar ou mostrar algo no UI
+                        alert(`O ID do evento criado é: ${response.idEvento}`);
+
+                        this.router.navigate(['/eventoExistente']);
+                    },
+                    (error) => {
+                        alert('Erro ao criar o evento.');
+                        console.error(error);
+                    }
+                );
+        } else {
+            alert('Organizador não encontrado no localStorage.');
+        }
     } else {
-      alert('Por favor, preencha os campos corretamente.');
+        alert('Por favor, preencha os campos corretamente.');
     }
-  }
+}
 }
