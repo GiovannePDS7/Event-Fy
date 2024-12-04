@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'inicial', component: InicialComponent, canActivate: [AuthGuard] },
   { path: 'formulario', component: FormularioComponent, canActivate: [AuthGuard] },
   { path: 'termosUso', component: TermosUsoComponent },
-  { path: 'eventoExistente', component: EventoExistenteComponent, canActivate: [AuthGuard] },
+  { path: 'eventoExistente', component: EventoExistenteComponent, canActivate: [AuthGuard]},
 
   { path: 'areaUsuario', component: AreaUsuarioComponent/*, canActivate: [AuthGuard]*/ },
 
