@@ -17,8 +17,6 @@ export class EvInfosComponent implements OnInit {
     valor: null
   };
 
-<<<<<<< HEAD
-
   isModalOpen = false;
 
   openModal() {
@@ -29,8 +27,6 @@ export class EvInfosComponent implements OnInit {
     this.isModalOpen = false;
   }
 
-
-=======
   constructor(private tarefaService: TarefaService) {}
 
   ngOnInit(): void {
@@ -57,7 +53,7 @@ export class EvInfosComponent implements OnInit {
       nomeTarefa: this.novaTarefa.nomeTarefa,
       fornecedor: this.novaTarefa.fornecedor,
       valor: this.novaTarefa.valor,
-      evento: { idEvento: this.evento?.idEvento } // Usando o idEvento do objeto evento
+      idEvento: this.evento?.idEvento
     };
 
     this.tarefaService.cadastrarTarefa(tarefaData).subscribe(response => {
@@ -67,5 +63,4 @@ export class EvInfosComponent implements OnInit {
       console.error('Erro ao cadastrar a tarefa', error);
     });
   }
->>>>>>> f9221f69e50ad81a0f7c564393751918f003c609
 }

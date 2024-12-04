@@ -7,14 +7,14 @@ import { Observable } from 'rxjs';
 })
 export class TarefaService {
 
-  // private apiUrl = 'http://localhost:8084/api/tarefas/cadastrar';
+  private apiUrl = 'http://localhost:8084/api/tarefas/cadastrar';
 
   constructor(private http: HttpClient) {}
 
   cadastrarTarefa(tarefaData: any): Observable<any> {
-    // Simplesmente envia a requisição sem o token
+    
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json'  // Apenas o cabeçalho Content-Type
+      'Content-Type': 'application/json'
     });
 
     return this.http.post(this.apiUrl, tarefaData, { headers });

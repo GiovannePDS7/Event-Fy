@@ -1,98 +1,62 @@
 <div class="d-xs-block d-md-none" id="background">
   <div class="card">
-      <section id="container-Title">
-          <!-- Exibe o nome do evento -->
-          <h1>{{ evento?.nomeEvento }}</h1>
-
-<<<<<<< HEAD
-    <div class="card">
-        <section class="container-Title">
-            <h1>Nome Evento</h1>
-            <div id="container-imgEvento">
-                <img src="../../../assets/Elementos/imgUsuario.png" alt="" id="imgUsuario">
-            </div>
-        </section>
-        <section>
-            <div id="container-Infos">
-                <span><p>Data:</p></span>
-                <span><p>Local do evento:</p></span>
-                <span><p>Horario de início:</p></span>
-                <span><p>Horario de termino:</p></span>
-                <span><p>Tipo:</p></span>
-            </div>
-            <div id="container-Titletarefas">
-              <h3>
-                  Tarefas
-                  <button id="addTarefa" >+</button>
-              </h3>
-          </div>
-
-            <div id="container-Tarefas">
-                <div id="container-Titletarefas">
-                    <h3>Nome da tarefa</h3>
-                    <button id="btnEditar">
-                        <img src="../../../assets/Elementos/editarTarefa.png" alt="">
-                    </button>
-                </div>
-                <div id="container-Infostarefas">
-                    <span class="valores"><p>Fornecedor:</p>xxxxxxxx</span>
-                    <span class="valores"><p>Valor: R$</p>1000</span>
-                </div>
-            </div>
-            <div id="container-Lista">
-                <h3>Lista de Convidados +</h3>
-            </div>
-        </section>
-=======
-          <div id="container-imgEvento">
-              <!-- Você pode também exibir uma imagem, caso tenha a URL no evento -->
-              <img src="../../../assets/Elementos/imgUsuario.png" alt="Imagem do usuário" id="imgUsuario">
-          </div>
-      </section>
->>>>>>> f9221f69e50ad81a0f7c564393751918f003c609
+    <section id="container-Title">
+      <!-- Exibe o nome do evento -->
+      <h1>{{ evento?.nomeEvento }}</h1>
 
       <section>
-          <div id="container-Infos">
+        <div id="container-Infos">
 
-              <span><p>Data: {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p></span>
-
-
-              <span><p>Local do evento: {{ evento?.localEvento }}</p></span>
-
-
-              <span><p>Horário de início: {{ evento?.horarioInicio }}</p></span>
+          <span>
+            <p>Data: {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
+          </span>
 
 
-              <span><p>Horário de término: {{ evento?.horarioFim }}</p></span>
+          <span>
+            <p>Local do evento: {{ evento?.localEvento }}</p>
+          </span>
 
 
-              <span><p>Tipo: {{ evento?.tipoEvento }}</p></span>
-          </div>
+          <span>
+            <p>Horário de início: {{ evento?.horarioInicio }}</p>
+          </span>
 
-          <div id="container-Titletarefas">
-              <h3>Tarefas</h3>
-              <button (click)="abrirFormularioTarefa()">+</button>
-          </div>
 
-          <div *ngIf="mostrarFormularioTarefa">
-            <form (ngSubmit)="cadastrarTarefa()">
-                <label for="nomeTarefa">Nome da Tarefa:</label>
-                <input type="text" [(ngModel)]="novaTarefa.nomeTarefa" name="nomeTarefa" required>
+          <span>
+            <p>Horário de término: {{ evento?.horarioFim }}</p>
+          </span>
 
-                <label for="fornecedor">Fornecedor:</label>
-                <input type="text" [(ngModel)]="novaTarefa.fornecedor" name="fornecedor">
 
-                <label for="valor">Valor:</label>
-                <input type="number" [(ngModel)]="novaTarefa.valor" name="valor" required>
-
-                <button type="submit">Cadastrar Tarefa</button>
-            </form>
+          <span>
+            <p>Tipo: {{ evento?.tipoEvento }}</p>
+          </span>
         </div>
 
-          <div id="container-Lista">
-              <h3>Lista de Convidados +</h3>
-          </div>
+        <div id="container-Titletarefas">
+          <h3>Tarefas</h3>
+          <button (click)="abrirFormularioTarefa()">+</button>
+        </div>
+
+        <div *ngIf="mostrarFormularioTarefa">
+          <form (ngSubmit)="cadastrarTarefa()">
+            <label for="nomeTarefa">Nome da Tarefa:</label>
+            <input type="text" [(ngModel)]="novaTarefa.nomeTarefa" name="nomeTarefa" required>
+
+            <label for="fornecedor">Fornecedor:</label>
+            <input type="text" [(ngModel)]="novaTarefa.fornecedor" name="fornecedor">
+
+            <label for="valor">Valor:</label>
+            <input type="number" [(ngModel)]="novaTarefa.valor" name="valor" required>
+
+            <button type="submit">Cadastrar Tarefa</button>
+          </form>
+        </div>
+
+        <div id="container-Lista">
+          <h3>Lista de Convidados +</h3>
+        </div>
       </section>
+    </section>
   </div>
 </div>
 
@@ -102,7 +66,7 @@
       <div class="container-Title" id="container-TitleLG">
         <h1>Nome Evento</h1>
         <div id="container-imgEventoLG">
-            <img src="../../../assets/Elementos/imgUsuario.png" alt="" id="imgUsuarioLG">
+          <img src="../../../assets/Elementos/imgUsuario.png" alt="" id="imgUsuarioLG">
         </div>
       </div>
     </section>
@@ -110,11 +74,21 @@
       <mat-grid-list cols="2" rowHeight="25vh">
         <mat-grid-tile>
           <div id="container-InfosLG">
-            <span><p>Data:</p></span>
-            <span><p>Local do evento:</p></span>
-            <span><p>Horario de início:</p></span>
-            <span><p>Horario de termino:</p></span>
-            <span><p>Tipo:</p></span>
+            <span>
+              <p>Data:</p>
+            </span>
+            <span>
+              <p>Local do evento:</p>
+            </span>
+            <span>
+              <p>Horario de início:</p>
+            </span>
+            <span>
+              <p>Horario de termino:</p>
+            </span>
+            <span>
+              <p>Tipo:</p>
+            </span>
           </div>
         </mat-grid-tile>
         <mat-grid-tile>2</mat-grid-tile>

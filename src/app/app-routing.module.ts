@@ -24,13 +24,7 @@ const routes: Routes = [
   { path: 'termosUso', component: TermosUsoComponent },
   { path: 'eventoExistente', component: EventoExistenteComponent, canActivate: [AuthGuard]},
   { path: 'areaUsuario', component: AreaUsuarioComponent/*, canActivate: [AuthGuard]*/ },
-<<<<<<< HEAD
-
   { path: 'infoEvento/:id', component: InfoEventosComponent, /*canActivate: [AuthGuard]*/ },
-
-=======
-  { path: 'infoEvento/:id', component: InfoEventosComponent, canActivate: [AuthGuard] },
->>>>>>> f9221f69e50ad81a0f7c564393751918f003c609
   { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
 ];
 
