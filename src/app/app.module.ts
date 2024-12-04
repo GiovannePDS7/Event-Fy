@@ -33,6 +33,7 @@ import { EventosComponent } from './Components/eventos/eventos.component';
 import { AreaUsuarioComponent } from './Pages/area-usuario/area-usuario.component';
 
 import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.component';
+import { EvInfosComponent } from './Components/ev-infos/ev-infos.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.componen
     EventosComponent,
     AreaUsuarioComponent,
     InfoEventosComponent,
+    EvInfosComponent,
   ],
   imports: [
     ReactiveFormsModule,

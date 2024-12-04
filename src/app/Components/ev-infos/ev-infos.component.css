@@ -1,0 +1,102 @@
+#background
+{
+    background-color: #FFBC74;
+    width: 100%;
+    padding-top: 25%;
+    padding-bottom: 20%;
+}
+.card
+{
+    width: 90%;
+    border: 1px solid #000;
+    margin-left: 5%;
+    border-radius: 13px;
+    padding-bottom: 40%;
+}
+#container-imgEvento
+{
+    border: 1px solid #000;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 10px;
+    text-align: center;
+}
+#imgUsuario
+{
+    margin-top: 20%;
+}
+#container-Title
+{
+    width: 90%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    display: flex;
+    margin-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#container-Title h1
+{
+    font-weight: bold;
+    margin-right: 25%;
+}
+#container-Infos, #container-Tarefas
+{
+    width: 90%;
+    margin-left: 5%;
+    font-weight: bold;
+}
+#container-Tarefas h3, #container-Infos p
+{
+    font-weight: bold;
+}
+#cardTarefas
+{
+    width: 100%;
+    border: 1px solid #EF820D;
+    border-radius: 10px;
+    margin-left: 1%;
+}
+#container-Tarefas
+{
+    width: 90%;
+    border: 1px solid #EF820D;
+    border-radius: 10px;
+}
+#container-Titletarefas {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 90%; 
+    margin-left: 5%;
+}
+#container-Titletarefas h3
+{
+    font-weight: bold;
+    margin-top: 1%;
+}
+#btnEditar {
+    border: none; 
+    background: transparent; 
+}
+#container-Infostarefas
+{
+    width: 90%;
+    margin-left: 5%;
+    font-weight: 300;
+}
+.valores
+{
+    display: flex;
+}
+#container-Lista 
+{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+#container-Lista h3
+{
+    font-weight: bold;
+}
