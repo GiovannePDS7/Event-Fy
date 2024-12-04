@@ -1,14 +1,13 @@
 <div class="d-xs-block d-md-none" id="background">
 
     <div class="card">
-        <section id="container-Title">
+        <section class="container-Title">
             <h1>Nome Evento</h1>
             <div id="container-imgEvento">
                 <img src="../../../assets/Elementos/imgUsuario.png" alt="" id="imgUsuario">
             </div>
         </section>
         <section>
-            
             <div id="container-Infos">
                 <span><p>Data:</p></span>
                 <span><p>Local do evento:</p></span>
@@ -17,8 +16,12 @@
                 <span><p>Tipo:</p></span>
             </div>
             <div id="container-Titletarefas">
-                <h3>Tarefas +</h3>
-            </div>
+              <h3>
+                  Tarefas
+                  <button id="addTarefa" >+</button>
+              </h3>
+          </div>
+
             <div id="container-Tarefas">
                 <div id="container-Titletarefas">
                     <h3>Nome da tarefa</h3>
@@ -38,4 +41,31 @@
 
     </div>
 
+</div>
+
+<div class="d-none d-md-block d-xxl-block" id="background">
+  <div class="card" id="cardLG">
+    <section id="container-TitleLG">
+      <div class="container-Title" id="container-TitleLG">
+        <h1>Nome Evento</h1>
+        <div id="container-imgEventoLG">
+            <img src="../../../assets/Elementos/imgUsuario.png" alt="" id="imgUsuarioLG">
+        </div>
+      </div>
+    </section>
+    <section>
+      <mat-grid-list cols="2" rowHeight="25vh">
+        <mat-grid-tile>
+          <div id="container-InfosLG">
+            <span><p>Data:</p></span>
+            <span><p>Local do evento:</p></span>
+            <span><p>Horario de início:</p></span>
+            <span><p>Horario de termino:</p></span>
+            <span><p>Tipo:</p></span>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+      </mat-grid-list>
+    </section>
+  </div>
 </div>

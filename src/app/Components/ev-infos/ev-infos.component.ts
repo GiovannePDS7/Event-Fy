@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class EvInfosComponent {
 
+
+  isModalOpen = false;
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
+
+
 }
