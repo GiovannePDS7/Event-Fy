@@ -1,5 +1,5 @@
-<div class="d-xs-block d-md-none">
 <app-header></app-header>
+<div class="d-xs-block d-md-none">
 <div>
   <body id="background">
     <div id="userBody">
@@ -7,5 +7,59 @@
     </div>
   </body>
 </div>
-<app-footer></app-footer>
+
 </div>
+
+
+<div class="d-none d-md-block d-xxl-block">
+  <div id="grandContainer">
+      <div id="containerTitle">
+          <h1 id="titleDesktop">Área do Usuário</h1>
+      </div>
+      <div id="containerDesktop">
+          <section id="containerImgEvento">
+              <img class="ImgEvento" src="../../../../assets/Elementos/IconFormulario.png">
+              <button id="btnInserirFoto">Editar</button>
+          </section>
+          <div id="grandContainerInputs">
+              <div id="containerLeftInputs">
+                  <form id="containerlittle-inputleftLG" >
+                      <fieldset class="formFieldsetLG">
+                          <legend class="legendLG">Nome do Evento</legend>
+                          <input type="text" placeholder="Nome de Usuário" class="textFormLG"
+                              formControlName="nomeEvento" minlength="3" maxlength="45">
+                      </fieldset>
+
+                      <fieldset class="formFieldsetLG">
+                        <legend class="legendLG">E-mail</legend>
+                        <input type="text" placeholder="email@gmail.com" class="textFormLG"
+                            formControlName="nomeEvento" minlength="3" maxlength="45">
+                      </fieldset>
+                  </form>
+              </div>
+              
+              <div id="containerRightInputs">
+                  <form id="containerlittle-inputRightLG">
+                    <fieldset class="formFieldsetLG">
+                      <legend class="legendLG">Telefone</legend>
+                      <input type="text" placeholder="+55 11 9xxxx-xxxx" class="textFormLG"
+                          formControlName="nomeEvento" minlength="3" maxlength="45">
+                    </fieldset>
+
+                    <fieldset class="formFieldsetLG">
+                      <legend class="legendLG">Data de Nascimento</legend>
+                      <input type="date" placeholder="Qual dia acontecerá seu evento?" class="textFormLG"
+                          formControlName="dataEvento" >
+                  </fieldset>
+                  </form>
+              </div>
+          </div>
+      <div id="containerBtnCriarEvento">
+          <button mat-stroked-button id="btnCriarEvento">Salvar</button>
+      </div>
+  </div>
+</div>
+
+
+
+<app-footer></app-footer>
