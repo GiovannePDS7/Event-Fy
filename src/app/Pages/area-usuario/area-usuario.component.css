@@ -1,13 +1,14 @@
-#Background {
+#grandContainerM {
   background-color: #f6bb7c;
+  padding-top: 25%;
   width: 100%;
   align-items: center;
   flex-direction: column;
   display: flex;
-  padding-top: 20vw;
+  padding: 15vw 0;
 }
 
-#Title {
+#containerTitleM {
   padding-top: 2vh;
   font-size: 5vw;
   font-weight: bold;
@@ -20,8 +21,28 @@
   text-align: center;
 }
 
+#photoM {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+#btnInserirFotoM {
+  width: 20vw;
+  height: 5vh;
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+  background-color: #EF820D;
+  font-size: 3vw;
+  border: none;
+  border-radius: 2vw;
+  font-family: "Myriad pro Semibold";
+}
+
 #formularioMobile {
   width: 90%;
+  height: 70vh;
+  padding-top: 9vh;
   background-color: white;
   border-radius: 15px;
   border: 1px solid #000;
@@ -40,7 +61,7 @@ img {
   margin-bottom: 4vh;
   background-color: #EF820D;
   font-size: 3vw;
-  font-family: "Myriad pro Semibold"
+  font-family: "Myriad pro Semibold";
 }
 
 #btnPhotoLG {
@@ -87,15 +108,12 @@ legend {
 
 .container-erro:has(.error-box) {
   padding-bottom: 2vh;
-
 }
 
 .error-box .error-boxLG {
   width: 80vw;
   font-size: 3.5vw;
 }
-
-
 
 .textForm, .textFormLG {
   all: unset;
@@ -119,7 +137,6 @@ legend {
 
 #chbx1, #chbx2, #chbx3 {
   display: none;
-  /* Oculta o checkbox padrão */
 }
 
 label {
@@ -144,7 +161,7 @@ label::before {
   transition: background-color 0.3s, border-color 0.3s;
 }
 
-input[type="checkbox"]:checked+label::before {
+input[type="checkbox"]:checked + label::before {
   content: "✓";
   background-color: #EF820D;
   border-color: #EF820D;
@@ -165,7 +182,7 @@ label::after {
   transition: opacity 0.3s;
 }
 
-input[type="checkbox"]:checked+label::after {
+input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
 
@@ -183,7 +200,6 @@ input[type="checkbox"]:checked+label::after {
   font-size: 4vw;
   margin-top: 7vw;
 }
-
 
 #backgroundDesk {
   background-color: #f6bb7c;
@@ -205,12 +221,12 @@ input[type="checkbox"]:checked+label::after {
   padding-top: 2vh;
   font-size: 2.5vw;
   font-weight: bold;
-  text-align: center
+  text-align: center;
 }
 
-/*LG*/
+/* LG (Desktop) */
 
-#grandContainer{
+#grandContainer {
   width: 100%;
   height: 130vh;
   background-color: #f6bb7c;
@@ -221,7 +237,7 @@ input[type="checkbox"]:checked+label::after {
   padding-top: 40px;
 }
 
-#containerTitle{
+#containerTitle {
   width: 100%;
   height: 8vh;
   justify-content: center;
@@ -229,20 +245,20 @@ input[type="checkbox"]:checked+label::after {
   display: flex;
 }
 
-#titleDesktop{
+#titleDesktop {
   font-size: 300%;
   font-weight: bold;
 }
 
-#containerDesktop{
+#containerDesktop {
   width: 90%;
   height: 85vh;
   background-color: #ffffff;
   border: 2px solid #000000;
-  border-radius: 27px;    
+  border-radius: 27px;
 }
 
-#containerImgEvento{
+#containerImgEvento {
   width: 100%;
   height: 25vh;
   display: flex;
@@ -251,7 +267,7 @@ input[type="checkbox"]:checked+label::after {
   flex-direction: column;
 }
 
-#btnInserirFoto{
+#btnInserirFoto {
   margin-top: 2vh;
   width: 12%;
   height: 4vh;
@@ -262,17 +278,34 @@ input[type="checkbox"]:checked+label::after {
   font-weight: 600;
 }
 
-.ImgEvento{
+.ImgEvento {
   margin-top: -50px;
 }
 
-#grandContainerInputs{
+#grandContainerInputs {
   width: 100%;
   height: 45vh;
   display: flex;
 }
 
-#containerLeftInputs{
+#grandContainerInputsM {
+  width: 100%;
+}
+
+.formFieldsetM {
+  border-radius: 8px;
+  margin-bottom: 3vh;
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: revert;
+  padding: 0 0% 1.5% 3%;
+  border: 1.5px solid var(--cor-secundaria);
+  white-space: nowrap;
+}
+
+#containerLeftInputs {
   width: 50%;
   height: 100%;
   display: flex;
@@ -281,7 +314,14 @@ input[type="checkbox"]:checked+label::after {
   flex-direction: column;
 }
 
-#containerRightInputs{
+#containerLeftInputsM {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#containerRightInputs {
   width: 50%;
   height: 100%;
   display: flex;
@@ -290,7 +330,12 @@ input[type="checkbox"]:checked+label::after {
   flex-direction: column;
 }
 
-
+#containerRightInputsM {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .formFieldsetLG {
   width: 65%;
@@ -305,11 +350,27 @@ input[type="checkbox"]:checked+label::after {
   font-size: 1vw;
   margin-top: 3px;
   height: 3vh;
+}
 
+.textFormM {
+  font-size: 5vw;
+  margin-top: 3px;
+  height: 3vh;
+  all: unset;
+  width: 100%;
+  padding: 2% 0 2% 4%;
 }
 
 .containerlittle-inputLG, #containerlittle-inputRightLG, #containerlittle-inputleftLG {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.containerlittle-inputM, #containerlittle-inputRightM, #containerlittle-inputleftM {
+  width: 10vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -329,36 +390,31 @@ input[type="checkbox"]:checked+label::after {
   height: 1vw;
 }
 
-
-.containerChecksBox{
+.containerChecksBox {
   width: 41.5%;
   height: 20vh;
   float: right;
 }
 
 .checkbox-container {
-  display: flex;          
-  align-items: center;    
-  margin-bottom: 15px;    
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .checkbox-container input[type="checkbox"] {
-  width: 20px;       
-  height: 20px;          
-  margin-right: 10px;     
-  border-radius: 5px;      
-  cursor: pointer;        
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
 
 .checkbox-container label {
-  font-size: 16px;           
-  color: #000000;               
-  font-weight: 500;          
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
 }
-
-
-
 
 .formFieldset, .formFieldsetLG {
   border-radius: 8px;
@@ -374,8 +430,7 @@ input[type="checkbox"]:checked+label::after {
   white-space: nowrap;
 }
 
-
-#containerBtnCriarEvento{
+#containerBtnCriarEvento {
   width: 100%;
   height: 10vh;
   display: flex;
@@ -383,12 +438,20 @@ input[type="checkbox"]:checked+label::after {
   align-items: center;
 }
 
-#btnCriarEvento{
-  height: 6vh;
+#containerBtnCriarEventoM {
+  width: 100%;
+  margin-top: 2vh;
+  padding-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btnCriarEvento {
   background-color: #EF820D;
   font-size: 180%;
   font-weight: bold;
-  width: 20vw;
+  width: 20%;
   border: none;
 }
 
@@ -396,3 +459,6 @@ input[type="checkbox"]:checked+label::after {
   font-size: 1.2vw;
 }
 
+.legendM {
+  font-size: 3vw;
+}
