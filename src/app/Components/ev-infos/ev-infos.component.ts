@@ -23,6 +23,11 @@ export class EvInfosComponent implements OnInit {
     this.isModalOpen = true;
   }
 
+
+  fecharFormulario() {
+  this.mostrarFormularioTarefa = false;
+  }
+
   closeModal() {
     this.isModalOpen = false;
   }
@@ -49,6 +54,8 @@ export class EvInfosComponent implements OnInit {
       return;
     }
 
+
+  
     const tarefaData = {
       nomeTarefa: this.novaTarefa.nomeTarefa,
       fornecedor: this.novaTarefa.fornecedor,

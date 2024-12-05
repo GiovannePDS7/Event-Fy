@@ -34,21 +34,46 @@
 
         <div id="container-Titletarefas">
           <h3>Tarefas</h3>
-          <button (click)="abrirFormularioTarefa()">+</button>
+          <div id="container-btnaddTarefa">
+            <button id="btnEditar" (click)="abrirFormularioTarefa()">+</button>
+          </div>
         </div>
 
         <div *ngIf="mostrarFormularioTarefa">
           <form (ngSubmit)="cadastrarTarefa()">
-            <label for="nomeTarefa">Nome da Tarefa:</label>
-            <input type="text" [(ngModel)]="novaTarefa.nomeTarefa" name="nomeTarefa" required>
 
-            <label for="fornecedor">Fornecedor:</label>
-            <input type="text" [(ngModel)]="novaTarefa.fornecedor" name="fornecedor">
+            
+            <div id="overlay" *ngIf="mostrarFormularioTarefa"></div>
 
-            <label for="valor">Valor:</label>
-            <input type="number" [(ngModel)]="novaTarefa.valor" name="valor" required>
-
-            <button type="submit">Cadastrar Tarefa</button>
+           
+            <div id="container-Tarefas" *ngIf="mostrarFormularioTarefa">
+              <div class="container-InputTarefa">
+                <fieldset id="fieldset1">
+                  <legend for="nomeTarefa">Tarefa</legend>
+                  <input type="text" class="inputTarefa" [(ngModel)]="novaTarefa.nomeTarefa" placeholder="Nome da tarefa" name="nomeTarefa" required>
+                </fieldset>
+              </div>
+              <div class="container-InputTarefa">
+                <fieldset>
+                  <legend for="fornecedor">Fornecedor</legend>
+                  <input type="text" class="inputTarefa" [(ngModel)]="novaTarefa.fornecedor" placeholder="Nome do fornecedor" name="fornecedor">
+                </fieldset>
+              </div>
+              <div class="container-InputTarefa">
+                <fieldset>
+                  <legend for="valor">valor</legend>
+                  <input type="number" class="inputTarefa" [(ngModel)]="novaTarefa.valor" placeholder="R$1000.00" name="valor" required>
+                </fieldset>
+              </div>
+              
+              <div id="container-btnTarefa">
+                <button class="btnTarefas" type="submit" (click)="cadastrarTarefa()">Enviar</button>
+              </div>
+              <div id="container-btnCancelar">
+                <button class="btnTarefas" (click)="fecharFormulario()">Cancelar</button>
+              </div>
+            </div>
+  
           </form>
         </div>
 

@@ -98,7 +98,19 @@
 }
 #btnEditar {
     border: none;
-    background: transparent;
+    background-color: transparent;
+    font-size: 3vh;
+}
+#container-btnaddTarefa
+{
+    background: #EABB88;
+    width: 2.5vh;
+    height: 2.5vh;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
 }
 #container-Infostarefas
 {
@@ -130,36 +142,90 @@
   background: none;
 }
 
-
-/* Modal */
-.modal {
-  display: none; /* Oculto por padrão */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
-  justify-content: center;
-  align-items: center;
+#container-InputTarefa
+{
+    padding-bottom: 10%;
 }
 
-/* Conteúdo do Modal */
-.modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  text-align: center;
+
+
+/* Overlay escurecendo a tela */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+    z-index: 998; /* Aparece abaixo do container de tarefas */
+  }
+  
+  /* Container de Tarefas (centralizado e sobreposto) */
+  #container-Tarefas {
+    position: fixed;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999; /* Sobrepõe o overlay */
+  }
+  
+
+  fieldset {
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: revert;
+    margin: revert;
+    padding: 0 0% 1.5% 3%;
+    border: 1.5px solid var(--cor-secundaria);
+    margin-bottom: 5%;
+  }
+  #fieldset1
+  {
+    margin-top: 5%;
+  }
+  legend {
+    float: none;
+    width: auto;
+    margin: 0;
+    font-size: 4vw;
+    padding: 0 3%;
+    font-style: italic;
+    }
+
+.inputTarefa
+{
+    all: unset;
+    width: 95%;
 }
 
-/* Botão de fechar */
-.close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
+.inputTarefa::placeholder {
+    color: #8a8a8a;
+    font-style: italic;
+}
+
+#container-btnTarefa, #container-btnCancelar
+{
+    text-align: center;
+}
+#container-btnTarefa
+{
+    margin-bottom: 5%;
+}
+.btnTarefas
+{
+    border: 1px solid #000;
+    background-color: #EF820D;
+    font-weight: bold;
+    width: 40%;
+    height: 4vh;
+    border-radius: 10px;
 }
