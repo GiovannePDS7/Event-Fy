@@ -34,6 +34,7 @@ import { AreaUsuarioComponent } from './Pages/area-usuario/area-usuario.componen
 
 import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.component';
 import { EvInfosComponent } from './Components/ev-infos/ev-infos.component';
+import { EsqueceuSenhaComponent } from './Pages/esqueceu-senha/esqueceu-senha.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { EvInfosComponent } from './Components/ev-infos/ev-infos.component';
     AreaUsuarioComponent,
     InfoEventosComponent,
     EvInfosComponent,
+    EsqueceuSenhaComponent,
   ],
   imports: [
     ReactiveFormsModule,

@@ -8,11 +8,9 @@ import { FormularioComponent } from './Pages/formulario/formulario.component';
 import { AuthGuard } from './security/AuthGuard';
 import { TermosUsoComponent } from './Pages/termos-uso/termos-uso.component';
 import { EventoExistenteComponent } from './Pages/evento-existente/evento-existente.component';
-
 import { AreaUsuarioComponent } from './Pages/area-usuario/area-usuario.component';
-
 import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.component';
-
+import { EsqueceuSenhaComponent } from './Pages/esqueceu-senha/esqueceu-senha.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "/apresentacao", pathMatch: 'full' },
@@ -26,6 +24,7 @@ const routes: Routes = [
   { path: 'areaUsuario', component: AreaUsuarioComponent/*, canActivate: [AuthGuard]*/ },
   { path: 'infoEvento/:id', component: InfoEventosComponent, /*canActivate: [AuthGuard]*/ },
   { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
+  { path: 'esqueceuSenha', component: EsqueceuSenhaComponent },
 ];
 
 @NgModule({
