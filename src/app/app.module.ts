@@ -36,6 +36,9 @@ import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.componen
 import { EvInfosComponent } from './Components/ev-infos/ev-infos.component';
 import { EsqueceuSenhaComponent } from './Pages/esqueceu-senha/esqueceu-senha.component';
 
+import { FinanceiroComponent } from './Pages/financeiro/financeiro.component';
+import { FinanceiroComponentsComponent } from './Components/financeiro-components/financeiro-components.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +63,8 @@ import { EsqueceuSenhaComponent } from './Pages/esqueceu-senha/esqueceu-senha.co
     InfoEventosComponent,
     EvInfosComponent,
     EsqueceuSenhaComponent,
+    FinanceiroComponent,
+    FinanceiroComponentsComponent,
   ],
   imports: [
     ReactiveFormsModule,

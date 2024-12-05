@@ -11,6 +11,7 @@ import { EventoExistenteComponent } from './Pages/evento-existente/evento-existe
 import { AreaUsuarioComponent } from './Pages/area-usuario/area-usuario.component';
 import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.component';
 import { EsqueceuSenhaComponent } from './Pages/esqueceu-senha/esqueceu-senha.component';
+import { FinanceiroComponent } from './Pages/financeiro/financeiro.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "/apresentacao", pathMatch: 'full' },
@@ -22,9 +23,13 @@ const routes: Routes = [
   { path: 'termosUso', component: TermosUsoComponent },
   { path: 'eventoExistente', component: EventoExistenteComponent, canActivate: [AuthGuard]},
   { path: 'areaUsuario', component: AreaUsuarioComponent/*, canActivate: [AuthGuard]*/ },
+  {path: 'financeiro', component: FinanceiroComponent/*, canActivate: [AuthGuard]*/},
   { path: 'infoEvento/:id', component: InfoEventosComponent, /*canActivate: [AuthGuard]*/ },
-  { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
   { path: 'esqueceuSenha', component: EsqueceuSenhaComponent },
+  { path: '', component: EsqueceuSenhaComponent },
+  { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
+ 
+  
 ];
 
 @NgModule({
