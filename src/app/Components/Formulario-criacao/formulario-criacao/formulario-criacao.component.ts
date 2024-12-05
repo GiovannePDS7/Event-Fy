@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class FormularioCriacaoComponent {
   hoje = new Date();
 
-  // apiUrl : string = 'http://localhost:8082';
-  apiUrl: string = 'https://cadastroeventoeventfy-production.up.railway.app'
+  apiUrl : string = 'http://localhost:8082';
+  //apiUrl: string = 'https://cadastroeventoeventfy-production.up.railway.app'
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,

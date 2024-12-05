@@ -136,7 +136,16 @@
   margin: 2.5vw 0;
   padding: 2vw 0 2vw 3vw;
   height: 35vh;
+  cursor: pointer;
 }
+
+.section-eventos-desktop:hover {
+  background: #f0f0f0; 
+  border-color: #555; 
+  transform: scale(1.05); 
+  transition: all 0.3s ease; 
+}
+
 
 .containerNome-desktop {
   width: 100%;
@@ -148,10 +157,12 @@
 .h1-nomeEvento-desktop {
   width: 45%;
   padding-top: 2vw;
-  font-size: 3vw;
+  font-size: 1.6vw;
   font-weight: bold;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
 
 .imgfotoEvento-desktop {
@@ -200,6 +211,14 @@
   font-size: 1.2vw;
 }
 
+.infoLocalEvento-desktop {
+  display: inline-block;
+  max-width: 200px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
 
 .infoHInicioEvento-desktop, .infoHFimEvento-desktop {
   font-size: 1.2vw;
@@ -213,3 +232,4 @@
   justify-content: center;
   align-items: center;
 }
+
