@@ -87,37 +87,25 @@
 
 <div class="d-none d-md-block d-xxl-block" id="background">
   <div class="card" id="cardLG">
-    <section id="container-TitleLG">
-      <div class="container-Title" id="container-TitleLG">
-        <h1>Nome Evento</h1>
-        <div id="container-imgEventoLG">
-          <img src="../../../assets/Elementos/imgUsuario.png" alt="" id="imgUsuarioLG">
-        </div>
+    <div id="container-TitleLG">
+      <div id="container-InfosLG">
+        <h3>Nome Evento</h3>
+        <span><p>Data:</p></span>
+        <span><p>Local do evento:</p></span>
+        <span><p>Horário de início:</p></span>
+        <span><p>Horário de término:</p></span>
+        <span><p>Tipo:</p></span>
       </div>
-    </section>
-    <section>
-      <mat-grid-list cols="2" rowHeight="25vh">
-        <mat-grid-tile>
-          <div id="container-InfosLG">
-            <span>
-              <p>Data:</p>
-            </span>
-            <span>
-              <p>Local do evento:</p>
-            </span>
-            <span>
-              <p>Horario de início:</p>
-            </span>
-            <span>
-              <p>Horario de termino:</p>
-            </span>
-            <span>
-              <p>Tipo:</p>
-            </span>
-          </div>
-        </mat-grid-tile>
-        <mat-grid-tile>2</mat-grid-tile>
-      </mat-grid-list>
-    </section>
+    </div>
+    <div id="container-TarefasConvidados">
+        <div id="container-TitletarefasLG">
+          <h3>Tarefas <button id="btnEditar" (click)="abrirFormularioTarefa()">+</button></h3>
+        </div>
+    </div>
+    <div id="grandcontainer-imgEventoLG">
+      <div id="container-imgEventoLG">
+        <img src="../../../assets/Elementos/imgUsuario.png" alt="" id="imgUsuarioLG">
+      </div>
+    </div>
   </div>
 </div>
