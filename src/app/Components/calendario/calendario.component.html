@@ -1,0 +1,49 @@
+<div class="d-xs-block d-md-none" id="background">
+
+</div>
+
+<div class="d-none d-md-block d-xxl-block" id="background">
+    <div class="grandContainer">
+      <div class="content-wrapper">
+        <div class="container">
+          <div class="calendario-titulo">
+            <div>
+              <button class="btn" (click)="alterarMes(-1)">
+                <img class="btnSeta" src="../../../assets/Elementos/back.png">
+              </button>
+            </div>
+            <div class="calendario-titulo-mes-ano">
+              {{ getNomeMes() | titlecase }} de {{ getAno() }}
+            </div>
+            <div>
+              <button class="btn" (click)="alterarMes(+1)">
+                <img class="btnSeta" src="../../../assets/Elementos/next.png">
+              </button>
+            </div>
+          </div>
+          
+          <div class="calendario-dias-titulo">
+            <div *ngFor="let diaSemana of ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']" class="calendario-dia-titulo">
+              <strong>{{ diaSemana }}</strong>
+            </div>
+          </div>
+          
+          <div class="calendario-dias">
+            <div *ngFor="let dia of diasCalendario; let i = index"
+                 class="calendario-dia"
+                 [class.calendario-dia-nao-faz-parte-mes-atual]="dataAtual.getMonth() !== dia.getMonth()">
+              {{ dataAtual.getMonth() === dia.getMonth() ? (dia | date : 'dd') : '' }}
+            </div>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <h1 class="info-title">Anotações</h1>
+          <div class="anotacoes">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -12,6 +12,8 @@ import { AreaUsuarioComponent } from './Pages/area-usuario/area-usuario.componen
 import { InfoEventosComponent } from './Pages/info-eventos/info-eventos.component';
 import { EsqueceuSenhaComponent } from './Pages/esqueceu-senha/esqueceu-senha.component';
 import { FinanceiroComponent } from './Pages/financeiro/financeiro.component';
+import { CalendarioComponent } from './Components/calendario/calendario.component';
+import { AgendaComponent } from './Pages/agenda/agenda.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "/apresentacao", pathMatch: 'full' },
@@ -26,7 +28,7 @@ const routes: Routes = [
   {path: 'financeiro', component: FinanceiroComponent/*, canActivate: [AuthGuard]*/},
   { path: 'infoEvento/:id', component: InfoEventosComponent, /*canActivate: [AuthGuard]*/ },
   { path: 'esqueceuSenha', component: EsqueceuSenhaComponent },
-  { path: '', component: EsqueceuSenhaComponent },
+  { path: 'calendario', component: AgendaComponent },
   { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
  
   
