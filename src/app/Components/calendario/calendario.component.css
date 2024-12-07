@@ -1,0 +1,222 @@
+.grandContainer-mobile {
+    width: 100%;
+    display: flex;
+    height: 130vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6bb7c;
+}
+
+.content-wrapper-mobile {
+    display: flex; 
+    flex-direction: column;
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-mobile {
+    width: 95%; 
+    height: auto;
+    border-radius: 20px;
+}
+
+.info-container-mobile {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.info-title-mobile {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.calendario-titulo-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.calendario-titulo-mes-ano-mobile {
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+.calendario-dias-titulo-mobile {
+    display: flex;
+    justify-content: space-around; 
+    margin-bottom: 5px; 
+}
+
+.calendario-dia-titulo-mobile {
+    flex: 1; 
+    text-align: center; 
+    font-weight: 500;
+    margin-top: 2vh;
+    height: 5vh;
+    font-size: 4vw;
+}
+
+.calendario-dias-mobile {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    border: 3px solid #000;
+    border-radius: 20px; 
+    overflow: hidden;
+}
+
+
+.calendario-dia-mobile {
+    border: 1px solid #000;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 2vw;
+    background-color: rgb(255, 255, 255);
+    height: 8vh;
+    text-align: center;
+}
+
+.calendario-dia-nao-faz-parte-mes-atual-mobile {
+    background-color: #e6e6e6;
+}
+
+.btn-mobile {
+    width: 8vw;
+    height: 5vh;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+
+.anotacoes-mobile {
+    width: 90%;
+    height: 50vh;
+    background-color: #ffffff;
+    border: 4px solid #000;
+    border-radius: 20px;
+}
+
+/* TELA DESKTOP */
+
+.grandContainer-desktop {
+    width: 100%;
+    display: flex;
+    height: 130vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6bb7c;
+}
+
+.content-wrapper-desktop {
+    display: flex; 
+    width: 90%; 
+    height: 100vh; 
+}
+
+.container-desktop {
+    width: 60%; 
+    height: 100%;
+    border-radius: 20px;
+    margin-top: 3%;
+}
+
+.info-container-desktop {
+    width: 30%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4%;
+}
+
+.info-title-desktop {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-bottom: 1vw;
+}
+
+.info-text-desktop {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.calendario-titulo-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.calendario-titulo-mes-ano-desktop {
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.calendario-dias-titulo-desktop {
+    display: flex;
+    justify-content: space-around; 
+    margin-bottom: 5px; 
+}
+
+.calendario-dia-titulo-desktop {
+    flex: 1; 
+    text-align: center; 
+    font-weight: 500;
+    margin-top: 2vh;
+    height: 5vh;
+    font-size: 1.8vw;
+}
+
+.calendario-dias-desktop {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    border: 3px solid #000;
+    border-radius: 20px; 
+    overflow: hidden;
+}
+
+.calendario-dia-desktop {
+    border: 1px solid #000;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    height: 13vh;
+}
+
+.calendario-dia-nao-faz-parte-mes-atual-desktop {
+    background-color: #e6e6e6;
+}
+
+.btn-desktop {
+    width: 2vw;
+    height: 5vh;
+    border: none;
+    background-color: transparent;
+}
+
+.anotacoes-desktop{
+    width: 90%;
+    height: 80%;
+    background-color: #ffffff;
+    border: 4px solid #000;
+    border-radius: 20px;
+}

@@ -33,11 +33,7 @@
     align-items: center;
     justify-content: center;
 }
-#container-imgEventoLG
-{
-    width: 15vh;
-    height: 15vh;
-}
+
 .container-Title
 {
     width: 90%;
@@ -49,8 +45,7 @@
 }
 #container-TitleLG h1
 {
-  font-size: 5vh;
-  margin-left: 3%;
+  font-size: 3vh;
 }
 .container-Title h1
 {
@@ -84,17 +79,20 @@
     border: 1px solid #EF820D;
     border-radius: 10px;
 }
-#container-Titletarefas {
+#container-Titletarefas, #container-TitletarefasLG {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 90%;
     margin-left: 5%;
 }
+#container-Titletarefas
+{
+    justify-content: space-between;
+}
 #container-Titletarefas h3
 {
     font-weight: bold;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 #btnEditar {
     border: none;
@@ -228,4 +226,50 @@
     width: 40%;
     height: 4vh;
     border-radius: 10px;
+}
+
+#grandContaine-infos
+{
+    width: 90%;
+}
+
+/*LG*/
+
+#cardLG {
+  display: flex; /* Define o layout como flexbox */
+  flex-direction: row; /* Alinha os elementos em uma linha */
+  justify-content: space-between; /* Distribui espaço entre os itens */
+  align-items: flex-start; /* Alinha os elementos no topo */
+  gap: 20px; /* Espaçamento entre as divs */
+}
+
+#container-TarefasConvidados
+{
+    width: 43%;
+    margin-top: 3%;
+}
+#grandcontainer-imgEventoLG
+{
+    width: 20%;
+    margin-top: 2%;
+}
+#container-TitleLG
+{
+    width: 40%;
+    margin-top: 3%;
+}
+
+#container-TitleLG h3, #container-TarefasConvidados h3
+{
+    font-weight: bold;
+    font-size: 5vh;
+}
+#container-TarefasConvidados h3
+{
+    font-size: 2.5vh;
+}
+#container-imgEventoLG
+{
+    width: 13vh;
+    height: 13vh;
 }

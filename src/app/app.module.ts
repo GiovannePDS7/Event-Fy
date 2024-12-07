@@ -38,6 +38,8 @@ import { EsqueceuSenhaComponent } from './Pages/esqueceu-senha/esqueceu-senha.co
 
 import { FinanceiroComponent } from './Pages/financeiro/financeiro.component';
 import { FinanceiroComponentsComponent } from './Components/financeiro-components/financeiro-components.component';
+import { CalendarioComponent } from './Components/calendario/calendario.component';
+import { AgendaComponent } from './Pages/agenda/agenda.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,8 @@ import { FinanceiroComponentsComponent } from './Components/financeiro-component
     EsqueceuSenhaComponent,
     FinanceiroComponent,
     FinanceiroComponentsComponent,
+    AgendaComponent,
+    
   ],
   imports: [
     ReactiveFormsModule,
@@ -78,7 +82,8 @@ import { FinanceiroComponentsComponent } from './Components/financeiro-component
     MatGridListModule,
     HttpClientModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    CalendarioComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
