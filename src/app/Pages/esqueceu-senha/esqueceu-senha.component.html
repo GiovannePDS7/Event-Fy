@@ -1,1 +1,61 @@
-<p>esqueceu-senha works!</p>
+
+<div class="d-xs-block d-md-none" id="background">
+  <section id="containerSection" class="d-flex align-items-center justify-content- flex-column">
+    <button id="button-seta" [routerLink]="['/apresentacao']">
+      <img class="img-fluid" id="seta" src="../../../assets/Elementos/Seta.png">
+    </button>
+    <div id="img-container">
+      <img src="../../../assets/Elementos/esqueceuSenha.png" id="iso-logo" class="img_fluid">
+    </div>
+    <div id="Login">
+      <h1 class="text-center" id="h1-Login">Esqueceu sua senha?</h1>
+      <p id="txtForgotMobile">Digite seu e-mail e te enviaremos uma mensagem para redefinição da sua senha</p>
+      
+      <form method="post" id="formulario" class="example-form" (ngSubmit)="onSubmit()">
+
+        <fieldset>
+          <legend>E-mail</legend>
+          <input class="input-form" matInput type="email" placeholder="seuemail@gmail.com" formControlName="emailOrganizador">
+          <img class="img-fluid icon-form" src="../../../assets/Elementos/email.png">
+        </fieldset>
+
+        <div class="w-100 d-flex align-items-center flex-column">
+          <button id="button-submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+<div class="d-none d-md-block d-lg-block">
+  <mat-grid-list cols="2" rowHeight="100vh">
+    <mat-grid-tile id="background">
+      <img src="../../../assets/Elementos/esqueceuSenha.png" id="imgEsqueceu">
+    </mat-grid-tile>
+
+    <mat-grid-tile id="container-ForgotLg">
+      <section>
+        <button id="button-setaLg" [routerLink]="['/apresentacao']">
+          <img class="img-fluid" id="setaLg" src="../../../assets/Elementos/SetaP.png">
+        </button>
+        <h1>Esqueceu sua senha?</h1>
+        <p id="textForgot">Digite seu e-mail e te enviaremos uma mensagem para redefinição da sua senha</p>
+      </section>
+
+      <section id="section-formLg">
+        <form method="post" id="formularioLg" class="example-form" (ngSubmit)="onSubmit()">
+          <fieldset id="containerInputUser">
+            <legend class="legendLg">E-mail</legend>
+            <input class="input-formLg" matInput type="email" placeholder="seuemail@gmail.com" formControlName="emailOrganizador">
+            <img class="img-fluid icon-form" id="icon-formlg" src="../../../assets/Elementos/email.png">
+          </fieldset>
+
+
+          <div id="btn-formLg">
+            <button id="button-submitLg" type="submit">Enviar</button>
+          </div>
+        </form>
+      </section>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
