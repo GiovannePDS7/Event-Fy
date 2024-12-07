@@ -32,53 +32,72 @@
           </span>
         </div>
 
-        <div id="container-Titletarefas">
-          <h3>Tarefas</h3>
-          <div id="container-btnaddTarefa">
-            <button id="btnEditar" (click)="abrirFormularioTarefa()">+</button>
+        <div *ngIf="evento?.incluirTarefas">
+          <div id="container-Titletarefas">
+            <h3>Tarefas</h3>
+            <div id="container-btnaddTarefa">
+              <button id="btnEditar" (click)="abrirFormularioTarefa()">+</button>
+            </div>
+          </div>
+
+          <div *ngIf="mostrarFormularioTarefa">
+            <form (ngSubmit)="cadastrarTarefa()">
+              <div id="overlay" *ngIf="mostrarFormularioTarefa"></div>
+
+              <div id="container-Tarefas" *ngIf="mostrarFormularioTarefa">
+                <div class="container-InputTarefa">
+                  <fieldset id="fieldset1">
+                    <legend for="nomeTarefa">Tarefa</legend>
+                    <input type="text" class="inputTarefa" [(ngModel)]="novaTarefa.nomeTarefa"
+                      placeholder="Nome da tarefa" name="nomeTarefa" required>
+                  </fieldset>
+                </div>
+                <!-- Exibe o campo "Fornecedor" somente se fornecedores for true -->
+                <div *ngIf="evento?.fornecedores" class="container-InputTarefa">
+                  <fieldset>
+                    <legend for="fornecedor">Fornecedor</legend>
+                    <input type="text" class="inputTarefa" [(ngModel)]="novaTarefa.fornecedor"
+                      placeholder="Nome do fornecedor" name="fornecedor">
+                  </fieldset>
+                </div>
+                <div class="container-InputTarefa">
+                  <fieldset>
+                    <legend for="valor">Valor</legend>
+                    <input type="number" class="inputTarefa" [(ngModel)]="novaTarefa.valor" placeholder="R$1000.00"
+                      name="valor" required>
+                  </fieldset>
+                </div>
+
+                <div id="container-btnTarefa">
+                  <button class="btnTarefas" type="submit">Enviar</button>
+                </div>
+                <div id="container-btnCancelar">
+                  <button class="btnTarefas" (click)="fecharFormulario()">Cancelar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div *ngIf="tarefas.length > 0">
+            <h3>Tarefas do Evento</h3>
+            <ul>
+              <li *ngFor="let tarefa of tarefas">
+                <p><strong>{{ tarefa.nomeTarefa }}</strong></p>
+                <p>{{ tarefa.fornecedor }}</p>
+                <p>Valor: {{ tarefa.valor }}</p>
+              </li>
+            </ul>
+          </div>
+          <div *ngIf="tarefas.length === 0">
+            <p>Não há tarefas cadastradas para este evento.</p>
           </div>
         </div>
 
-        <div *ngIf="mostrarFormularioTarefa">
-          <form (ngSubmit)="cadastrarTarefa()">
-
-            
-            <div id="overlay" *ngIf="mostrarFormularioTarefa"></div>
-
-           
-            <div id="container-Tarefas" *ngIf="mostrarFormularioTarefa">
-              <div class="container-InputTarefa">
-                <fieldset id="fieldset1">
-                  <legend for="nomeTarefa">Tarefa</legend>
-                  <input type="text" class="inputTarefa" [(ngModel)]="novaTarefa.nomeTarefa" placeholder="Nome da tarefa" name="nomeTarefa" required>
-                </fieldset>
-              </div>
-              <div class="container-InputTarefa">
-                <fieldset>
-                  <legend for="fornecedor">Fornecedor</legend>
-                  <input type="text" class="inputTarefa" [(ngModel)]="novaTarefa.fornecedor" placeholder="Nome do fornecedor" name="fornecedor">
-                </fieldset>
-              </div>
-              <div class="container-InputTarefa">
-                <fieldset>
-                  <legend for="valor">valor</legend>
-                  <input type="number" class="inputTarefa" [(ngModel)]="novaTarefa.valor" placeholder="R$1000.00" name="valor" required>
-                </fieldset>
-              </div>
-              
-              <div id="container-btnTarefa">
-                <button class="btnTarefas" type="submit" (click)="cadastrarTarefa()">Enviar</button>
-              </div>
-              <div id="container-btnCancelar">
-                <button class="btnTarefas" (click)="fecharFormulario()">Cancelar</button>
-              </div>
-            </div>
-  
-          </form>
-        </div>
-
-        <div id="container-Lista">
-          <h3>Lista de Convidados +</h3>
+        <!-- Se listaConvidados for true, exibe a lista de convidados -->
+        <div *ngIf="evento?.listaConvidados">
+          <div id="container-Lista">
+            <h3>Lista de Convidados +</h3>
+          </div>
         </div>
       </section>
     </section>
