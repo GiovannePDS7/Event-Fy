@@ -14,18 +14,17 @@ export class EvInfosComponent implements OnInit {
   novaTarefa: any = {
     nomeTarefa: '',
     fornecedor: '',
-    valor: null
+    valor: null,
   };
-
+  tarefas: any[] = [];  // Adicionando a variável para armazenar as tarefas
   isModalOpen = false;
 
   openModal() {
     this.isModalOpen = true;
   }
 
-
   fecharFormulario() {
-  this.mostrarFormularioTarefa = false;
+    this.mostrarFormularioTarefa = false;
   }
 
   closeModal() {
@@ -39,9 +38,23 @@ export class EvInfosComponent implements OnInit {
     if (navigation && navigation.evento) {
       this.evento = navigation.evento; // Se o evento foi passado, atribui à variável
       console.log('Evento recebido:', this.evento);
+      // Buscar as tarefas para o evento ao carregar o componente
+      if (this.evento?.idEvento) {
+        this.carregarTarefas(this.evento.idEvento);
+      }
     } else {
       console.error('Nenhum evento encontrado no estado de navegação');
     }
+  }
+
+  // Método para carregar as tarefas do evento
+  carregarTarefas(idEvento: number): void {
+    this.tarefaService.listarTarefasPorEvento(idEvento).subscribe(response => {
+      this.tarefas = response;  // Atribui as tarefas recebidas à variável 'tarefas'
+      console.log('Tarefas carregadas:', this.tarefas);
+    }, error => {
+      console.error('Erro ao carregar as tarefas', error);
+    });
   }
 
   abrirFormularioTarefa() {
@@ -54,8 +67,6 @@ export class EvInfosComponent implements OnInit {
       return;
     }
 
-
-  
     const tarefaData = {
       nomeTarefa: this.novaTarefa.nomeTarefa,
       fornecedor: this.novaTarefa.fornecedor,
@@ -65,7 +76,11 @@ export class EvInfosComponent implements OnInit {
 
     this.tarefaService.cadastrarTarefa(tarefaData).subscribe(response => {
       console.log('Tarefa cadastrada com sucesso', response);
-      // Realizar algum procedimento após o sucesso (ex: atualizar lista de tarefas)
+      this.fecharFormulario();
+      // Atualizar a lista de tarefas após o cadastro
+      if (this.evento?.idEvento) {
+        this.carregarTarefas(this.evento.idEvento);
+      }
     }, error => {
       console.error('Erro ao cadastrar a tarefa', error);
     });

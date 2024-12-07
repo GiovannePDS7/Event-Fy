@@ -18,7 +18,6 @@ export class FormularioCriacaoComponent {
     private http: HttpClient,
     private router: Router
   ) {
-""
   }
 
   CadastroEventoForm = this.formBuilder.group({
@@ -47,20 +46,15 @@ export class FormularioCriacaoComponent {
 
         if (idOrganizador) {
             const eventoData = {
-                ...this.CadastroEventoForm.value,
-                idOrganizador: +idOrganizador  // Garantir que o idOrganizador seja convertido para número
+                ...this.CadastroEventoForm.value
             };
 
-            this.http.post(`${this.apiUrl}/eventos/criarEvento`, eventoData)
+            // Adiciona o idOrganizador como parâmetro na URL
+            const url = `${this.apiUrl}/eventos/criarEvento?idOrganizador=${idOrganizador}`;
+
+            this.http.post(url, eventoData)
                 .subscribe(
                     (response: any) => {
-                        // Aqui você deve verificar se o `idEvento` está presente na resposta
-                        console.log('Evento criado:', response);
-                        console.log('ID do evento:', response.idEvento); // Verifique se o ID é retornado corretamente
-
-                        // Usar o idEvento para redirecionar ou mostrar algo no UI
-                        alert(`O ID do evento criado é: ${response.idEvento}`);
-
                         this.router.navigate(['/eventoExistente']);
                     },
                     (error) => {
@@ -75,4 +69,5 @@ export class FormularioCriacaoComponent {
         alert('Por favor, preencha os campos corretamente.');
     }
 }
+
 }

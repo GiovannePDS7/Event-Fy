@@ -83,7 +83,7 @@ import { AgendaComponent } from './Pages/agenda/agenda.component';
     HttpClientModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    CalendarioComponent
+    CalendarioComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

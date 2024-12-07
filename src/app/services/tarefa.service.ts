@@ -7,16 +7,19 @@ import { Observable } from 'rxjs';
 })
 export class TarefaService {
 
-  private apiUrl = 'http://localhost:8084/api/tarefas/cadastrar';
+  private apiUrl = 'http://localhost:8084/api/tarefas';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   cadastrarTarefa(tarefaData: any): Observable<any> {
-    
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
 
-    return this.http.post(this.apiUrl, tarefaData, { headers });
+    return this.http.post(`${this.apiUrl}/cadastrar`, tarefaData, { headers });
+  }
+
+  listarTarefasPorEvento(idEvento: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/evento/${idEvento}`);
   }
 }
