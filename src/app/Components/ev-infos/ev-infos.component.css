@@ -74,17 +74,26 @@
     border-radius: 10px;
     margin-left: 1%;
 }
-#container-Tarefas, #grandcontainer-Tarefasadd
+#container-Tarefas, #grandcontainer-Tarefasadd, #grandcontainer-TarefasaddLG
 {
     width: 90%;
     border: 1px solid #EF820D;
     border-radius: 10px;
+}
+#grandcontainer-TarefasaddLG
+{
+    margin-bottom: 5%;
 }
 #container-Titletarefas, #container-TitletarefasLG {
     display: flex;
     align-items: center;
     width: 90%;
     margin-left: 5%;
+}
+#container-TitletarefasLG
+{
+    width: 100%;
+    margin-left: 0;
 }
 #container-Titletarefas
 {
@@ -275,7 +284,7 @@
     height: 13vh;
 }
 
-#container-tarefaadd
+#container-tarefaadd, #container-tarefaaddLG
 {
     width: 90%;
     margin-left: 5%;
@@ -284,8 +293,22 @@
 {
     font-size: 3.5vh;
 }
-#container-tarefaadd p
+#container-tarefaaddLG h3
+{
+    font-size: 3vh;
+}
+#container-tarefaadd p, #container-tarefaaddLG p
 {
     font-weight: 300;
     font-size: 2.3vh;
+}
+.legendLG
+{
+    font-size: 3.2vh;
+}
+#container-tarefan
+{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
 }

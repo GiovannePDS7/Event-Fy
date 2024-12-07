@@ -34,9 +34,9 @@
 
         <div *ngIf="evento?.incluirTarefas">
           <div id="container-Titletarefas">
-            <h3>Tarefas</h3>
+            <h3><label for="btnEditar">Tarefas</label></h3>
             <div id="container-btnaddTarefa">
-              <button id="btnEditar" (click)="abrirFormularioTarefa()">+</button>
+              <button id="btnEditar" (click)="abrirFormularioTarefa()" name="btnEditar">+</button>
             </div>
           </div>
 
@@ -87,7 +87,7 @@
                 </div>
             </div>
           </div>
-          <div *ngIf="tarefas.length === 0">
+          <div *ngIf="tarefas.length === 0" id="container-tarefan">
             <p>Não há tarefas cadastradas para este evento.</p>
           </div>
         </div>
@@ -107,17 +107,47 @@
   <div class="card" id="cardLG">
     <div id="container-TitleLG">
       <div id="container-InfosLG">
-        <h3>Nome Evento</h3>
-        <span><p>Data:</p></span>
-        <span><p>Local do evento:</p></span>
-        <span><p>Horário de início:</p></span>
-        <span><p>Horário de término:</p></span>
-        <span><p>Tipo:</p></span>
+        <h3>{{ evento?.nomeEvento }}</h3>
+        <span>
+          <p>Data: {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
+        </span>
+
+
+        <span>
+          <p>Local do evento: {{ evento?.localEvento }}</p>
+        </span>
+
+
+        <span>
+          <p>Horário de início: {{ evento?.horarioInicio }}</p>
+        </span>
+
+
+        <span>
+          <p>Horário de término: {{ evento?.horarioFim }}</p>
+        </span>
+
+
+        <span>
+          <p>Tipo: {{ evento?.tipoEvento }}</p>
+        </span>
       </div>
     </div>
     <div id="container-TarefasConvidados">
         <div id="container-TitletarefasLG">
-          <h3>Tarefas <button id="btnEditar" (click)="abrirFormularioTarefa()">+</button></h3>
+          <h3><label for="btnEditar">Tarefas <button id="btnEditar" (click)="abrirFormularioTarefa()" name="btnEditar">+</button></label></h3>
+        </div>
+        <div *ngIf="tarefas.length > 0">
+          <div id="grandcontainer-TarefasaddLG">
+              <div *ngFor="let tarefa of tarefas" id="container-tarefaaddLG">
+                <h3><strong>{{ tarefa.nomeTarefa }}</strong></h3>
+                <p>Fornecedor: {{ tarefa.fornecedor }}</p>
+                <p>Valor: {{ tarefa.valor }}</p>
+              </div>
+          </div>
+        </div>
+        <div *ngIf="tarefas.length === 0">
+          <p>Não há tarefas cadastradas para este evento.</p>
         </div>
     </div>
     <div id="grandcontainer-imgEventoLG">
@@ -125,5 +155,42 @@
         <img src="../../../assets/Elementos/imgUsuario.png" alt="" id="imgUsuarioLG">
       </div>
     </div>
+
+
+    <div id="overlay" *ngIf="mostrarFormularioTarefa"></div>
+    <form (ngSubmit)="cadastrarTarefa()">
+    <div id="container-Tarefas" *ngIf="mostrarFormularioTarefa">
+      <div class="container-InputTarefa">
+        <fieldset id="fieldset1">
+          <legend class="legendLG" for="nomeTarefa">Tarefa</legend>
+          <input type="text" class="inputTarefa" [(ngModel)]="novaTarefa.nomeTarefa"
+            placeholder="Nome da tarefa" name="nomeTarefa" required>
+        </fieldset>
+      </div>
+      <!-- Exibe o campo "Fornecedor" somente se fornecedores for true -->
+      <div *ngIf="evento?.fornecedores" class="container-InputTarefa">
+        <fieldset>
+          <legend class="legendLG" for="fornecedor">Fornecedor</legend>
+          <input type="text" class="inputTarefa" [(ngModel)]="novaTarefa.fornecedor"
+            placeholder="Nome do fornecedor" name="fornecedor">
+        </fieldset>
+      </div>
+      <div class="container-InputTarefa">
+        <fieldset>
+          <legend class="legendLG" for="valor">Valor</legend>
+          <input type="number" class="inputTarefa" [(ngModel)]="novaTarefa.valor" placeholder="R$1000.00"
+            name="valor" required>
+        </fieldset>
+      </div>
+
+      <div id="container-btnTarefa">
+        <button class="btnTarefas" type="submit">Enviar</button>
+      </div>
+      <div id="container-btnCancelar">
+        <button class="btnTarefas" (click)="fecharFormulario()">Cancelar</button>
+      </div>
+    </div>
+  </form>
+
   </div>
 </div>
