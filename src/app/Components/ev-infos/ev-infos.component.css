@@ -47,12 +47,13 @@
 {
   font-size: 3vh;
 }
-.container-Title h1
+#container-Title h1
 {
     font-weight: bold;
-    margin-right: 25%;
+    margin-top: 5%;
+    margin-left: 5%;
 }
-#container-Infos, #container-Tarefas, #container-InfosLG
+#container-Infos, #container-Tarefas, #container-InfosLG, #grandcontainer-Tarefasadd
 {
     width: 90%;
     margin-left: 5%;
@@ -73,7 +74,7 @@
     border-radius: 10px;
     margin-left: 1%;
 }
-#container-Tarefas
+#container-Tarefas, #grandcontainer-Tarefasadd
 {
     width: 90%;
     border: 1px solid #EF820D;
@@ -272,4 +273,19 @@
 {
     width: 13vh;
     height: 13vh;
+}
+
+#container-tarefaadd
+{
+    width: 90%;
+    margin-left: 5%;
+}
+#container-tarefaadd h3
+{
+    font-size: 3.5vh;
+}
+#container-tarefaadd p
+{
+    font-weight: 300;
+    font-size: 2.3vh;
 }

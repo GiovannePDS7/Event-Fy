@@ -1,8 +1,8 @@
-<div class="d-xs-block d-md-none" id="background">
+<div class="d-xs-block d-lg-none" id="background">
   <div class="card">
     <section id="container-Title">
       <!-- Exibe o nome do evento -->
-      <h1 id>{{ evento?.nomeEvento }}</h1>
+      <h1>{{ evento?.nomeEvento }}</h1>
 
       <section>
         <div id="container-Infos">
@@ -79,14 +79,13 @@
           </div>
 
           <div *ngIf="tarefas.length > 0">
-            <h3>Tarefas do Evento</h3>
-            <ul>
-              <li *ngFor="let tarefa of tarefas">
-                <p><strong>{{ tarefa.nomeTarefa }}</strong></p>
-                <p>{{ tarefa.fornecedor }}</p>
-                <p>Valor: {{ tarefa.valor }}</p>
-              </li>
-            </ul>
+            <div id="grandcontainer-Tarefasadd">
+                <div *ngFor="let tarefa of tarefas" id="container-tarefaadd">
+                  <h3><strong>{{ tarefa.nomeTarefa }}</strong></h3>
+                  <p>Fornecedor: {{ tarefa.fornecedor }}</p>
+                  <p>Valor: {{ tarefa.valor }}</p>
+                </div>
+            </div>
           </div>
           <div *ngIf="tarefas.length === 0">
             <p>Não há tarefas cadastradas para este evento.</p>
@@ -104,7 +103,7 @@
   </div>
 </div>
 
-<div class="d-none d-md-block d-xxl-block" id="background">
+<div class="d-none d-lg-block d-xxl-block" id="background">
   <div class="card" id="cardLG">
     <div id="container-TitleLG">
       <div id="container-InfosLG">
