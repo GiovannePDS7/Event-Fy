@@ -14,25 +14,30 @@
 
           <span>
             <p><b>Data:</b> {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
+            <p><b>Data:</b> {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
           </span>
 
 
           <span>
+            <p><b>Local do evento:</b> {{ evento?.localEvento }}</p>
             <p><b>Local do evento:</b> {{ evento?.localEvento }}</p>
           </span>
 
 
           <span>
             <p><b>Horário de início:</b> {{ evento?.horarioInicio }}</p>
+            <p><b>Horário de início:</b> {{ evento?.horarioInicio }}</p>
           </span>
 
 
           <span>
             <p><b>Horário de término:</b> {{ evento?.horarioFim }}</p>
+            <p><b>Horário de término:</b> {{ evento?.horarioFim }}</p>
           </span>
 
 
           <span>
+            <p><b>Tipo:</b> {{ evento?.tipoEvento }}</p>
             <p><b>Tipo:</b> {{ evento?.tipoEvento }}</p>
           </span>
         </div>
@@ -148,33 +153,33 @@
   </div>
 </div>
 
-<div class="d-none d-lg-block d-xxl-block" id="background">
+<div class="d-none d-lg-block d-xxl-block" id="backgroundLG">
   <div class="card" id="cardLG">
     <div id="container-TitleLG">
       <div id="container-InfosLG">
-        <h3>{{ evento?.nomeEvento }}</h3>
+        <h3 id="titleH3LG">{{ evento?.nomeEvento }}</h3>
         <span>
-          <p>Data: {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
+          <p><b>Data:</b> {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
         </span>
 
 
         <span>
-          <p>Local do evento: {{ evento?.localEvento }}</p>
+          <p><b>Local do evento:</b> {{ evento?.localEvento }}</p>
         </span>
 
 
         <span>
-          <p>Horário de início: {{ evento?.horarioInicio }}</p>
+          <p><b>Horário de início:</b> {{ evento?.horarioInicio }}</p>
         </span>
 
 
         <span>
-          <p>Horário de término: {{ evento?.horarioFim }}</p>
+          <p><b>Horário de término:</b> {{ evento?.horarioFim }}</p>
         </span>
 
 
         <span>
-          <p>Tipo: {{ evento?.tipoEvento }}</p>
+          <p><b>Tipo:</b> {{ evento?.tipoEvento }}</p>
         </span>
       </div>
     </div>
