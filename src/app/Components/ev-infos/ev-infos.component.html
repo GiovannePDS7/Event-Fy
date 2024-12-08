@@ -1,34 +1,37 @@
 <div class="d-xs-block d-lg-none" id="background">
   <div class="card">
-    <section id="container-Title">
-      <!-- Exibe o nome do evento -->
-      <h1>{{ evento?.nomeEvento }}</h1>
-
+    <section >
+      <div class="container-Title">
+        <h1>{{ evento?.nomeEvento }}</h1>
+        <div id="container-imgEvento">
+          <img src="../../../assets/Elementos/imgUsuario.png" alt="" id="imgUsuario">
+        </div>
+      </div>
       <section>
         <div id="container-Infos">
 
           <span>
-            <p>Data: {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
+            <p><b>Data:</b> {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
           </span>
 
 
           <span>
-            <p>Local do evento: {{ evento?.localEvento }}</p>
+            <p><b>Local do evento:</b> {{ evento?.localEvento }}</p>
           </span>
 
 
           <span>
-            <p>Horário de início: {{ evento?.horarioInicio }}</p>
+            <p><b>Horário de início:</b> {{ evento?.horarioInicio }}</p>
           </span>
 
 
           <span>
-            <p>Horário de término: {{ evento?.horarioFim }}</p>
+            <p><b>Horário de término:</b> {{ evento?.horarioFim }}</p>
           </span>
 
 
           <span>
-            <p>Tipo: {{ evento?.tipoEvento }}</p>
+            <p><b>Tipo:</b> {{ evento?.tipoEvento }}</p>
           </span>
         </div>
 
@@ -94,8 +97,11 @@
 
         <!-- Se listaConvidados for true, exibe a lista de convidados -->
         <div *ngIf="evento?.listaConvidados">
-          <div id="container-Lista">
-            <h3>Lista de Convidados +</h3>
+          <div id="container-Titletarefas">
+            <h3><label for="btnConvidado">Lista de Convidados</label></h3>
+            <div id="container-btnaddTarefa">
+              <button id="btnConvidado" name="btnConvidado">+</button>
+            </div>
           </div>
         </div>
       </section>
@@ -103,51 +109,59 @@
   </div>
 </div>
 
-<div class="d-none d-lg-block d-xxl-block" id="background">
+<div class="d-none d-lg-block d-xxl-block" id="backgroundLG">
   <div class="card" id="cardLG">
     <div id="container-TitleLG">
       <div id="container-InfosLG">
-        <h3>{{ evento?.nomeEvento }}</h3>
+        <h3 id="titleH3LG">{{ evento?.nomeEvento }}</h3>
         <span>
-          <p>Data: {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
+          <p><b>Data:</b> {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
         </span>
 
 
         <span>
-          <p>Local do evento: {{ evento?.localEvento }}</p>
+          <p><b>Local do evento:</b> {{ evento?.localEvento }}</p>
         </span>
 
 
         <span>
-          <p>Horário de início: {{ evento?.horarioInicio }}</p>
+          <p><b>Horário de início:</b> {{ evento?.horarioInicio }}</p>
         </span>
 
 
         <span>
-          <p>Horário de término: {{ evento?.horarioFim }}</p>
+          <p><b>Horário de término:</b> {{ evento?.horarioFim }}</p>
         </span>
 
 
         <span>
-          <p>Tipo: {{ evento?.tipoEvento }}</p>
+          <p><b>Tipo:</b> {{ evento?.tipoEvento }}</p>
         </span>
       </div>
     </div>
     <div id="container-TarefasConvidados">
-        <div id="container-TitletarefasLG">
+        <div id="container-TitletarefasLG" *ngIf="evento?.incluirTarefas">
           <h3><label for="btnEditar">Tarefas <button id="btnEditar" (click)="abrirFormularioTarefa()" name="btnEditar">+</button></label></h3>
         </div>
         <div *ngIf="tarefas.length > 0">
           <div id="grandcontainer-TarefasaddLG">
               <div *ngFor="let tarefa of tarefas" id="container-tarefaaddLG">
                 <h3><strong>{{ tarefa.nomeTarefa }}</strong></h3>
-                <p>Fornecedor: {{ tarefa.fornecedor }}</p>
+                <p *ngIf="evento?.fornecedores" >Fornecedor: {{ tarefa.fornecedor }}</p>
                 <p>Valor: {{ tarefa.valor }}</p>
               </div>
           </div>
         </div>
         <div *ngIf="tarefas.length === 0">
-          <p>Não há tarefas cadastradas para este evento.</p>
+          <p *ngIf="evento?.incluirTarefas">Não há tarefas cadastradas para este evento.</p>
+        </div>
+        <div *ngIf="evento?.incluirTarefas == false" id="container-tarefadesativada">
+          <p>Lista de Tarefas não foi ativa para esse evento</p>
+        </div>
+        <div *ngIf="evento?.listaConvidados">
+          <div id="container-ListaLG">
+            <h3><label for="btnConvidado">Lista de Convidados <button id="btnConvidado"  name="btnConvidado">+</button></label></h3>
+          </div>
         </div>
     </div>
     <div id="grandcontainer-imgEventoLG">
