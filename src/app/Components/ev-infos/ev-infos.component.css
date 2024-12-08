@@ -1,157 +1,161 @@
-#background
-{
+* {
+    line-height: normal;
+}
+
+#background {
     background-color: #FFBC74;
     width: 100%;
     padding-top: 25%;
     padding-bottom: 20%;
 }
-.card
-{
+
+.card {
+    display: flex;
     justify-content: center;
     flex-direction: column;
     width: 90%;
     border: 1px solid #000;
     margin-left: 5%;
     border-radius: 13px;
-    padding-bottom: 40%;
+    padding: 6vw 0;
 }
-#cardLG
-{
-  padding-bottom: 0;
+
+#cardLG {
+    padding-bottom: 0;
 }
-#container-imgEvento, #container-imgEventoLG
-{
+
+#container-imgEvento, #container-imgEventoLG {
     border: 1px solid #000;
     width: 6vh;
     height: 6vh;
     border-radius: 10px;
     text-align: center;
 }
-#container-imgEventoLG, #container-imgEvento
-{
+
+#container-imgEventoLG, #container-imgEvento {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.container-Title
-{
+.container-Title {
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 5%;
-    padding-top: 5%;
+
 }
-#container-TitleLG h1
-{
-  font-size: 3vh;
+
+#container-TitleLG h1 {
+    font-size: 3vh;
 }
-#container-Title h1
-{
+
+#container-Title h1 {
     font-weight: bold;
-    margin-top: 5%;
-    margin-left: 5%;
 }
-#container-Infos, #container-Tarefas, #container-InfosLG, #grandcontainer-Tarefasadd
-{
+
+#container-Infos, #container-Tarefas, #container-InfosLG, #grandcontainer-Tarefasadd {
     width: 90%;
     margin-left: 5%;
-    font-weight: bold;
 }
-#container-InfosLG
-{
-  width: 80%;
+
+#container-Infos {
+    font-size: 4vw;
 }
-#container-Tarefas h3, #container-Infos p
-{
-    font-weight: bold;
+
+
+#grandcontainer-Tarefasadd {
+    padding: 2vw 0;
 }
-#cardTarefas
-{
+
+#container-InfosLG {
+    width: 80%;
+}
+
+
+#cardTarefas {
     width: 100%;
     border: 1px solid #EF820D;
     border-radius: 10px;
     margin-left: 1%;
 }
-#container-Tarefas, #grandcontainer-Tarefasadd, #grandcontainer-TarefasaddLG
-{
+
+#container-Tarefas, #grandcontainer-Tarefasadd, #grandcontainer-TarefasaddLG {
     width: 90%;
-    border: 1px solid #EF820D;
+    border: 1.5px solid #EF820D;
     border-radius: 10px;
 }
-#grandcontainer-TarefasaddLG
-{
+
+#grandcontainer-TarefasaddLG {
     margin-bottom: 5%;
 }
+
 #container-Titletarefas, #container-TitletarefasLG {
     display: flex;
     align-items: center;
     width: 90%;
     margin-left: 5%;
 }
-#container-TitletarefasLG
-{
+
+#container-TitletarefasLG {
     width: 100%;
     margin-left: 0;
 }
-#container-Titletarefas
-{
-    justify-content: space-between;
+
+#container-Titletarefas {
+    padding-bottom: 3vw;
+    display: inline-flex;
+    justify-content: flex-start;
 }
-#container-Titletarefas h3
-{
+
+#container-Titletarefas h3 {
     font-weight: bold;
-    margin-top: 2%;
+    margin: 0;
+    font-size: 5vw;
 }
-#btnEditar {
+
+#btnEditar, #btnEditar2 {
     border: none;
     background-color: transparent;
-    font-size: 3vh;
+    font-size: 5vw;
 }
-#container-btnaddTarefa
-{
+
+#container-btnaddTarefa {
     background: #EABB88;
-    width: 2.5vh;
-    height: 2.5vh;
+    width: 5vw;
+    height: 5vw;
     text-align: center;
     justify-content: center;
     display: flex;
     align-items: center;
-    border-radius: 2px;
+    border-radius: 4px;
+    margin-left: 2vw;
 }
-#container-Infostarefas
-{
-    width: 90%;
-    margin-left: 5%;
-    font-weight: 300;
-}
-.valores
-{
+
+.valores {
     display: flex;
 }
-#container-Lista
-{
+
+#container-Lista {
     width: 90%;
     margin-left: 5%;
     margin-top: 5%;
 }
-#container-Lista h3
-{
+
+#container-Lista h3 {
     font-weight: bold;
 }
-#imgUsuarioLG
-{
-  width: 50%;
-}
-#addTarefa
-{
-  border: none;
-  background: none;
+
+#imgUsuarioLG {
+    width: 50%;
 }
 
-#container-InputTarefa
-{
+#addTarefa {
+    border: none;
+    background: none;
+}
+
+#container-InputTarefa {
     padding-bottom: 10%;
 }
 
@@ -164,12 +168,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
-    z-index: 998; /* Aparece abaixo do container de tarefas */
-  }
-  
-  /* Container de Tarefas (centralizado e sobreposto) */
-  #container-Tarefas {
+    background: rgba(0, 0, 0, 0.5);
+    /* Fundo escurecido */
+    z-index: 998;
+    /* Aparece abaixo do container de tarefas */
+}
+
+/* Container de Tarefas (centralizado e sobreposto) */
+#container-Tarefas {
     position: fixed;
     top: 45%;
     left: 45%;
@@ -180,11 +186,12 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 999; /* Sobrepõe o overlay */
-  }
-  
+    z-index: 999;
+    /* Sobrepõe o overlay */
+}
 
-  fieldset {
+
+fieldset {
     border-radius: 8px;
     width: 100%;
     display: flex;
@@ -195,22 +202,22 @@
     padding: 0 0% 1.5% 3%;
     border: 1.5px solid var(--cor-secundaria);
     margin-bottom: 5%;
-  }
-  #fieldset1
-  {
+}
+
+#fieldset1 {
     margin-top: 5%;
-  }
-  legend {
+}
+
+legend {
     float: none;
     width: auto;
     margin: 0;
     font-size: 4vw;
     padding: 0 3%;
     font-style: italic;
-    }
+}
 
-.inputTarefa
-{
+.inputTarefa {
     all: unset;
     width: 95%;
 }
@@ -220,16 +227,15 @@
     font-style: italic;
 }
 
-#container-btnTarefa, #container-btnCancelar
-{
+#container-btnTarefa, #container-btnCancelar {
     text-align: center;
 }
-#container-btnTarefa
-{
+
+#container-btnTarefa {
     margin-bottom: 5%;
 }
-.btnTarefas
-{
+
+.btnTarefas {
     border: 1px solid #000;
     background-color: #EF820D;
     font-weight: bold;
@@ -238,77 +244,159 @@
     border-radius: 10px;
 }
 
-#grandContaine-infos
-{
+#grandContaine-infos {
     width: 90%;
 }
 
 /*LG*/
 
 #cardLG {
-  display: flex; /* Define o layout como flexbox */
-  flex-direction: row; /* Alinha os elementos em uma linha */
-  justify-content: space-between; /* Distribui espaço entre os itens */
-  align-items: flex-start; /* Alinha os elementos no topo */
-  gap: 20px; /* Espaçamento entre as divs */
+    display: flex;
+    /* Define o layout como flexbox */
+    flex-direction: row;
+    /* Alinha os elementos em uma linha */
+    justify-content: space-between;
+    /* Distribui espaço entre os itens */
+    align-items: flex-start;
+    /* Alinha os elementos no topo */
+    gap: 20px;
+    /* Espaçamento entre as divs */
 }
 
-#container-TarefasConvidados
-{
+#container-TarefasConvidados {
     width: 43%;
     margin-top: 3%;
 }
-#grandcontainer-imgEventoLG
-{
+
+#grandcontainer-imgEventoLG {
     width: 20%;
     margin-top: 2%;
 }
-#container-TitleLG
-{
+
+#container-TitleLG {
     width: 40%;
     margin-top: 3%;
 }
 
-#container-TitleLG h3, #container-TarefasConvidados h3
-{
+#container-TitleLG h3, #container-TarefasConvidados h3 {
     font-weight: bold;
     font-size: 5vh;
 }
-#container-TarefasConvidados h3
-{
+
+#container-TarefasConvidados h3 {
     font-size: 2.5vh;
 }
-#container-imgEventoLG
-{
+
+#container-imgEventoLG {
     width: 13vh;
     height: 13vh;
 }
 
-#container-tarefaadd, #container-tarefaaddLG
-{
+#container-tarefaadd, #container-tarefaaddLG {
     width: 90%;
     margin-left: 5%;
 }
-#container-tarefaadd h3
-{
-    font-size: 3.5vh;
+
+#container-tarefaadd {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 2vw 0;
 }
-#container-tarefaaddLG h3
-{
+
+#span-convidados-mobile {
+    margin-left: 5%;
+    padding: 1vw 0;
+    font-size: 4vw;
+}
+
+#container-tarefaadd h3 {
+    font-size: 4vw;
+    color: #000;
+    margin: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#container-tarefaaddLG h3 {
     font-size: 3vh;
 }
-#container-tarefaadd p, #container-tarefaaddLG p
-{
+
+
+#container-tarefaadd p {
     font-weight: 300;
-    font-size: 2.3vh;
+    margin: 0;
+    font-size: 3.3vw;
+    color: #000;
+    margin: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
-.legendLG
-{
+
+.legendLG {
     font-size: 3.2vh;
 }
-#container-tarefan
-{
+
+#container-tarefan, #container-convidadon {
     width: 90%;
     margin-left: 5%;
     margin-top: 2%;
+}
+
+#container-name-mobile {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0vw 1vw 4vw 5vw;
+    width: 100%;
+}
+
+#h1-mobile {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 70%;
+    text-overflow: ellipsis;
+    font-size: 5vw;
+}
+
+.imgfotoEvento-mobile {
+    border: 1px solid #000;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16vw;
+    height: 16vw;
+    background: #fff;
+    margin-left: 5vw;
+    border-radius: 10px;
+}
+
+.img-evento-mobile {
+    width: 8vw;
+}
+
+.closeTarefa-mobile, .closeConvidado-mobile {
+    width: 4vw;
+}
+
+#container-Lista h3 {
+    font-size: 5vw;
+    margin: 0;
+}
+
+#container-Lista {
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.p-convidados-mobile {
+    padding: 1.5vw 0;
 }
