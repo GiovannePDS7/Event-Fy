@@ -1,11 +1,175 @@
-h1 {
-    font-size: 1.8rem;
+
+#grandContainer-desktop {
+    width: 100%;
+    height: 155vh;
+    background-color: #FFBC74;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12vw;
 }
-  
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+#container-desktop {
+    width: 90%;
+    height: 150vh;
 }
-  
-  .card-title {
+
+#litteContainer, #litteContainer2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#litteContainer2 {
+    margin-top: 2%;
+}
+
+#containerTitle-desktop {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#title1-desktop {
+    font-size: 2.5rem;
     font-weight: bold;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+#title2-desktop {
+    font-size: 2rem;
+    padding-left: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.containerInfos-desktop {
+    width: 90%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    border-radius: 25px;
+    margin: 1rem auto;
+    overflow-y: auto; 
+    padding: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.littleContainerInfos-desktop {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.title3-desktop {
+    margin: 1% 0 0 2%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.littleContainerGrafico-desktop {
+    width: 40%;
+    height: 100%;
+}
+
+.linha-desktop {
+    width: 0.2%;
+    height: 90%;
+    background-color: rgb(0, 0, 0);
+}
+
+.littleContainersInfos-desktop {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title4-desktop, .title5-desktop {
+    margin: 0 0 5% 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.title5-desktop {
+    margin-top: 2%;
+}
+
+.recebimentosPendentes, .recebimentosPendenteTotal {
+    font-size: 1rem;
+    list-style-type: none;
+    margin: 2% 0 0 0;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.recebimentosPendenteTotal {
+    font-size: 1.1rem;
+    margin: 10% 0 0 0;
+}
+
+#containerSecondInf-desktop {
+    width: 100%;
+    height: 35vh;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerFluxoCaixa-desktop {
+    width: 35%;
+    height: 100%;    
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    border-radius: 25px;
+    margin-right: 5%;
+    overflow-y: auto; 
+    padding: 10px;
+}
+
+#containerAnaliEvento-desktop {
+    width: 50%;
+    height: 100%;
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto; 
+    padding: 10px;
+}
+
+.analise {
+    width: 90%;
+    height: 80%;
+    line-height: 1.8rem;
+    text-align: justify;
+    overflow-y: auto; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.textAnalise {
+    font-size: 1.3rem;
 }
