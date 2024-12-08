@@ -1,0 +1,299 @@
+#background {
+  background: black;
+  height: 100vh;
+}
+
+#button-seta {
+  left: 5%;
+  top: 4%;
+  position: absolute;
+  background: none;
+  border: none;
+}
+
+#seta {
+  width: 8vw;
+}
+
+
+#img-container {
+  padding-top: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+
+#iso-logo {
+  width: 70vw;
+}
+
+#containerSection {
+  height: 100%;
+}
+
+#containerInput {
+  border: 1px solid;
+}
+
+#Login {
+  flex: 1;
+  width: 100%;
+  background: var(--cor-primaria);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10%;
+}
+
+#formulario {
+  width: 100%;
+  height: 95vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#h1-Login {
+  margin: 0;
+  padding-bottom: 10%;
+  color: #000;
+  font-size: 8.5vw;
+  font-weight: bold;
+}
+
+#txtForgotMobile{
+  font-size: 3.5vw;
+  padding-left: 9%;
+  padding-bottom: 9%;
+}
+
+
+/*----------------*/
+
+/* fieldset */
+fieldset:disabled {
+  pointer-events: revert;
+  opacity: revert;
+}
+
+fieldset {
+  border-radius: 2px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: revert;
+  margin: revert;
+  padding: 0 0% 1.5% 3%;
+  border: 1.5px solid var(--cor-secundaria);
+}
+
+legend {
+  float: none;
+  width: auto;
+  margin: 0;
+  font-size: 4vw;
+  padding: 0 3%;
+  font-style: italic;
+}
+
+
+
+/*----------------*/
+
+.input-form {
+  all: unset;
+  height: 100%;
+  width: 80%;
+  padding-left: 4%;
+  font-size: 3.5vw;
+}
+
+.input-form::placeholder {
+  color: #8a8a8a;
+  font-style: italic;
+}
+
+.icon-form {
+  width: 7vw;
+  float: right;
+}
+
+#button-submit {
+  height: 9.3vw;
+  border-radius: 8px;
+  background: #000;
+  color: var(--cor-primaria);
+  border: none;
+  width: 90%;
+  font-size: 5.2vw;
+  font-weight: bold;
+}
+
+#container-EsqueceuSenha, #container-EsqueceuSenha-Lg {
+  width: 100%;
+  text-align: end;
+  padding-top: 4vw;
+}
+
+#a-ES, #a-ES-Lg {
+  color: var(--cor-secundaria);
+  font-size: 3.5vw;
+  font-style: italic;
+  text-decoration: underline;
+  margin-right: 5%;
+
+}
+
+#container-SignUp {
+  margin-bottom: 10vw;
+}
+
+#span-SignUp {
+  color: var(--cor-secundaria);
+  font-size: 4vw;
+  font-style: italic;
+}
+
+#a-SignUp {
+  color: #000;
+  text-decoration: underline;
+}
+
+
+/*LG*/
+
+#button-setaLg {
+  left: 5%;
+  top: 7%;
+  position: absolute;
+  background: none;
+  border: none;
+}
+
+
+#container-ForgotLg h1 {
+  color: #000;
+  position: absolute;
+  top: 22%;
+  left: 15%;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+
+#textForgot{
+  color: #000;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  max-width: 32vw;
+  font-size: 1.5vw;
+  line-height: 100%;
+}
+
+#setaLg {
+  width: 4vw;
+}
+
+.legendLg {
+  white-space: nowrap;
+  font-size: 1.8vw;
+}
+
+.input-form, .input-formLg {
+  all: unset;
+  height: 100%;
+  width: 80%;
+  padding-left: 4%;
+  font-size: 4vw;
+}
+
+.input-formLg {
+  font-size: 1.3vw;
+  width: 100%;
+  padding-left: 3.5%;
+}
+
+
+#formularioLg {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#icon-formlg {
+  width: 9%;
+  padding-right: 3%;
+}
+
+#button-submit, #button-submitLg {
+  height: 9.3vw;
+  border-radius: 8px;
+  background: #000;
+  color: var(--cor-primaria);
+  border: none;
+  width: 90%;
+  font-size: 5.2vw;
+  font-weight: bold;
+}
+
+#button-submitLg {
+  height: 6vh;
+  width: 80%;
+  font-size: 1.5vw;
+}
+
+#container-SignInLg {
+  margin-top: 5vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#span-SignIn, #span-SignInLg {
+  color: var(--cor-secundaria);
+  font-size: 4vw;
+  font-style: italic;
+}
+
+
+#containerInputUser, #containerInputEmail {
+  width: 70%;
+}
+
+#imgEsqueceu {
+  width: 65%;
+}
+
+#section-formLg {
+  margin-top: 15vw;
+  height: 20vw;
+  width: 100%;
+}
+
+#btn-formLg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#a-ES-Lg {
+  font-size: 1vw;
+  margin-right: 5vw;
+}
+
+#container-SignupLg {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
