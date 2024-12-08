@@ -8,7 +8,7 @@
     </div>
 
     <div id="icons" class="d-flex align-items-center justify-content-center">
-      <img id="imgM" src="../../../../assets/Elementos/IconFormulario.png">
+      <img [routerLink]="['/areaUsuario']" id="imgM" src="../../../../assets/Elementos/IconFormulario.png">
     </div>
   </header>
 
@@ -17,9 +17,11 @@
       <img class="close-button" (click)="toggleSidebar()" src="../../../../assets/Elementos/Close.png">
     </div>
 
-    <div class="containerUsuarioMobile">
-      <img class="iconUsuario" src="../../../../assets/Elementos/IconFormulario.png">
-      <p class="nameUsuario">{{nomeUsuario}}</p>
+    <div>
+      <a [routerLink]="['/areaUsuario']" class="containerUsuarioMobile">
+        <img class="iconUsuario" src="../../../../assets/Elementos/IconFormulario.png">
+        <p class="nameUsuario">{{nomeUsuario}}</p>
+      </a>
     </div>
 
     <ul id="ul-mobile">
@@ -49,7 +51,7 @@
       </li>
 
       <li class="containerElementoMobile">
-        <a [routerLink]="['']">
+        <a [routerLink]="['/financeiro']">
           <img class="imgElemento" src="../../../../assets/Elementos/financeiroImg.png">
           <h2 class="textoElemento">Financeiro</h2>
           <img class="playMobile" src="../../../../assets/Elementos/play.png">
@@ -73,7 +75,7 @@
       </li>
 
       <li class="containerElementoMobile">
-        <a  [routerLink]="['']">
+        <a [routerLink]="['']">
           <img class="imgElemento" src="../../../../assets/Elementos/plano.png">
           <h2 class="textoElemento">Planos</h2>
           <img class="playMobile" src="../../../../assets/Elementos/play.png">
@@ -107,7 +109,7 @@
     <div id="icons">
       <i id="emailPc" class="bi bi-envelope"></i>
       <i id="bellPc" class="bi bi-bell"></i>
-      <img id="personPc" src="../../../../assets/Elementos/IconFormulario.png">
+      <img [routerLink]="['/areaUsuario']" id="personPc" src="../../../../assets/Elementos/IconFormulario.png">
     </div>
   </header>
 
@@ -116,9 +118,11 @@
       <img class="close-button" (click)="toggleSidebar()" src="../../../../assets/Elementos/Close.png">
     </div>
 
-    <div class="containerUsuario" id="containerUsuario-desktop">
-      <img class="iconUsuario" id="iconUsuario-desktop" src="../../../../assets/Elementos/IconFormulario.png">
-      <p class="nameUsuario" id="nameUsuario-desktop">{{nomeUsuario}}</p>
+    <div class="containerUsuario">
+      <a [routerLink]="['/areaUsuario']" id="containerUsuario-desktop">
+        <img class="iconUsuario" id="iconUsuario-desktop" src="../../../../assets/Elementos/IconFormulario.png">
+        <p class="nameUsuario" id="nameUsuario-desktop">{{nomeUsuario}}</p>
+      </a>
     </div>
 
     <ul id="ul-desktop">
@@ -144,7 +148,7 @@
       </li>
 
       <li class="containerElemento">
-        <a  [routerLink]="['']">
+        <a [routerLink]="['/calendario']">
           <div class="container-img-desktop">
 
             <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/agendaImg.png">
@@ -155,7 +159,7 @@
       </li>
 
       <li class="containerElemento">
-        <a  [routerLink]="['']">
+        <a [routerLink]="['/financeiro']">
           <div class="container-img-desktop">
             <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/financeiroImg.png">
           </div>
@@ -165,7 +169,7 @@
       </li>
 
       <li class="containerElemento">
-        <a  [routerLink]="['/eventoExistente']">
+        <a [routerLink]="['/eventoExistente']">
           <div class="container-img-desktop">
 
             <img class="imgElemento imgElemento-desktop" src="../../../../assets/Elementos/futurosImg.png">
@@ -201,7 +205,7 @@
     <div class="containerSair" id="containerSair-desktop">
       <a class="a-link-sair" (click)="SairConta()">
         <img class="iconSair" id="iconSair-desktop" src="../../../../assets/Elementos/sair.png">
-        <p class="sair" id="sair-desktop" >Sair</p>
+        <p class="sair" id="sair-desktop">Sair</p>
       </a>
     </div>
 

@@ -79,7 +79,8 @@ i, #i-desktop {
 }
 
 #personPc {
-  width: 1.8vw;
+  cursor: pointer;
+  width: 2vw;
 }
 
 #headerPc {
@@ -182,6 +183,8 @@ i, #i-desktop {
 }
 
 #containerUsuario-desktop {
+  color: #000;
+  text-decoration: none;
   height: auto;
   display: inline-flex;
   align-items: center;
@@ -381,7 +384,8 @@ i, #i-desktop {
 }
 
 .containerUsuarioMobile {
-
+  color: #000;
+  text-decoration: none;
   height: auto;
   display: inline-flex;
   width: auto;

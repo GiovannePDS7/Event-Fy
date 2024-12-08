@@ -1,12 +1,22 @@
 * {
     line-height: normal;
+    margin: 0;
+    color: #000;
 }
 
 #background, #backgroundLG {
     background-color: #FFBC74;
     width: 100%;
-    padding-top: 25%;
-    padding-bottom: 20%;
+    padding: 18vw 0 10vw 0;
+}
+
+#backgroundLG {
+    padding: 10vw 0 8vw 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .card {
@@ -22,6 +32,7 @@
 
 #cardLG {
     padding-bottom: 0;
+    padding: 0;
 }
 
 #container-imgEvento, #container-imgEventoLG {
@@ -47,10 +58,6 @@
 
 }
 
-#container-TitleLG h1 {
-    font-size: 3vh;
-}
-
 #container-Title h1 {
     font-weight: bold;
 }
@@ -69,9 +76,6 @@
     padding: 2vw 0;
 }
 
-#container-InfosLG {
-    width: 80%;
-}
 
 
 #cardTarefas {
@@ -89,6 +93,7 @@
 #grandcontainer-TarefasaddLG {
     margin-bottom: 5%;
     margin-left: 2%;
+    padding: 1.2vw 0;
 }
 
 #container-Titletarefas, #container-TitletarefasLG {
@@ -100,8 +105,12 @@
 
 #container-TitletarefasLG {
     width: 100%;
-    margin-left: 0;
-    margin-top: 4%;
+    margin: 0;
+    padding: 1vw 0;
+}
+
+#container-TitletarefasLG h3 {
+    margin: 0;
 }
 
 #container-Titletarefas {
@@ -116,13 +125,17 @@
     font-size: 5vw;
 }
 
-#btnEditar, #btnEditar2 {
+#btnEditar, #btnEditar2, #btnEditar-LG {
     border: none;
     background-color: transparent;
     font-size: 5vw;
 }
 
-#container-btnaddTarefa {
+#btnEditar-LG {
+    font-size: 1.6vw;
+}
+
+#container-btnaddTarefa, #container-btnaddTarefa-LG {
     background: #EABB88;
     width: 5vw;
     height: 5vw;
@@ -132,6 +145,12 @@
     align-items: center;
     border-radius: 4px;
     margin-left: 2vw;
+}
+
+#container-btnaddTarefa-LG {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-left: 1vw;
 }
 
 .valores {
@@ -254,20 +273,16 @@ legend {
 
 #cardLG {
     display: flex;
-    /* Define o layout como flexbox */
     flex-direction: row;
-    /* Alinha os elementos em uma linha */
     justify-content: space-between;
-    /* Distribui espaço entre os itens */
     align-items: flex-start;
-    /* Alinha os elementos no topo */
     gap: 20px;
-    /* Espaçamento entre as divs */
+    margin: 0;
+    padding: 3vw 2vw;
 }
 
 #container-TarefasConvidados {
-    width: 43%;
-    margin-top: 3%;
+    width: 40%;
 }
 
 #grandcontainer-imgEventoLG {
@@ -277,16 +292,7 @@ legend {
 
 #container-TitleLG {
     width: 40%;
-    margin-top: 3%;
-}
 
-#container-TitleLG h3, #container-TarefasConvidados h3 {
-    font-weight: bold;
-    font-size: 6.5vh;
-}
-
-#container-TarefasConvidados h3 {
-    font-size: 2.5vh;
 }
 
 #container-imgEventoLG {
@@ -307,10 +313,15 @@ legend {
     padding: 2vw 0;
 }
 
-#span-convidados-mobile {
+#span-convidados-mobile, #span-convidados-desktop {
     margin-left: 5%;
     padding: 1vw 0;
     font-size: 4vw;
+}
+
+#span-convidados-desktop {
+    padding-bottom: 1.5vw;
+    font-size: 1.4vw;
 }
 
 #container-tarefaadd h3 {
@@ -324,7 +335,11 @@ legend {
 }
 
 #container-tarefaaddLG h3 {
-    font-size: 3vh;
+    font-size: 1.4vw;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -386,6 +401,12 @@ legend {
 
 .closeTarefa-mobile, .closeConvidado-mobile {
     width: 4vw;
+
+}
+
+.closeTarefa-desktop {
+    cursor: pointer;
+    width: 2vw;
 }
 
 #container-Lista h3 {
@@ -401,4 +422,50 @@ legend {
 
 .p-convidados-mobile {
     padding: 1.5vw 0;
+}
+
+#titleH3LG {
+    font-size: 4vw;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    line-height: normal;
+    margin: 0;
+    padding-bottom: 3vw;
+}
+
+
+.p-info-LG {
+    margin: 0;
+    padding: 1vw 0;
+    font-size: 1.5vw;
+}
+
+#label-info-LG {
+    font-size: 1.5vw;
+}
+
+#nTarefas-LG {
+    font-size: 1.2vw;
+}
+
+#container-tarefaaddLG h3, #container-tarefaaddLG p {
+    margin: 0;
+}
+
+#container-tarefaaddLG p {
+    padding: 0.2vw 0;
+    font-size: 1.1vw;
+}
+
+
+.p-convidados-desktop {
+    font-size: 1.1vw !important;
+    padding: 0.5vw 0 !important;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }

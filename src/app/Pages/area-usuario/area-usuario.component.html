@@ -14,12 +14,12 @@
           <form id="containerlittle-inputleftM">
             <fieldset class="formFieldsetM">
               <legend class="legendM">Nome do Organizador</legend>
-              <input type="text" placeholder="Nome de Usuário" class="textFormM" [(ngModel)]="nomeOrganizador" readonly>
+              <input type="text" placeholder="Nome de Usuário" class="textFormM" [value]="nomeOrganizador" readonly>
             </fieldset>
 
             <fieldset class="formFieldsetM">
               <legend class="legendM">E-mail</legend>
-              <input type="text" placeholder="email@gmail.com" class="textFormM" [(ngModel)]="emailOrganizador"
+              <input type="text" placeholder="email@gmail.com" class="textFormM" [value]="emailOrganizador"
                 readonly>
             </fieldset>
           </form>
@@ -29,7 +29,7 @@
           <form id="containerlittle-inputRightM">
             <fieldset class="formFieldsetM">
               <legend class="legendM">Telefone</legend>
-              <input type="text" placeholder="+55 11 9xxxx-xxxx" class="textFormM" [(ngModel)]="contatoOrganizador"
+              <input type="text" placeholder="+55 11 9xxxx-xxxx" class="textFormM" [value]="contatoOrganizador"
                 readonly>
             </fieldset>
 
@@ -62,12 +62,12 @@
           <form id="containerlittle-inputleftLG">
             <fieldset class="formFieldsetLG">
               <legend class="legendLG">Nome do Organizador</legend>
-              <input type="text" placeholder="Nome de Usuário" class="textFormT" [(ngModel)]="nomeOrganizador" readonly>
+              <input type="text" placeholder="Nome de Usuário" class="textFormT" [value]="nomeOrganizador" readonly>
             </fieldset>
 
             <fieldset class="formFieldsetLG">
               <legend class="legendLG">E-mail</legend>
-              <input type="text" placeholder="email@gmail.com" class="textFormT" [(ngModel)]="emailOrganizador"
+              <input type="text" placeholder="email@gmail.com" class="textFormT" [value]="emailOrganizador"
                 readonly>
             </fieldset>
           </form>
@@ -77,7 +77,7 @@
           <form id="containerlittle-inputRightLG">
             <fieldset class="formFieldsetLG">
               <legend class="legendLG">Telefone</legend>
-              <input type="text" placeholder="+55 11 9xxxx-xxxx" class="textFormT" [(ngModel)]="contatoOrganizador"
+              <input type="text" placeholder="+55 11 9xxxx-xxxx" class="textFormT" [value]="contatoOrganizador"
                 readonly>
             </fieldset>
 

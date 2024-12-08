@@ -14,30 +14,25 @@
 
           <span>
             <p><b>Data:</b> {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
-            <p><b>Data:</b> {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
           </span>
 
 
           <span>
-            <p><b>Local do evento:</b> {{ evento?.localEvento }}</p>
             <p><b>Local do evento:</b> {{ evento?.localEvento }}</p>
           </span>
 
 
           <span>
             <p><b>Horário de início:</b> {{ evento?.horarioInicio }}</p>
-            <p><b>Horário de início:</b> {{ evento?.horarioInicio }}</p>
           </span>
 
 
           <span>
             <p><b>Horário de término:</b> {{ evento?.horarioFim }}</p>
-            <p><b>Horário de término:</b> {{ evento?.horarioFim }}</p>
           </span>
 
 
           <span>
-            <p><b>Tipo:</b> {{ evento?.tipoEvento }}</p>
             <p><b>Tipo:</b> {{ evento?.tipoEvento }}</p>
           </span>
         </div>
@@ -108,37 +103,41 @@
           <div id="container-Titletarefas" class="pt-3">
             <h3><label for="btnEditar2">Lista de Convidados</label></h3>
             <div id="container-btnaddTarefa">
-              <button id="btnEditar2" (click)="abrirFormularioConvidado()" name="btnEditarConvidado">+</button>
+              <button id="btnEditar2" (click)="abrirFormularioConvidado()" name="btnEditar2">+</button>
             </div>
           </div>
 
-          <div id="overlay" *ngIf="mostrarFormularioConvidado"></div>
-          <form (ngSubmit)="cadastrarConvidado()">
-            <div id="container-Tarefas" *ngIf="mostrarFormularioConvidado">
-              <div class="container-InputTarefa">
-                <fieldset id="fieldset1">
-                  <legend class="legendLG" for="nomeConvidado">Convidado</legend>
-                  <input type="text" class="inputTarefa" [(ngModel)]="novoConvidado.nomeConvidado"
-                    placeholder="Nome do convidado" name="nomeConvidado" required>
-                </fieldset>
-              </div>
+          <div *ngIf="mostrarFormularioConvidado">
+            <form (ngSubmit)="cadastrarConvidado()">
+              <div id="overlay" *ngIf="mostrarFormularioConvidado"></div>
 
-              <div id="container-btnTarefa">
-                <button class="btnTarefas" type="submit">Enviar</button>
+              <div id="container-Tarefas" *ngIf="mostrarFormularioConvidado">
+                <div class="container-InputTarefa">
+                  <fieldset id="fieldset1">
+                    <legend for="nomeConvidado">Convidado</legend>
+                    <input type="text" class="inputTarefa" [(ngModel)]="novoConvidado.nomeConvidado"
+                      placeholder="Nome do convidado" name="nomeConvidado" required>
+                  </fieldset>
+                </div>
+
+                <div id="container-btnTarefa">
+                  <button class="btnTarefas" type="submit">Enviar</button>
+                </div>
+                <div id="container-btnCancelar">
+                  <button class="btnTarefas" (click)="fecharFormularioConvidado()">Cancelar</button>
+                </div>
               </div>
-              <div id="container-btnCancelar">
-                <button class="btnTarefas" (click)="fecharFormularioConvidado()">Cancelar</button>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
+
 
 
           <div *ngIf="convidados.length > 0">
             <div id="grandcontainer-Tarefasadd">
               <span id="span-convidados-mobile"><i>Convidados</i></span>
               <div *ngFor="let convidado of convidados" id="container-tarefaadd">
-                <p class="p-convidados-mobile">{{ convidado.nomeConvidado }} <img class="img-fuild closeConvidado-mobile"
-                    src="../../../assets/Elementos/close.svg"></p>
+                <p class="p-convidados-mobile">{{ convidado.nomeConvidado }} <img
+                    class="img-fuild closeConvidado-mobile" src="../../../assets/Elementos/close.svg"></p>
               </div>
             </div>
           </div>
@@ -153,54 +152,82 @@
   </div>
 </div>
 
-<div class="d-none d-lg-block d-xxl-block" id="backgroundLG">
+<div class="d-none d-lg-flex d-xxl-flex" id="backgroundLG">
   <div class="card" id="cardLG">
     <div id="container-TitleLG">
       <div id="container-InfosLG">
         <h3 id="titleH3LG">{{ evento?.nomeEvento }}</h3>
-        <span>
-          <p><b>Data:</b> {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
+        <span class="span-info-LG">
+          <p class="p-info-LG"><b>Data:</b> {{ evento?.dataEvento | date: 'dd/MM/yyyy' }}</p>
         </span>
 
 
-        <span>
-          <p><b>Local do evento:</b> {{ evento?.localEvento }}</p>
+        <span class="span-info-LG">
+          <p class="p-info-LG"><b>Local do evento:</b> {{ evento?.localEvento }}</p>
         </span>
 
 
-        <span>
-          <p><b>Horário de início:</b> {{ evento?.horarioInicio }}</p>
+        <span class="span-info-LG">
+          <p class="p-info-LG"><b>Horário de início:</b> {{ evento?.horarioInicio }}</p>
         </span>
 
 
-        <span>
-          <p><b>Horário de término:</b> {{ evento?.horarioFim }}</p>
+        <span class="span-info-LG">
+          <p class="p-info-LG"><b>Horário de término:</b> {{ evento?.horarioFim }}</p>
         </span>
 
 
-        <span>
-          <p><b>Tipo:</b> {{ evento?.tipoEvento }}</p>
+        <span class="span-info-LG">
+          <p class="p-info-LG"><b>Tipo:</b> {{ evento?.tipoEvento }}</p>
         </span>
       </div>
     </div>
     <div id="container-TarefasConvidados">
-      <div id="container-TitletarefasLG">
-        <h3><label for="btnEditar">Tarefas <button id="btnEditar" (click)="abrirFormularioTarefa()"
-              name="btnEditar">+</button></label></h3>
-      </div>
-
-      <div *ngIf="tarefas.length > 0">
-        <div id="grandcontainer-TarefasaddLG">
-          <div *ngFor="let tarefa of tarefas" id="container-tarefaaddLG">
-            <h3><strong>{{ tarefa.nomeTarefa }}</strong></h3>
-            <p>Fornecedor: {{ tarefa.fornecedor }}</p>
-            <p>Valor: {{ tarefa.valor }}</p>
+      <div *ngIf="evento?.incluirTarefas">
+        <div id="container-TitletarefasLG">
+          <h3><label id="label-info-LG" for="btnEditar-LG"><b>Tarefas</b></label></h3>
+          <div id="container-btnaddTarefa-LG">
+            <button id="btnEditar-LG" (click)="abrirFormularioTarefa()" name="btnEditar-LG">+</button>
           </div>
         </div>
+
+        <div *ngIf="tarefas.length > 0">
+          <div id="grandcontainer-TarefasaddLG">
+            <div *ngFor="let tarefa of tarefas" id="container-tarefaaddLG">
+              <h3><i>{{ tarefa.nomeTarefa }}</i><img class="img-fuild closeTarefa-desktop"
+                  src="../../../assets/Elementos/close.svg"></h3>
+              <p>Fornecedor: {{ tarefa.fornecedor }}</p>
+              <p>Valor: R$ {{ tarefa.valor }}</p>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="tarefas.length === 0">
+          <p id="nTarefas-LG">Não há tarefas cadastradas para este evento.</p>
+        </div>
       </div>
-      <div *ngIf="tarefas.length === 0">
-        <p>Não há tarefas cadastradas para este evento.</p>
+
+      <div *ngIf="evento?.listaConvidados">
+        <div id="container-TitletarefasLG">
+          <h3><label id="label-info-LG" for="btnEditar-LG"><b>Lista de Convidados</b></label></h3>
+          <div id="container-btnaddTarefa-LG">
+            <button id="btnEditar-LG" (click)="abrirFormularioConvidado()" name="btnEditar-LG">+</button>
+          </div>  
+        </div>
+        <div *ngIf="convidados.length > 0">
+          <div id="grandcontainer-TarefasaddLG">
+            <span id="span-convidados-desktop"><i>Convidados</i></span>
+            <div *ngFor="let convidado of convidados" id="container-tarefaaddLG">
+              <p class="p-convidados-desktop">{{ convidado.nomeConvidado }} <img
+                  class="img-fuild closeTarefa-desktop" src="../../../assets/Elementos/close.svg"></p>
+            </div>
+          </div> 
+        </div>
+
+        <div *ngIf="convidados.length === 0">
+          <p id="nTarefas-LG">Não há convidados cadastrados para este evento.</p>
+        </div>
       </div>
+
     </div>
     <div id="grandcontainer-imgEventoLG">
       <div id="container-imgEventoLG">
@@ -208,6 +235,28 @@
       </div>
     </div>
 
+    <div *ngIf="mostrarFormularioConvidado">
+      <form (ngSubmit)="cadastrarConvidado()">
+        <div id="overlay" *ngIf="mostrarFormularioConvidado"></div>
+
+        <div id="container-Tarefas" *ngIf="mostrarFormularioConvidado">
+          <div class="container-InputTarefa">
+            <fieldset id="fieldset1">
+              <legend class="legendLG" for="nomeConvidado">Convidado</legend>
+              <input type="text" class="inputTarefa" [(ngModel)]="novoConvidado.nomeConvidado"
+                placeholder="Nome do convidado" name="nomeConvidado" required>
+            </fieldset>
+          </div>
+
+          <div id="container-btnTarefa">
+            <button class="btnTarefas" type="submit">Enviar</button>
+          </div>
+          <div id="container-btnCancelar">
+            <button class="btnTarefas" (click)="fecharFormularioConvidado()">Cancelar</button>
+          </div>
+        </div>
+      </form>
+    </div>
 
     <div id="overlay" *ngIf="mostrarFormularioTarefa"></div>
     <form (ngSubmit)="cadastrarTarefa()">
