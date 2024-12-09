@@ -24,11 +24,11 @@ const routes: Routes = [
   { path: 'formulario', component: FormularioComponent, canActivate: [AuthGuard] },
   { path: 'termosUso', component: TermosUsoComponent },
   { path: 'eventoExistente', component: EventoExistenteComponent, canActivate: [AuthGuard]},
-  { path: 'areaUsuario', component: AreaUsuarioComponent/*, canActivate: [AuthGuard]*/ },
-  {path: 'financeiro', component: FinanceiroComponent/*, canActivate: [AuthGuard]*/},
-  { path: 'infoEvento/:id', component: InfoEventosComponent, /*canActivate: [AuthGuard]*/ },
+  { path: 'areaUsuario', component: AreaUsuarioComponent, canActivate: [AuthGuard]},
+  {path: 'financeiro', component: FinanceiroComponent, canActivate: [AuthGuard]},
+  { path: 'infoEvento/:id', component: InfoEventosComponent, canActivate: [AuthGuard] },
   { path: 'esqueceuSenha', component: EsqueceuSenhaComponent },
-  { path: 'calendario', component: AgendaComponent },
+  { path: 'calendario', component: AgendaComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: '/apresentacao', pathMatch: 'full' },
  
   
