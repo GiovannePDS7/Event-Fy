@@ -3,6 +3,17 @@
     <h1 id="h1-mobile">Meus Eventos</h1>
   </section>
   <main id="main-mobile">
+    <section *ngIf="eventos.length === 0" class="no-events-message">
+      <div class="container-semEventos">
+        <span class="span-semEventos">Você ainda não possui eventos, crie um agora!</span>
+        <div class="container-criarEvento">
+          <a [routerLink]="['/formulario']" class="a-semEvento">
+            <img class="img-fluid img-semEventos" src="../../../assets/Elementos/criarEvento.png">
+            <button class="btnCriarEvento">Criar Evento</button>
+          </a>
+        </div>
+      </div>
+    </section>
     <section class="section-eventos-mobile" *ngFor="let evento of eventos" (click)="verDetalhes(evento)">
       <div class="containerNome-mobile">
         <h1 class="h1-nomeEvento-mobile">{{ evento.nomeEvento }}</h1>
@@ -31,6 +42,17 @@
   </section>
   <div id="grandContainer">
     <main id="main-Desktop">
+      <section *ngIf="eventos.length === 0" class="no-events-message no-events-message-LG">
+        <div class="container-semEventos container-semEventos-LG">
+          <span class="span-semEventos span-semEventos-LG">Você ainda não possui eventos, crie um agora!</span>
+          <div class="container-criarEvento">
+            <a [routerLink]="['/formulario']" class="a-semEvento">
+              <img class="img-fluid img-semEventosDesktop" src="../../../assets/Elementos/criarEvento.png">
+              <button class="btnCriarEventoDesktop">Criar Evento</button>
+            </a>
+          </div>
+        </div>
+      </section>
       <section class="section-eventos-desktop" *ngFor="let evento of eventos" (click)="verDetalhes(evento)">
         <div class="containerNome-desktop">
           <h1 class="h1-nomeEvento-desktop">{{ evento.nomeEvento }}</h1>

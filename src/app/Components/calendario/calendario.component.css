@@ -1,30 +1,31 @@
 .grandContainer-mobile {
     width: 100%;
     display: flex;
-    height: 130vh;
+    height: 140vh;
     justify-content: center;
     align-items: center;
     background-color: #f6bb7c;
+    padding-top: 20%;
 }
 
 .content-wrapper-mobile {
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container-mobile {
-    width: 95%; 
+    width: 95%;
     height: auto;
     border-radius: 20px;
 }
 
 .info-container-mobile {
-    width: 100%; 
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,13 +57,13 @@
 
 .calendario-dias-titulo-mobile {
     display: flex;
-    justify-content: space-around; 
-    margin-bottom: 5px; 
+    justify-content: space-around;
+    margin-bottom: 5px;
 }
 
 .calendario-dia-titulo-mobile {
-    flex: 1; 
-    text-align: center; 
+    flex: 1;
+    text-align: center;
     font-weight: 500;
     margin-top: 2vh;
     height: 5vh;
@@ -71,9 +72,9 @@
 
 .calendario-dias-mobile {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); 
+    grid-template-columns: repeat(7, 1fr);
     border: 3px solid #000;
-    border-radius: 20px; 
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -120,20 +121,20 @@
 }
 
 .content-wrapper-desktop {
-    display: flex; 
-    width: 90%; 
-    height: 100vh; 
+    display: flex;
+    width: 90%;
+    height: 100vh;
 }
 
 .container-desktop {
-    width: 60%; 
+    width: 60%;
     height: 100%;
     border-radius: 20px;
     margin-top: 3%;
 }
 
 .info-container-desktop {
-    width: 30%; 
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -172,13 +173,13 @@
 
 .calendario-dias-titulo-desktop {
     display: flex;
-    justify-content: space-around; 
-    margin-bottom: 5px; 
+    justify-content: space-around;
+    margin-bottom: 5px;
 }
 
 .calendario-dia-titulo-desktop {
-    flex: 1; 
-    text-align: center; 
+    flex: 1;
+    text-align: center;
     font-weight: 500;
     margin-top: 2vh;
     height: 5vh;
@@ -187,9 +188,9 @@
 
 .calendario-dias-desktop {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); 
+    grid-template-columns: repeat(7, 1fr);
     border: 3px solid #000;
-    border-radius: 20px; 
+    border-radius: 20px;
     overflow: hidden;
 }
 

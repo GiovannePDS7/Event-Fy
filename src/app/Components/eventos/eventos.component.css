@@ -140,10 +140,10 @@
 }
 
 .section-eventos-desktop:hover {
-  background: #f0f0f0; 
-  border-color: #555; 
-  transform: scale(1.05); 
-  transition: all 0.3s ease; 
+  background: #f0f0f0;
+  border-color: #555;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 
@@ -160,9 +160,9 @@
   font-size: 1.6vw;
   font-weight: bold;
   display: inline-block;
-  white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .imgfotoEvento-desktop {
@@ -213,10 +213,10 @@
 
 .infoLocalEvento-desktop {
   display: inline-block;
-  max-width: 200px; 
-  white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
@@ -233,3 +233,70 @@
   align-items: center;
 }
 
+.no-events-message {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.no-events-message-LG{
+  height: 72vh;
+}
+.container-semEventos{
+  width: 80vw;
+  height: 60%;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3vw;
+}
+.span-semEventos{
+  text-align: center;
+  font-size: 4vw;
+}
+
+.img-semEventos, .img-semEventosDesktop{
+  margin-top: 3vw;
+  width: 8vw;
+}
+
+.img-semEventosDesktop{
+  width: 2.5vw;
+}
+
+
+.btnCriarEvento, .btnCriarEventoDesktop{
+  border: 1px solid #000;
+  background-color: #EF820D;
+  font-weight: bold;
+  width: 50%;
+  border-radius: 6px;
+  margin-top: 3vw;
+  padding: 1.5vw 0;
+}
+
+.btnCriarEventoDesktop{
+  width: 25%;
+  font-size: 1.5vw;
+}
+
+
+.container-criarEvento{
+  width: 100%;
+}
+
+.a-semEvento{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.span-semEventos-LG{
+  font-size: 1.5vw;
+}
