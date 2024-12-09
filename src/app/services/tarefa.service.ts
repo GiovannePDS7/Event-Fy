@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class TarefaService {
 
-  private apiUrl = 'http://localhost:8084/api/tarefas';
+  // private apiUrl = 'http://localhost:8084/api/tarefas';
+  private apiUrl = 'http://cadastrotarefa-production.up.railway.app/api/tarefas';
 
   constructor(private http: HttpClient) { }
 
