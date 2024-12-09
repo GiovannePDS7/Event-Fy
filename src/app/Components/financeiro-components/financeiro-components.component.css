@@ -173,3 +173,139 @@
 .textAnalise {
     font-size: 1.3rem;
 }
+
+.linha{
+    border: 1px solid #000;
+    width:60vw;
+}
+#eventoMobile {
+    width: 100%;
+    background-color: #FFBC74;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  #containerMobile {
+    width: 100%;
+    padding-top: 5vh;
+  }
+  
+  #tituloMobile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #nomeEventoMobile {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  #dataEventoMobile {
+    font-size: 1.2rem;
+    color: #000;
+  }
+  
+ 
+  .blocoInfosMobile {
+    background-color: #FFF;
+    padding: 15px;
+    border-radius: 0; 
+    border: 1px solid #000;
+    margin: 0; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+.blocoInfosMobile2{
+    background-color: #FFF;
+    padding: 15px;
+    border-radius: 0; 
+    border: 1px solid #000;
+    margin-top:5vh;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+  .linha {
+    border: 1px solid #000;
+    width: 60vw;
+  }
+  
+
+  
+  .tituloBlocoMobile {
+    padding-top: 3vh;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .graficoMobile img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  .legendaMobile {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .legendaMobile li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .legendaCor {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 3px;
+  }
+  
+  .cor1 {
+    background-color: #FFA500;
+  }
+  
+  .cor2 {
+    background-color: #FFCC80;
+  }
+  
+  .cor3 {
+    background-color: #FFDAB9;
+  }
+  
+  .cor4 {
+    background-color: #FF8C00;
+  }
+  
+  .cor5 {
+    background-color: #FFF5E6;
+  }
+  
+  .infoLinhaMobile,
+  .totalLinhaMobile {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #000;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+  
+  .totalLinhaMobile {
+    font-weight: bold;
+  }
+  
+  
+  
+  
+  
