@@ -86,8 +86,9 @@
           <div *ngIf="tarefas.length > 0">
             <div id="grandcontainer-Tarefasadd">
               <div *ngFor="let tarefa of tarefas" id="container-tarefaadd">
-                <h3><i>{{ tarefa.nomeTarefa }}</i> <img class="img-fuild closeTarefa-mobile"
-                    src="../../../assets/Elementos/close.svg"></h3>
+                <h3><i>{{ tarefa.nomeTarefa }}</i> <button (click)="excluirTarefa(tarefa.idTarefa)" id="btnExcluirTarefa">
+                  <img class="img-fuild closeTarefa-mobile" src="../../../assets/Elementos/close.svg">
+                </button></h3>
                 <p class="pt-2 pb-2">Fornecedor: {{ tarefa.fornecedor }}</p>
                 <p>Valor: R$ {{ tarefa.valor }}</p>
               </div>
@@ -194,8 +195,9 @@
         <div *ngIf="tarefas.length > 0">
           <div id="grandcontainer-TarefasaddLG">
             <div *ngFor="let tarefa of tarefas" id="container-tarefaaddLG">
-              <h3><i>{{ tarefa.nomeTarefa }}</i><img class="img-fuild closeTarefa-desktop"
-                  src="../../../assets/Elementos/close.svg"></h3>
+              <h3><i>{{ tarefa.nomeTarefa }}</i><button (click)="excluirTarefa(tarefa.idTarefa)" id="btnExcluirTarefa">
+                <img class="img-fuild closeTarefa-desktop" src="../../../assets/Elementos/close.svg">
+              </button></h3>
               <p>Fornecedor: {{ tarefa.fornecedor }}</p>
               <p>Valor: R$ {{ tarefa.valor }}</p>
             </div>

@@ -469,3 +469,8 @@ legend {
     align-items: center;
     width: 100%;
 }
+#btnExcluirTarefa
+{
+    border: none;
+    background: transparent;
+}

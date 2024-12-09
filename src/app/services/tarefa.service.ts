@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class TarefaService {
 
-  // private apiUrl = 'http://localhost:8084/api/tarefas';
-  private apiUrl = 'https://cadastrotarefa-production.up.railway.app/api/tarefas';
+   private apiUrl = 'http://localhost:8084/api/tarefas';
+  //private apiUrl = 'https://cadastrotarefa-production.up.railway.app/api/tarefas';
 
   constructor(private http: HttpClient) { }
 
@@ -23,4 +23,10 @@ export class TarefaService {
   listarTarefasPorEvento(idEvento: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/evento/${idEvento}`);
   }
+
+
+  excluirTarefa(idTarefa: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${idTarefa}`, { responseType: 'text' });
+  }
+
 }

@@ -135,4 +135,22 @@ export class EvInfosComponent implements OnInit {
       }
     );
   }
+
+  excluirTarefa(idTarefa: number): void {
+    
+     
+    this.tarefaService.excluirTarefa(idTarefa).subscribe({
+      next: () => {
+        console.log('Tarefa excluída com sucesso');
+
+        // Atualiza a lista local
+        this.tarefas = this.tarefas.filter(tarefa => tarefa.idTarefa !== idTarefa);
+      },
+      error: error => {
+        console.error('Erro ao excluir a tarefa', error);
+      }
+    });
+  
+  }
+
 }
