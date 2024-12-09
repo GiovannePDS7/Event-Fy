@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ConvidadosService {
   // private apiUrl = 'http://localhost:8085/api/convidados'; 
-  private apiUrl = 'http://cadastro_listaconvidados.railway.internal/api/convidados'; 
+  private apiUrl = 'https://cadastro_listaconvidados.railway.internal/api/convidados'; 
   constructor(private http: HttpClient) { }
 
   // Método para listar convidados de um evento específico
