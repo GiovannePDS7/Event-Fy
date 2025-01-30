@@ -79,3 +79,69 @@ EventFy has some main features, including:
 ---
 
 ## System screens
+
+Some of the system's main screens, more screens available on [*Figma*](https://www.figma.com/design/K6Rm3KtMaXtQy4jIuNdFXv/Untitled)
+
+<div align='center'>
+  <div>
+    <h2>Main</h2>
+    <img src='./src/assets/Elementos/Principal_Apresentacao.png' alt="Apresentação" width="50%" height="50%">
+  </div>
+  <div>
+    <h2>Home page</h2>
+    <img src='./src/assets/Elementos/Principal.png' alt="Principal" width="50%" height="50%">
+  </div>
+  <div>
+    <h2>Event creation</h2>
+    <img src='./src/assets/Elementos/Criacao Evento.png' alt="Principal" width="50%" height="50%">
+  </div>
+</div>
+
+---
+
+## Microservices
+
+### [*User registration*](https://github.com/GiovannePDS7/Cadastro_EventFy)
+- Back-end for user registrations with Java and Spring Boot.
+
+### [*JWT login*](https://github.com/GiovannePDS7/Login_EventFy)
+- Login back-end using JWT Token in Java and Spring Boot.
+
+### [*Event registration*](https://github.com/GiovannePDS7/CriacaoEvento_EventFy)
+- Back-end for event registration using Java and Spring Boot.
+
+### [*Retrieve event*](https://github.com/GiovannePDS7/EventoExistente_EventFy)
+- Service to retrieve existing events based on the user.
+  
+### [*Register guests*](https://github.com/GiovannePDS7/Cadastro_ListaConvidados)
+- Back-end to register guests per event.
+
+### [*Register task*](https://github.com/GiovannePDS7/Cadastro_Tarefa)
+- Back-end for registering tasks per event.
+
+---
+
+## Development team and their responsibilities
+
+#### [*Giovanne Pagano*](https://github.com/GiovannePDS7)
+- Project manager and leader;
+- Full stack developer;
+- System integration and hosting;
+
+#### [*Anderson Armando*](https://github.com/Anderson-Armando)
+- Project administrator;
+- DataBase administrator;
+  
+#### [*João Eduardo*](https://github.com/juedu006)
+- Project administrator;
+- Front-end developer;
+- UX/UI designer;
+
+#### [*Pedro Henrique Soares*](https://github.com/PedroSoares22)
+- DataBase administrator;
+
+#### [*Henrique Lopes*](https://github.com/Henriqueluz21)
+- Back-end developer;
+
+#### [*Isabella Amaro*](https://github.com/Isabellinhaa)
+- UX/UI designer;
