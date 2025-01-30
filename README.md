@@ -1,5 +1,5 @@
 <div align="center">
-  <img src='./src/assets/Logo/Logo.png' alt="Logo do Projeto" width="200">
+  <img src='./src/assets/Logo/Logo.png' alt="Logo do Projeto" width="250">
 </div>
 
 # EventFy - Event Management Platform
@@ -80,7 +80,7 @@ EventFy has some main features, including:
 
 ## System screens
 
-Some of the system's main screens, more screens available on [*Figma*](https://www.figma.com/design/K6Rm3KtMaXtQy4jIuNdFXv/Untitled)
+Some of the system's main screens, more screens available on [*Figma*](https://www.figma.com/design/K6Rm3KtMaXtQy4jIuNdFXv/Untitled).
 
 <div align='center'>
   <div>
