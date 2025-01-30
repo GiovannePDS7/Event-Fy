@@ -80,7 +80,7 @@ EventFy has some main features, including:
 
 ## System screens
 
-Some of the system's main screens, more screens available on [*Figma*](https://www.figma.com/design/K6Rm3KtMaXtQy4jIuNdFXv/Untitled).
+Some of the system's main screens, more screens available on [*Figma*](https://www.figma.com/design/K6Rm3KtMaXtQy4jIuNdFXv/Untitled?node-id=10-2).
 
 <div align='center'>
   <div>
